@@ -24,6 +24,8 @@ jobs:
       run: git clone https://github.com/consensys/teku.git
 
     - name: Run teku reference tests
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd teku
         NIGHTLY=true ./gradlew expandRefTests
