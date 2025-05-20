@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - fulu - minimal - fork_choice/on_block</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>fulu - minimal - fork_choice/on_block</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/tech.pegasys.teku.reference.fulu.fork_choice_on_block.html">tech.pegasys.teku.reference.fulu.fork_choice_on_block</a> &gt; MinimalForkChoiceOnBlockProposerBoostRootSameSlotUntimelyBlockReferenceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.012s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">proposer_boost_root_same_slot_untimely_block</td>
+<td class="success">testProposerBoostRootSameSlotUntimelyBlock()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-05-20 21:14:00.655+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
+2025-05-20 21:14:00.655+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
+2025-05-20 21:14:00.656+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
+2025-05-20 21:14:00.656+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=26}
+2025-05-20 21:14:00.656+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 4 Epoch: 0
+2025-05-20 21:14:00.656+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=26, head={slot=0, root=0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645}, justified_checkpoint={epoch=0, root=0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645}, finalized_checkpoint={epoch=0, root=0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-20 21:14:00.656+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0x5817d7b3ecf3088b1d47384a4509845a77a76d02601a9e82b10af6916119fe45, valid=true}
+2025-05-20 21:14:00.657+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Preparing 0 blobs with proofs [] for block 0x14f2453af75f56df0dc6dca72cc13366aca0b92a6a38de644ecbd6ec2e553cdf
+2025-05-20 21:14:00.657+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x14f2453af75f56df0dc6dca72cc13366aca0b92a6a38de644ecbd6ec2e553cdf at slot 4 with parent 0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645
+2025-05-20 21:14:00.657+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x14f2453af75f56df0dc6dca72cc13366aca0b92a6a38de644ecbd6ec2e553cdf:4 arrived at 2000 ms into slot 4, timeliness limit is 2000 ms. result: false
+2025-05-20 21:14:00.657+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-05-20 21:14:00.657+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
+2025-05-20 21:14:00.657+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0x45dd9c267a9f85b06d77a32a214bf8157f6a6293a146732a59829508605ffda9  versionedHashes: Optional[[]] parentBeaconBlockRoot: Optional[0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645] -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
+2025-05-20 21:14:00.657+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 4
+2025-05-20 21:14:00.657+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 4
+2025-05-20 21:14:00.660+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: VALID, blob sidecars: 0, cause: Optional.empty
+2025-05-20 21:14:00.660+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=26, head={slot=4, root=0x14f2453af75f56df0dc6dca72cc13366aca0b92a6a38de644ecbd6ec2e553cdf}, justified_checkpoint={epoch=0, root=0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645}, finalized_checkpoint={epoch=0, root=0x89dbcc89faeb9efa2d4f5b98a648ecce3e1b0d77f77ab49bd9a12fb302986645}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-20 21:14:00.660+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 20, 2025, 9:15:54 PM</p>
+</div>
+</div>
+</body>
+</html>
