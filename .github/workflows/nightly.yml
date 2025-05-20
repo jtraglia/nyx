@@ -40,9 +40,9 @@ jobs:
 
     - name: Copy teku HTML report
       run: |
-        rm -rf site/reports/teku
-        mkdir -p site/reports/teku
-        cp -r teku/eth-reference-tests/build/reports/tests/referenceTest/* site/reports/teku/
+        rm -rf reports/teku
+        mkdir -p reports/teku
+        cp -r teku/eth-reference-tests/build/reports/tests/referenceTest/* reports/teku/
 
     - name: Extract summary from HTML report
       run: |
@@ -55,7 +55,7 @@ jobs:
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "actions@github.com"
-        git add site/reports/teku
+        git add reports/teku
         git add results/teku.json
         git commit -m "Update teku test results" || echo "No changes to commit"
         git push
