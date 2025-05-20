@@ -17,18 +17,22 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '17'
         distribution: 'temurin'
+        java-version: '21'
 
     - name: Clone teku repo
       run: git clone https://github.com/consensys/teku.git
 
-    - name: Run teku reference tests
+    - name: Download reference tests
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd teku
         NIGHTLY=true ./gradlew expandRefTests
+
+    - name: Run reference tests
+      run: |
+        cd teku
         ./gradlew referenceTest || true
 
     - name: Copy teku HTML report
