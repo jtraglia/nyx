@@ -32,7 +32,7 @@
   <div id="results" class="client-summary">Loading…</div>
 
   <script>
-    fetch('../results/teku.json')
+    fetch('results/teku.json')
       .then(res => res.json())
       .then(data => {
         const { passed, failed, total, ignored, duration } = data;
