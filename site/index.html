@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyx - Nightly Consensus Layer Tests</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f7f7f7;
+    }
+    h1 {
+      text-align: center;
+    }
+    .client-summary {
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    .client-summary a {
+      text-decoration: none;
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ethereum Consensus Layer – Nightly Test Results</h1>
+  <div id="results" class="client-summary">Loading…</div>
+
+  <script>
+    fetch('../results/teku.json')
+      .then(res => res.json())
+      .then(data => {
+        const { passed, failed, total, ignored, duration } = data;
+        const status = failed === 0 ? '✅' : '❌';
+
+        document.getElementById('results').innerHTML = `
+          <strong>Teku</strong> — ${status} 
+          ${passed} passed, ${failed} failed, ${ignored} ignored 
+          (<code>${duration}</code>) —
+          <a href="reports/teku/index.html" target="_blank">See full report</a>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('results').textContent = 'Error loading test results.';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: Run Nightly Tests
+
+on:
+  schedule:
+    # Runs at 8 AM UTC nightly
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-teku-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Clone teku repo
+      run: git clone https://github.com/consensys/teku.git
+
+    - name: Run teku reference tests
+      run: |
+        cd teku
+        NIGHTLY=true ./gradlew expandRefTests
+        ./gradlew referenceTest || true
+
+    - name: Copy teku HTML report
+      run: |
+        rm -rf site/reports/teku
+        mkdir -p site/reports/teku
+        cp -r teku/eth-reference-tests/build/reports/tests/referenceTest/* site/reports/teku/
+
+    - name: Extract summary from HTML report
+      run: |
+        pip install beautifulsoup4
+        python3 scripts/extract_teku_summary.py
+
+    - name: Commit test results
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add site/reports/teku
+        git add results/teku.json
+        git commit -m "Update teku test results" || echo "No changes to commit"
+        git push
