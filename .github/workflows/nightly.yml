@@ -49,13 +49,13 @@ jobs:
         pip install beautifulsoup4
         python3 scripts/extract_teku_summary.py
 
-    - name: Commit test results
+    - name: Commit test summary
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "actions@github.com"
         git add docs/reports/teku
-        git add docs/results/teku.json
-        git commit -m "Update teku test results" || echo "No changes to commit"
+        git add docs/summaries/teku.json
+        git commit -m "Update teku test summary" || echo "No changes to commit"
         git push

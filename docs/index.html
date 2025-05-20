@@ -29,16 +29,16 @@
 </head>
 <body>
   <h1>Nyx - Nightly Client Tests</h1>
-  <div id="results" class="client-summary">Loading…</div>
+  <div id="summaries" class="client-summary">Loading…</div>
 
   <script>
-    fetch('results/teku.json')
+    fetch('summaries/teku.json')
       .then(res => res.json())
       .then(data => {
         const { passed, failed, total, ignored, duration } = data;
         const status = failed === 0 ? '✅' : '❌';
 
-        document.getElementById('results').innerHTML = `
+        document.getElementById('summaries').innerHTML = `
           <strong>Teku</strong> — ${status} 
           ${passed} passed, ${failed} failed, ${ignored} ignored 
           (<code>${duration}</code>) —
@@ -46,7 +46,7 @@
         `;
       })
       .catch(err => {
-        document.getElementById('results').textContent = 'Error loading test results.';
+        document.getElementById('summaries').textContent = 'Error loading test summary.';
         console.error(err);
       });
   </script>

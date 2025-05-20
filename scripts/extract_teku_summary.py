@@ -14,7 +14,7 @@ failed = int(get_counter("failures"))
 ignored = int(get_counter("ignored"))
 duration = get_counter("duration")
 
-with open("docs/results/teku.json", "w") as out:
+with open("docs/summaries/teku.json", "w") as out:
     json.dump({
         "total": total,
         "failed": failed,
