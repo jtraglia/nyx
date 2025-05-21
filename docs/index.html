@@ -37,7 +37,6 @@
   <div id="summaries" class="client-summary">Loading…</div>
 
   <script>
-    // Utility to convert date to relative time string
     function timeAgo(timestamp) {
       const now = new Date();
       const then = new Date(timestamp);
@@ -53,27 +52,23 @@
       return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
     }
 
-    Promise.all([
-      fetch('summaries/teku.json').then(res => res.json()),
-      fetch('summaries/teku.json', { method: 'HEAD' })
-    ])
-    .then(([data, headRes]) => {
-      const { passed, failed, ignored, duration } = data;
-      const status = failed === 0 ? '✅' : '❌';
+    fetch('summaries/teku.json')
+      .then(res => res.json())
+      .then(data => {
+        const { passed, failed, ignored, duration, timestamp } = data;
+        const status = failed === 0 ? '✅' : '❌';
+        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
 
-      const lastModified = headRes.headers.get('Last-Modified');
-      const updatedText = lastModified ? `last updated: ${timeAgo(lastModified)}` : '';
-
-      document.getElementById('summaries').innerHTML = `
-        <strong>Teku</strong> — ${status} 
-        ${passed} passed, ${failed} failed, ${ignored} ignored (<code>${duration}</code>)
-        <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a> — ${updatedText}</div>
-      `;
-    })
-    .catch(err => {
-      document.getElementById('summaries').textContent = 'error loading test summary';
-      console.error(err);
-    });
+        document.getElementById('summaries').innerHTML = `
+          <strong>Teku</strong> — ${status}
+          ${passed} passed, ${failed} failed, ${ignored} ignored (<code>${duration}</code>)
+          <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a> — ${updatedText}</div>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('summaries').textContent = 'error loading test summary';
+        console.error(err);
+      });
   </script>
 
   <footer style="text-align: center; margin-top: 4rem; color: #666;">

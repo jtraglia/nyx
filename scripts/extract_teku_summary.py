@@ -1,6 +1,7 @@
 import json
 
 from bs4 import BeautifulSoup
+from datetime import datetime, timezone
 
 with open("teku/eth-reference-tests/build/reports/tests/referenceTest/index.html") as f:
     soup = BeautifulSoup(f, "html.parser")
@@ -20,5 +21,6 @@ with open("docs/summaries/teku.json", "w") as out:
         "failed": failed,
         "ignored": ignored,
         "passed": total - failed - ignored,
-        "duration": duration
+        "duration": duration,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }, out, indent=2)
