@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.006s</div>
+<div class="counter">0.007s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_new_source_epoch</td>
 <td class="success">testInvalidNewSourceEpoch()</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,18 +89,18 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-05-20 21:11:10.760+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block
+<pre>2025-05-21 08:19:39.965+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block
 java.lang.IllegalArgumentException: process_attestations: Attestation source does not match current justified checkpoint
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:220) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.assertAttestationValid(AbstractBlockProcessor.java:302) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processAttestationsNoVerification$16(AbstractBlockProcessor.java:597) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:874) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttestationsNoVerification(AbstractBlockProcessor.java:593) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttestations(AbstractBlockProcessor.java:576) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.assertAttestationValid(AbstractBlockProcessor.java:302) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processAttestationsNoVerification$16(AbstractBlockProcessor.java:597) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:874) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttestationsNoVerification(AbstractBlockProcessor.java:593) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttestations(AbstractBlockProcessor.java:576) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
 	at tech.pegasys.teku.reference.common.operations.DefaultOperationProcessor.processAttestation(DefaultOperationProcessor.java:101) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.processOperation(OperationsTestExecutor.java:291) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.lambda$applyOperation$1(OperationsTestExecutor.java:251) ~[referenceTest/:?]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.4.1+36-g0f7c19fc49]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.4.1+43-gfdc1b8fc65]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.applyOperation(OperationsTestExecutor.java:251) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.lambda$assertOperationInvalid$0(OperationsTestExecutor.java:242) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -110,7 +110,7 @@ java.lang.IllegalArgumentException: process_attestations: Attestation source doe
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.assertOperationInvalid(OperationsTestExecutor.java:242) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.runProcessor(OperationsTestExecutor.java:172) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.common.operations.OperationsTestExecutor.runTest(OperationsTestExecutor.java:159) ~[referenceTest/:?]
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:114) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.deneb.operations_attestation.MinimalOperationsAttestationInvalidNewSourceEpochReferenceTest.testInvalidNewSourceEpoch(MinimalOperationsAttestationInvalidNewSourceEpochReferenceTest.java:28) ~[referenceTest/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
@@ -203,7 +203,7 @@ java.lang.IllegalArgumentException: process_attestations: Attestation source doe
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 20, 2025, 9:15:53 PM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 21, 2025, 8:24:43 AM</p>
 </div>
 </div>
 </body>
