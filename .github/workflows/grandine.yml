@@ -14,13 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install GitHub CLI
-      uses: cli/cli@v3
-
-    - name: Authenticate gh CLI
-      run: gh auth setup-git
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Checkout repo
       uses: actions/checkout@v3
 
