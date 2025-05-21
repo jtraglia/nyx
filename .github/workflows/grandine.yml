@@ -86,7 +86,7 @@ jobs:
         echo "TEST_DURATION=$((end - start))" >> "$GITHUB_ENV"
 
     - name: Summarize grandine
-      run: python3 scripts/summarize_grandine.py
+      run: python3 scripts/make_grandine_summary.py
 
     - name: Commit
       env:
