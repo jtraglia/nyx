@@ -1,0 +1,107 @@
+name: Run Nightly Tests
+
+on:
+  schedule:
+    # Runs at 8 AM UTC nightly
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-grandine-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install GitHub CLI
+      uses: cli/cli@v3
+
+    - name: Authenticate gh CLI
+      run: gh auth setup-git
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Clone client repo
+      run: |
+        git clone https://github.com/grandinetech/grandine.git
+        cd grandine
+        git rm --cached consensus-spec-tests hive
+        git config -f .gitmodules --remove-section submodule.consensus-spec-tests
+        git config -f .gitmodules --remove-section submodule.hive
+        git submodule update --init --recursive
+
+    - name: Get latest successful run ID
+      id: get_run
+      run: |
+        run_id=$(gh run list \
+          --repo ethereum/consensus-specs \
+          --workflow generate_vectors.yml \
+          --branch dev \
+          --limit 10 \
+          --json databaseId,conclusion \
+          --jq '[.[] | select(.conclusion == "success")][0].databaseId')
+        echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Download all artifacts from that run
+      run: |
+        gh run download ${{ steps.get_run.outputs.run_id }} \
+          --repo ethereum/consensus-specs \
+          --dir grandine/consensus-spec-tests
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Unpack reference tests
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        apt update && apt install unp
+        cd grandine/consensus-spec-tests
+        unp *.zip
+        unp *.tar.gz
+
+    - name: Build tests
+      run: |
+        mkdir -p docs/reports/grandine/
+        cd grandine
+
+        start=$(date +%s)
+        if cargo test --release --no-run > ../docs/reports/grandine/build.txt 2>&1; then
+          echo "BUILD_SUCCESS=true" >> "$GITHUB_ENV"
+        else
+          echo "BUILD_SUCCESS=false" >> "$GITHUB_ENV"
+        fi
+        end=$(date +%s)
+        echo "BUILD_DURATION=$((end - start))" >> "$GITHUB_ENV"
+
+    - name: Run tests
+      if: env.BUILD_SUCCESS == 'true'
+      run: |
+        cd grandine
+
+        start=$(date +%s)
+        if cargo test --release --no-fail-fast > ../docs/reports/grandine/tests.txt 2>&1; then
+          echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
+        else
+          echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"
+        fi
+        end=$(date +%s)
+        echo "TEST_DURATION=$((end - start))" >> "$GITHUB_ENV"
+
+    - name: Summarize grandine
+      run: python3 scripts/summarize_grandine.py
+
+    - name: Commit
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add docs/reports/grandine
+        git add docs/summaries/grandine.json
+        git commit -m "Update grandine status" || echo "No changes to commit"
+        git push

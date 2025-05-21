@@ -52,6 +52,58 @@
       return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
     }
 
+    function formatDuration(seconds) {
+      const total = Number(seconds);
+      const mins = Math.floor(total / 60);
+      const secs = (total % 60).toFixed(2).padStart(5, '0');
+      return mins > 0 ? `${mins}m${secs}s` : `${secs}s`;
+    }
+
+    fetch('summaries/grandine.json')
+      .then(res => res.json())
+      .then(data => {
+        const {
+          build_status,
+          build_duration,
+          test_status,
+          test_duration,
+          timestamp
+        } = data;
+
+        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
+        let content = `<strong>Grandine</strong> — `;
+
+        if (!build_status) {
+          content += `❌ build failed (build: ${formatDuration(build_duration)})`;
+        } else if (test_status === false) {
+          content += `❌ tests failed (build: ${formatDuration(build_duration)}, test: ${formatDuration(test_duration)})`;
+        } else if (test_status === true) {
+          content += `✅ passed (build: ${formatDuration(build_duration)}, test: ${formatDuration(test_duration)})`;
+        }
+
+        content += `<div class="client-meta">`;
+
+        if (build_status == false) {
+          content += `<a href="reports/grandine/build.txt" target="_blank">build output</a>`;
+        } else {
+          content += `<a href="reports/grandine/test.txt" target="_blank">test output</a>`;
+        }
+
+        content += ` — ${updatedText}</div>`;
+
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+        div.innerHTML = content;
+        summariesDiv.appendChild(div);
+      })
+      .catch(err => {
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+        div.textContent = 'error loading Grandine summary';
+        summariesDiv.appendChild(div);
+        console.error(err);
+      });
+
     fetch('summaries/teku.json')
       .then(res => res.json())
       .then(data => {
