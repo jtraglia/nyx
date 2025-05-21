@@ -25,6 +25,11 @@
       text-decoration: none;
       color: #007acc;
     }
+    .client-meta {
+      margin-top: 0.5em;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -32,23 +37,45 @@
   <div id="summaries" class="client-summary">Loading…</div>
 
   <script>
-    fetch('summaries/teku.json')
-      .then(res => res.json())
-      .then(data => {
-        const { passed, failed, total, ignored, duration } = data;
-        const status = failed === 0 ? '✅' : '❌';
+    // Utility to convert date to relative time string
+    function timeAgo(timestamp) {
+      const now = new Date();
+      const then = new Date(timestamp);
+      const diffMs = now - then;
+      const diffMins = Math.floor(diffMs / 60000);
+      if (diffMins < 1) return "just now";
+      if (diffMins === 1) return "1 minute ago";
+      if (diffMins < 60) return `${diffMins} minutes ago`;
+      const diffHours = Math.floor(diffMins / 60);
+      if (diffHours === 1) return "1 hour ago";
+      if (diffHours < 24) return `${diffHours} hours ago`;
+      const diffDays = Math.floor(diffHours / 24);
+      return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
+    }
 
-        document.getElementById('summaries').innerHTML = `
-          <strong>Teku</strong> — ${status} 
-          ${passed} passed, ${failed} failed, ${ignored} ignored 
-          (<code>${duration}</code>) —
-          <a href="reports/teku/index.html" target="_blank">full report</a>
-        `;
-      })
-      .catch(err => {
-        document.getElementById('summaries').textContent = 'Error loading test summary.';
-        console.error(err);
-      });
+    Promise.all([
+      fetch('summaries/teku.json').then(res => res.json()),
+      fetch('summaries/teku.json', { method: 'HEAD' })
+    ])
+    .then(([data, headRes]) => {
+      const { passed, failed, ignored, duration } = data;
+      const status = failed === 0 ? '✅' : '❌';
+
+      const lastModified = headRes.headers.get('Last-Modified');
+      const updatedText = lastModified ? `last updated: ${timeAgo(lastModified)}` : '';
+
+      document.getElementById('summaries').innerHTML = `
+        <strong>Teku</strong> — ${status} 
+        ${passed} passed, ${failed} failed, ${ignored} ignored 
+        (<code>${duration}</code>)
+        <div class="client-meta">${updatedText}</div>
+        <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a></div>
+      `;
+    })
+    .catch(err => {
+      document.getElementById('summaries').textContent = 'error loading test summary';
+      console.error(err);
+    });
   </script>
 
   <footer style="text-align: center; margin-top: 4rem; color: #666;">
@@ -56,7 +83,7 @@
   </footer>
 
   <footer style="text-align: center; margin-top: 0.5rem; color: #888; font-size: 0.9em;">
-    <a href="https://en.wikipedia.org/wiki/Nyx" target="_blank">Nyx</a>, the goddess of the night
+    <a href="https://en.wikipedia.org/wiki/Nyx" target="_blank" style="color: #007acc; text-decoration: none;">Nyx</a>, the goddess of the night
   </footer>
 </body>
 </html>
