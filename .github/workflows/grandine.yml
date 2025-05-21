@@ -52,7 +52,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        apt update && apt install unp
+        sudo apt update
+        sudo apt install -y unp
         cd grandine/consensus-spec-tests
         unp *.zip
         unp *.tar.gz
