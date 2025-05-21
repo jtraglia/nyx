@@ -66,10 +66,8 @@
 
       document.getElementById('summaries').innerHTML = `
         <strong>Teku</strong> — ${status} 
-        ${passed} passed, ${failed} failed, ${ignored} ignored 
-        (<code>${duration}</code>)
-        <div class="client-meta">${updatedText}</div>
-        <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a></div>
+        ${passed} passed, ${failed} failed, ${ignored} ignored (<code>${duration}</code>)
+        <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a> — ${updatedText}</div>
       `;
     })
     .catch(err => {
