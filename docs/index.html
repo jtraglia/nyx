@@ -30,6 +30,12 @@
       font-size: 0.9em;
       color: #666;
     }
+    .client-meta pre {
+      margin: 0.25em 0 0;
+      font-size: 0.8em;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
   </style>
 </head>
 <body>
@@ -58,6 +64,9 @@
       const secs = (total % 60).toFixed(2).padStart(5, '0');
       return mins > 0 ? `${mins}m${secs}s` : `${secs}s`;
     }
+
+    const summariesDiv = document.getElementById('summaries');
+    summariesDiv.innerHTML = '';
 
     fetch('summaries/grandine.json')
       .then(res => res.json())
@@ -99,7 +108,12 @@
       .catch(err => {
         const div = document.createElement('div');
         div.className = 'client-summary';
-        div.textContent = 'error loading Grandine summary';
+
+        div.innerHTML = `
+          <strong>Grandine</strong> — error loading test summary
+          <div class="client-meta"><pre>${err.message || err}</pre></div>
+        `;
+
         summariesDiv.appendChild(div);
         console.error(err);
       });
@@ -121,7 +135,15 @@
         summariesDiv.appendChild(div);
       })
       .catch(err => {
-        document.getElementById('summaries').textContent = 'error loading test summary';
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+
+        div.innerHTML = `
+          <strong>Teku</strong> — error loading test summary
+          <div class="client-meta"><pre>${err.message || err}</pre></div>
+        `;
+
+        summariesDiv.appendChild(div);
         console.error(err);
       });
   </script>
