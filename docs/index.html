@@ -111,11 +111,14 @@
         const status = failed === 0 ? '✅' : '❌';
         const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
 
-        document.getElementById('summaries').innerHTML = `
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+        div.innerHTML = `
           <strong>Teku</strong> — ${status}
           ${passed} passed, ${failed} failed, ${ignored} ignored (<code>${duration}</code>)
           <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a> — ${updatedText}</div>
         `;
+        summariesDiv.appendChild(div);
       })
       .catch(err => {
         document.getElementById('summaries').textContent = 'error loading test summary';
