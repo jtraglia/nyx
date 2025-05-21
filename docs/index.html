@@ -52,13 +52,6 @@
       return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
     }
 
-    function formatDuration(seconds) {
-      const total = Number(seconds);
-      const mins = Math.floor(total / 60);
-      const secs = (total % 60).toFixed(2).padStart(5, '0');
-      return mins > 0 ? `${mins}m${secs}s` : `${secs}s`;
-    }
-
     const summariesDiv = document.getElementById('summaries');
     summariesDiv.innerHTML = '';
 
@@ -77,11 +70,11 @@
         let content = `<strong>Grandine</strong> — `;
 
         if (!build_status) {
-          content += `❌ build failed (build: ${formatDuration(build_duration)})`;
+          content += `❌ build failed (build: <code>${build_duration}</code>)`;
         } else if (test_status === false) {
-          content += `❌ tests failed (build: ${formatDuration(build_duration)}, test: ${formatDuration(test_duration)})`;
+          content += `❌ tests failed (build: <code>${build_duration}</code>, test: <code>${test_duration}</code>)`;
         } else if (test_status === true) {
-          content += `✅ passed (build: ${formatDuration(build_duration)}, test: ${formatDuration(test_duration)})`;
+          content += `✅ passed (build: <code>${build_duration}</code>, test: <code>${test_duration}</code>)`;
         }
 
         content += `<div class="client-meta">`;
