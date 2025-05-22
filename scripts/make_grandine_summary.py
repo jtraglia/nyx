@@ -30,7 +30,7 @@ summary = {
     "build_status": build_status,
     "build_duration": format_duration(build_duration),
     "test_status": test_status,
-    "test_duration": format_duration(test_duration),
+    "test_duration": format_duration(test_duration) if test_duration else None,
     "timestamp": datetime.now(timezone.utc).isoformat(),
 }
 
