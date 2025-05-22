@@ -1,0 +1,62 @@
+name: Prysm
+
+on:
+  schedule:
+    # Run once daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-prysm-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Clone client repo
+      # After they've merged https://github.com/OffchainLabs/prysm/pull/15312
+      # run: git clone https://github.com/OffchainLabs/prysm.git
+      run: git clone https://github.com/jtraglia/prysm.git -b nightly-tests
+
+    - name: Install Bazel from .bazelversion
+      run: |
+        VERSION=$(cat prysm/.bazelversion)
+        sudo curl -fsSL https://releases.bazel.build/${VERSION}/release/bazel-${VERSION}-linux-amd64 \
+          -o /usr/local/bin/bazel
+        sudo chmod +x /usr/local/bin/bazel
+
+    - name: Delete old test reports
+      run: rm -rf docs/reports/prysm
+
+    - name: Run tests
+      run: |
+        mkdir -p docs/reports/prysm
+        cd prysm
+
+        start=$(date +%s.%N)
+        if bazel test //... --test_tag_filters=spectest --repo_env=CONSENSUS_SPEC_TESTS_VERSION=nightly > ../docs/reports/prysm/test.txt 2>&1; then
+          echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
+        else
+          echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"
+        fi
+        end=$(date +%s.%N)
+        duration=$(echo "$end - $start" | bc)
+        echo "TEST_DURATION=${duration}" >> "$GITHUB_ENV"
+
+    - name: Summarize prysm
+      run: python3 scripts/make_prysm_summary.py
+
+    - name: Commit
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add docs/reports/prysm
+        git add docs/summaries/prysm.json
+        git commit -m "Update prysm status" || echo "No changes to commit"
+        git push

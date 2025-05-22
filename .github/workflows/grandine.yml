@@ -57,9 +57,12 @@ jobs:
         cd grandine/consensus-spec-tests
         unp */*.tar.gz
 
+    - name: Delete old test reports
+      run: rm -rf docs/reports/grandine
+
     - name: Build tests
       run: |
-        mkdir -p docs/reports/grandine/
+        mkdir -p docs/reports/grandine
         cd grandine
 
         start=$(date +%s)
@@ -77,7 +80,7 @@ jobs:
         cd grandine
 
         start=$(date +%s)
-        if cargo test --release --no-fail-fast > ../docs/reports/grandine/tests.txt 2>&1; then
+        if cargo test --release --no-fail-fast > ../docs/reports/grandine/test.txt 2>&1; then
           echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
         else
           echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"

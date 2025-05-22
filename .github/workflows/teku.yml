@@ -33,6 +33,9 @@ jobs:
         cd teku
         NIGHTLY=true ./gradlew expandRefTests
 
+    - name: Delete old test reports
+      run: rm -rf docs/reports/teku
+
     - name: Run reference tests
       run: |
         cd teku

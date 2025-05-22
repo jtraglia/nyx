@@ -105,6 +105,39 @@
         console.error(err);
       });
 
+    fetch('summaries/prysm.json')
+      .then(res => res.json())
+      .then(data => {
+        const {
+          test_status,
+          test_duration,
+          timestamp
+        } = data;
+
+        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
+        const status = test_status === true ? '✅ passed' : '❌ failed';
+
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+        div.innerHTML = `
+          <strong>Prysm</strong> — ${status} (<code>${test_duration}</code>)
+          <div class="client-meta"><a href="reports/prysm/test.txt" target="_blank">test output</a> — ${updatedText}</div>
+        `;
+        summariesDiv.appendChild(div);
+      })
+      .catch(err => {
+        const div = document.createElement('div');
+        div.className = 'client-summary';
+
+        div.innerHTML = `
+          <strong>Prysm</strong> — error loading test summary
+          <div class="client-meta"><pre>${err.message || err}</pre></div>
+        `;
+
+        summariesDiv.appendChild(div);
+        console.error(err);
+      });
+
     fetch('summaries/teku.json')
       .then(res => res.json())
       .then(data => {
