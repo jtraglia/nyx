@@ -46,6 +46,8 @@ jobs:
         end=$(date +%s.%N)
         duration=$(echo "$end - $start" | bc)
         echo "TEST_DURATION=${duration}" >> "$GITHUB_ENV"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Summarize prysm
       run: python3 scripts/make_prysm_summary.py
