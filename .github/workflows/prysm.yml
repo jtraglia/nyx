@@ -25,7 +25,7 @@ jobs:
     - name: Install Bazel from .bazelversion
       run: |
         VERSION=$(cat prysm/.bazelversion)
-        sudo curl -fsSL https://releases.bazel.build/${VERSION}/release/bazel-${VERSION}-linux-amd64 \
+        sudo curl -fsSL https://releases.bazel.build/${VERSION}/release/bazel-${VERSION}-linux-x86_64 \
           -o /usr/local/bin/bazel
         sudo chmod +x /usr/local/bin/bazel
 
