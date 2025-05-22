@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.072s</div>
+<div class="counter">0.094s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">proposer_boost_is_first_block</td>
 <td class="success">testProposerBoostIsFirstBlock()</td>
-<td class="success">0.072s</td>
+<td class="success">0.094s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,26 +89,26 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-05-21 08:17:31.319+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
-2025-05-21 08:17:31.319+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
-2025-05-21 08:17:31.346+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
-2025-05-21 08:17:31.348+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=51}
-2025-05-21 08:17:31.348+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 4 Epoch: 0
-2025-05-21 08:17:31.348+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-05-21 08:17:31.348+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xbdfd0e15310468357edcd40697ad94983b4abad4934c8e53354549c1f7bdabc2, valid=true}
-2025-05-21 08:17:31.349+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f at slot 4 with parent 0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d
-2025-05-21 08:17:31.349+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f:4 arrived at 3000 ms into slot 4, timeliness limit is 4000 ms. result: true
-2025-05-21 08:17:31.349+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0xf262d4a361cb9ed5170b8743d25ac6f72bd79edfef69327be35662945fd7d359  versionedHashes: Optional.empty parentBeaconBlockRoot: Optional.empty -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
-2025-05-21 08:17:31.355+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: NOT_REQUIRED, blob sidecars: 0, cause: Optional.empty
-2025-05-21 08:17:31.355+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=4, root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
-2025-05-21 08:17:31.355+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
-2025-05-21 08:17:31.355+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xd49b07df9575c90843b601b1cc42e6d3082696a9cd576f5b22de24ce067683f3, valid=true}
-2025-05-21 08:17:31.356+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x14ca9dcea4be4b8a14fc649d6b95175bb2a1f20c32f5a2929e55e7df8d6595d5 at slot 4 with parent 0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d
-2025-05-21 08:17:31.356+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x14ca9dcea4be4b8a14fc649d6b95175bb2a1f20c32f5a2929e55e7df8d6595d5:4 arrived at 3000 ms into slot 4, timeliness limit is 4000 ms. result: true
-2025-05-21 08:17:31.356+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0xf262d4a361cb9ed5170b8743d25ac6f72bd79edfef69327be35662945fd7d359  versionedHashes: Optional.empty parentBeaconBlockRoot: Optional.empty -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
-2025-05-21 08:17:31.360+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: NOT_REQUIRED, blob sidecars: 0, cause: Optional.empty
-2025-05-21 08:17:31.361+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=4, root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
-2025-05-21 08:17:31.361+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
+<pre>2025-05-22 00:40:39.874+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
+2025-05-22 00:40:39.874+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
+2025-05-22 00:40:39.918+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
+2025-05-22 00:40:39.920+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=51}
+2025-05-22 00:40:39.921+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 4 Epoch: 0
+2025-05-22 00:40:39.921+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-22 00:40:39.921+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xbdfd0e15310468357edcd40697ad94983b4abad4934c8e53354549c1f7bdabc2, valid=true}
+2025-05-22 00:40:39.923+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f at slot 4 with parent 0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d
+2025-05-22 00:40:39.924+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f:4 arrived at 3000 ms into slot 4, timeliness limit is 4000 ms. result: true
+2025-05-22 00:40:39.925+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0xf262d4a361cb9ed5170b8743d25ac6f72bd79edfef69327be35662945fd7d359  versionedHashes: Optional.empty parentBeaconBlockRoot: Optional.empty -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
+2025-05-22 00:40:39.932+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: NOT_REQUIRED, blob sidecars: 0, cause: Optional.empty
+2025-05-22 00:40:39.933+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=4, root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
+2025-05-22 00:40:39.933+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
+2025-05-22 00:40:39.933+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xd49b07df9575c90843b601b1cc42e6d3082696a9cd576f5b22de24ce067683f3, valid=true}
+2025-05-22 00:40:39.933+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x14ca9dcea4be4b8a14fc649d6b95175bb2a1f20c32f5a2929e55e7df8d6595d5 at slot 4 with parent 0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d
+2025-05-22 00:40:39.933+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x14ca9dcea4be4b8a14fc649d6b95175bb2a1f20c32f5a2929e55e7df8d6595d5:4 arrived at 3000 ms into slot 4, timeliness limit is 4000 ms. result: true
+2025-05-22 00:40:39.934+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0xf262d4a361cb9ed5170b8743d25ac6f72bd79edfef69327be35662945fd7d359  versionedHashes: Optional.empty parentBeaconBlockRoot: Optional.empty -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
+2025-05-22 00:40:39.938+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: NOT_REQUIRED, blob sidecars: 0, cause: Optional.empty
+2025-05-22 00:40:39.939+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=51, head={slot=4, root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}, justified_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, finalized_checkpoint={epoch=0, root=0x18fd71193bf7500a5467b8dfe0e45639eee9fb7ff2545e41afd84176e4dd5e5d}, proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
+2025-05-22 00:40:39.939+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={proposer_boost_root=0x1c3d0ba141164a685c2efa893600fde25c5b8d2a13ec821c43e379cba6dce46f}}
 </pre>
 </span>
 </div>
@@ -120,7 +120,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 21, 2025, 8:24:42 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 22, 2025, 12:47:48 AM</p>
 </div>
 </div>
 </body>
