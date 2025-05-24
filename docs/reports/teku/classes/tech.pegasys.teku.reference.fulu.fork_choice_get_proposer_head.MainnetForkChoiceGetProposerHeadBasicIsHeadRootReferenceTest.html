@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.363s</div>
+<div class="counter">2.723s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">basic_is_head_root</td>
 <td class="success">testBasicIsHeadRoot()</td>
-<td class="success">2.363s</td>
+<td class="success">2.723s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,37 +89,37 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-05-22 00:45:35.095+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
-2025-05-22 00:45:35.095+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
-2025-05-22 00:45:35.122+00:00 | Test worker | DEBUG | CKZG4844 | Freeing current trusted setup jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt in order to load trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt
-2025-05-22 00:45:35.122+00:00 | Test worker | DEBUG | CKZG4844 | Trusted setup was freed
-2025-05-22 00:45:37.433+00:00 | Test worker | DEBUG | CKZG4844 | Loaded trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt
-2025-05-22 00:45:37.433+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=0}
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 0 Epoch: 0
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=0, head={slot=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=12}
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 1 Epoch: 0
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=12, head={slot=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xb2506b5b6216f4fda3f218d126d924c80ff5468cbe57b7517ae02dbb240c9a09, valid=true}
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Preparing 0 blobs with proofs [] for block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9
-2025-05-22 00:45:37.434+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9 at slot 1 with parent 0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4
-2025-05-22 00:45:37.434+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9:1 arrived at 0 ms into slot 1, timeliness limit is 4000 ms. result: true
-2025-05-22 00:45:37.435+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-05-22 00:45:37.435+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
-2025-05-22 00:45:37.436+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0x89ea6be3d15cd754faa07b6c6b62034acb39af61f858812b6a609277e565de3b  versionedHashes: Optional[[]] parentBeaconBlockRoot: Optional[0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4] -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
-2025-05-22 00:45:37.436+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
-2025-05-22 00:45:37.436+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
-2025-05-22 00:45:37.441+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: VALID, blob sidecars: 0, cause: Optional.empty
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=12, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}}
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=24}
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 2 Epoch: 0
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-05-22 00:45:37.441+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={get_proposer_head=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}}
-2025-05-22 00:45:37.441+00:00 | Test worker | DEBUG | LateBlockReorgLogic | start getProposerHead
-2025-05-22 00:45:37.442+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Check ProposingOnTime for slot 2, slot start time is 24000 ms and current time is 24000 ms, limit is 2000 ms result: true
-2025-05-22 00:45:37.442+00:00 | Test worker | DEBUG | LateBlockReorgLogic | getProposerHead - return headRoot - isHeadLate false, isForkChoiceStableAndFinalizationOk true, isProposingOnTime true, isProposerBoostActive false, head.isEmpty false
+<pre>2025-05-24 15:10:02.000+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
+2025-05-24 15:10:02.001+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
+2025-05-24 15:10:02.035+00:00 | Test worker | DEBUG | CKZG4844 | Freeing current trusted setup jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt in order to load trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt
+2025-05-24 15:10:02.035+00:00 | Test worker | DEBUG | CKZG4844 | Trusted setup was freed
+2025-05-24 15:10:04.680+00:00 | Test worker | DEBUG | CKZG4844 | Loaded trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt
+2025-05-24 15:10:04.680+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
+2025-05-24 15:10:04.682+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=0}
+2025-05-24 15:10:04.682+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 0 Epoch: 0
+2025-05-24 15:10:04.682+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=0, head={slot=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-24 15:10:04.683+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=12}
+2025-05-24 15:10:04.683+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 1 Epoch: 0
+2025-05-24 15:10:04.683+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=12, head={slot=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-24 15:10:04.683+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xb2506b5b6216f4fda3f218d126d924c80ff5468cbe57b7517ae02dbb240c9a09, valid=true}
+2025-05-24 15:10:04.684+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Preparing 0 blobs with proofs [] for block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9
+2025-05-24 15:10:04.684+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9 at slot 1 with parent 0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4
+2025-05-24 15:10:04.684+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9:1 arrived at 0 ms into slot 1, timeliness limit is 4000 ms. result: true
+2025-05-24 15:10:04.687+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-05-24 15:10:04.687+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
+2025-05-24 15:10:04.687+00:00 | Test worker | INFO  | ExecutionLayerChannelStub | newPayload: executionPayload blockHash: 0x89ea6be3d15cd754faa07b6c6b62034acb39af61f858812b6a609277e565de3b  versionedHashes: Optional[[]] parentBeaconBlockRoot: Optional[0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4] -&gt; PayloadStatus{status=Optional[VALID], latestValidHash=Optional.empty, validationError=Optional.empty, failureCause=Optional.empty}
+2025-05-24 15:10:04.687+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
+2025-05-24 15:10:04.687+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
+2025-05-24 15:10:04.696+00:00 | Test worker | DEBUG | ForkChoice | blobSidecars validation result: VALID, blob sidecars: 0, cause: Optional.empty
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=12, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}}
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=24}
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 2 Epoch: 0
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=1, root=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}, justified_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, finalized_checkpoint={epoch=0, root=0x7733d03e6d50e540abf97aef5eeff92528bf56ea57f021c5bf75491382f7f2d4}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-05-24 15:10:04.697+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={get_proposer_head=0xff005a313607240e3fde58871521212e8343b8dbc394a5dee69721517136c2c9}}
+2025-05-24 15:10:04.697+00:00 | Test worker | DEBUG | LateBlockReorgLogic | start getProposerHead
+2025-05-24 15:10:04.697+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Check ProposingOnTime for slot 2, slot start time is 24000 ms and current time is 24000 ms, limit is 2000 ms result: true
+2025-05-24 15:10:04.697+00:00 | Test worker | DEBUG | LateBlockReorgLogic | getProposerHead - return headRoot - isHeadLate false, isForkChoiceStableAndFinalizationOk true, isProposingOnTime true, isProposerBoostActive false, head.isEmpty false
 </pre>
 </span>
 </div>
@@ -131,7 +131,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 22, 2025, 12:47:51 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 24, 2025, 3:12:10 PM</p>
 </div>
 </div>
 </body>
