@@ -38,7 +38,7 @@ jobs:
         cd prysm
 
         start=$(date +%s.%N)
-        if bazel test //... --test_tag_filters=spectest --repo_env=CONSENSUS_SPEC_TESTS_VERSION=nightly > ../docs/reports/prysm/test.txt 2>&1; then
+        if bazel test --spawn_strategy=standalone --noexperimental_runfiles //... --test_tag_filters=spectest --repo_env=CONSENSUS_SPEC_TESTS_VERSION=nightly > ../docs/reports/prysm/test.txt 2>&1; then
           echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
         else
           echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"
