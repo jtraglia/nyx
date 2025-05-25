@@ -65,28 +65,30 @@ jobs:
         mkdir -p docs/reports/grandine
         cd grandine
 
-        start=$(date +%s)
+        start=$(date +%s.%N)
         if cargo test --release --no-run > ../docs/reports/grandine/build.txt 2>&1; then
           echo "BUILD_SUCCESS=true" >> "$GITHUB_ENV"
         else
           echo "BUILD_SUCCESS=false" >> "$GITHUB_ENV"
         fi
-        end=$(date +%s)
-        echo "BUILD_DURATION=$((end - start))" >> "$GITHUB_ENV"
+        end=$(date +%s.%N)
+        duration=$(echo "$end - $start" | bc)
+        echo "BUILD_DURATION=${duration}" >> "$GITHUB_ENV"
 
     - name: Run tests
       if: env.BUILD_SUCCESS == 'true'
       run: |
         cd grandine
 
-        start=$(date +%s)
+        start=$(date +%s.%N)
         if cargo test --release --no-fail-fast > ../docs/reports/grandine/test.txt 2>&1; then
           echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
         else
           echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"
         fi
-        end=$(date +%s)
-        echo "TEST_DURATION=$((end - start))" >> "$GITHUB_ENV"
+        end=$(date +%s.%N)
+        duration=$(echo "$end - $start" | bc)
+        echo "TEST_DURATION=${duration}" >> "$GITHUB_ENV"
 
     - name: Summarize grandine
       run: python3 scripts/make_grandine_summary.py
