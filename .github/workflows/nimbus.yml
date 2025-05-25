@@ -29,7 +29,7 @@ jobs:
         CONSENSUS_TEST_VECTOR_VERSIONS: nightly
       run: |
         mkdir -p docs/reports/nimbus
-        cd nimbus
+        cd nimbus-eth2
 
         start=$(date +%s.%N)
         if make test > ../docs/reports/nimbus/test.txt 2>&1; then
