@@ -20,6 +20,11 @@ jobs:
     - name: Clone client repo
       run: git clone https://github.com/status-im/nimbus-eth2.git -b unstable
 
+    - name: Make patches
+      run: |
+        sed -i 's|"tests-v" & SPEC_VERSION|"tests-" & SPEC_VERSION|' nimbus-eth2/tests/consensus_spec/fixtures_utils.nim
+        sed -i 's/^const SPEC_VERSION\* = ".*"/const SPEC_VERSION* = "nightly"/' nimbus-eth2/beacon_chain/spec/datatypes/base.nim
+
     - name: Delete old test reports
       run: rm -rf docs/reports/nimbus
 
