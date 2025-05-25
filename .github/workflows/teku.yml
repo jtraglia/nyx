@@ -47,7 +47,7 @@ jobs:
         mkdir -p docs/reports/teku
         cp -r teku/eth-reference-tests/build/reports/tests/referenceTest/* docs/reports/teku/
 
-    - name: Extract summary from HTML report
+    - name: Summarize
       run: |
         pip install beautifulsoup4
         python3 scripts/make_teku_summary.py
