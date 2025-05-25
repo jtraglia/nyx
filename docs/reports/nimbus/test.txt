@@ -202,42 +202,6 @@ Tip of the day: this will probably build faster if you use "make -j4 ...".
 [92mBuilding:[39m build/generate_makefile
 [92mBuild completed successfully:[39m build/generate_makefile
 [92mBuilding:[39m build/consensus_spec_tests_minimal
-[92mBuild completed successfully:[39m build/consensus_spec_tests_minimal
-[92mBuilding:[39m build/consensus_spec_tests_mainnet
-[92mBuild completed successfully:[39m build/consensus_spec_tests_mainnet
-[92mBuilding:[39m build/nimbus_signing_node
-[92mBuild completed successfully:[39m build/nimbus_signing_node
-[92mBuilding:[39m build/block_sim
-[92mBuild completed successfully:[39m build/block_sim
-[92mBuilding:[39m build/libnimbus_lc.a
-[92mBuild completed successfully:[39m build/libnimbus_lc.a
-[92mBuilding:[39m build/test_libnimbus_lc
-[92mBuild completed successfully:[39m build/test_libnimbus_lc
-[92mBuilding:[39m build/all_tests
-/home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(560, 13) template/generic instantiation of `toValidationError` from here
-/home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(542, 17) Warning: implicit conversion to 'cstring' from a non-const location: $error(r); this will become a compile time error in the future [CStringConv]
-/home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(575, 13) template/generic instantiation of `toValidationError` from here
-/home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(542, 17) Warning: implicit conversion to 'cstring' from a non-const location: $error(r); this will become a compile time error in the future [CStringConv]
-[92mBuild completed successfully:[39m build/all_tests
-Downloading consensus spec test vectors
-
-Running consensus_spec_tests_minimal --xml:build/consensus_spec_tests_minimal.xml --console
-
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-metrics/metrics.nim(668) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-metrics/metrics.nim(653) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-metrics/metrics.nim(503) PreMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-metrics/metrics.nim(309) PreMainInner
-/home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/phase0/test_fixture_operations.nim(39) atmphase0atstest_fixture_operationsdotnim_Init000
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/std/assertions.nim(41) _ZN10assertions16failedAssertImplE6string
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/std/assertions.nim(36) _ZN10assertions11raiseAssertE6string
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/fatal.nim(53) _ZN10assertions8sysFatalE8typeDescIN10exceptions15AssertionDefectEE6string
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/excpt.nim(349) _ZN6system18rawWriteStackTraceE3varI3seqIN6system15StackTraceEntryEEE
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/stacktraces.nim(62) _ZN11stacktraces30auxWriteStackTraceWithOverrideE3varI3seqIN6system15StackTraceEntryEEE
-Error: unhandled exception: /home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/phase0/test_fixture_operations.nim(36, 1) `toHashSet(mapIt(toSeq(walkDir(OpDir, relative = false)), it.path)) ==
-    toHashSet([OpAttestationsDir, OpAttSlashingDir, OpBlockHeaderDir,
-               OpDepositsDir, OpProposerSlashingDir, OpVoluntaryExitDir])`  [AssertionDefect]
-[Summary] 0 tests run (0.00s): 0 OK, 0 FAILED, 0 SKIPPED
-
-consensus_spec_tests_minimal --xml:build/consensus_spec_tests_minimal.xml --console failed; Last 5000 lines from the log:
-tail: cannot open 'consensus_spec_tests_minimal.log' for reading: No such file or directory
-make: *** [Makefile:389: test] Error 1
+/home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/fixtures_utils.nim(103, 66) Error: attempting to call routine: 'SPEC_VERSION'
+  found 'SPEC_VERSION' [const declared in /home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/spec/datatypes/base.nim(77, 7)]
+make: *** [Makefile:312: consensus_spec_tests_minimal] Error 1
