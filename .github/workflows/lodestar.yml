@@ -31,8 +31,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd lodestar
-        yarn install --frozen-lockfile
-        yarn download-spec-tests-nightly
+        yarn install
+        yarn  download-spec-tests-nightly
 
     - name: Delete old test reports
       run: rm -rf docs/reports/lodestar
