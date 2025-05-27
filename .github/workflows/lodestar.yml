@@ -32,7 +32,8 @@ jobs:
       run: |
         cd lodestar
         yarn install
-        yarn  download-spec-tests-nightly
+        yarn build
+        yarn download-spec-tests-nightly
 
     - name: Delete old test reports
       run: rm -rf docs/reports/lodestar
@@ -41,7 +42,6 @@ jobs:
       run: |
         mkdir -p docs/reports/lodestar
         cd lodestar/packages/beacon-node
-        yarn build
 
         start=$(date +%s.%N)
         if yarn test:spec > ../docs/reports/lodestar/test.txt 2>&1; then
