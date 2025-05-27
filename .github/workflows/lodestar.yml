@@ -20,9 +20,12 @@ jobs:
     - name: Clone client repo
       run: git clone https://github.com/GabrielAstieres/lodestar.git -b feat/generated-nightly-vectors
 
-    - uses: "./lodestar/.github/actions/setup-and-build"
+    - name: Setup Node
+      uses: actions/setup-node@v4
       with:
-        node: "22"
+        node-version: "22"
+        check-latest: true
+        cache: yarn
 
     - name: Download nightly test vectors
       env:
@@ -38,6 +41,8 @@ jobs:
       run: |
         mkdir -p docs/reports/lodestar
         cd lodestar/packages/beacon-node
+
+        yarn install --frozen-lockfile && yarn build
 
         start=$(date +%s.%N)
         if yarn test:spec > ../docs/reports/lodestar/test.txt 2>&1; then
