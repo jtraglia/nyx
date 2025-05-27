@@ -22,7 +22,7 @@ jobs:
 
     - name: Make patches
       run: |
-        sed -i 's|"tests-v" & SPEC_VERSION|"tests-" & SPEC_VERSION|' nimbus-eth2/tests/consensus_spec/fixtures_utils.nim
+        sed -i 's|"tests-v"|\"tests-\"|' nimbus-eth2/tests/consensus_spec/fixtures_utils.nim
         sed -i 's/^const SPEC_VERSION\* = ".*"/const SPEC_VERSION* = "nightly"/' nimbus-eth2/beacon_chain/spec/datatypes/base.nim
 
     - name: Delete old test reports
