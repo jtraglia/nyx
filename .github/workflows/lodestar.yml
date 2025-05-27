@@ -31,6 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd lodestar
+        yarn install --frozen-lockfile
         yarn download-spec-tests-nightly
 
     - name: Delete old test reports
@@ -40,8 +41,7 @@ jobs:
       run: |
         mkdir -p docs/reports/lodestar
         cd lodestar/packages/beacon-node
-
-        yarn install --frozen-lockfile && yarn build
+        yarn build
 
         start=$(date +%s.%N)
         if yarn test:spec > ../docs/reports/lodestar/test.txt 2>&1; then
