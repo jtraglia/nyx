@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.105s</div>
+<div class="counter">0.047s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_one_blob_max_plus_one_txs</td>
 <td class="success">testInvalidOneBlobMaxPlusOneTxs()</td>
-<td class="success">0.105s</td>
+<td class="success">0.047s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,20 +89,20 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-05-27 00:45:32.820+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-05-27 00:45:32.821+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
-2025-05-27 00:45:32.821+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x4fd3518e6a9ee5122b5c5d3d3dfeeae547cbdf99c7de1fc2a8e627bc48d75572)
+<pre>2025-05-28 00:46:21.135+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-05-28 00:46:21.135+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
+2025-05-28 00:46:21.135+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x77db5fd3c75612b7491b9198c4d77388e1c660cdbe7908fb8337c3c904973b82)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Number of kzg commitments in block exceeds max blobs per block
-	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:86) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:125) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:115) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:106) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:100) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.4.1+52-g65869daa82]
+	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:86) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:125) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:115) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:106) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:100) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.4.1+53-g43de43c253]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -206,7 +206,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 27, 2025, 12:47:18 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 28, 2025, 12:47:56 AM</p>
 </div>
 </div>
 </body>
