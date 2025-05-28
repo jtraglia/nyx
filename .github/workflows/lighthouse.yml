@@ -1,4 +1,4 @@
-name: Lighthouse
+name: Nimbus
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  run-lighthouse-tests:
+  run-nimbus-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,20 +18,26 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Clone client repo
-      run: git clone https://github.com/GabrielAstieres/lighthouse.git -b feat/nightly-test-vectors
+      run: git clone https://github.com/status-im/nimbus-eth2.git -b unstable
+
+    - name: Make patches
+      run: |
+        sed -i 's|"tests-v"|\"tests-\"|' nimbus-eth2/tests/consensus_spec/fixtures_utils.nim
+        sed -i 's/^const SPEC_VERSION\* = ".*"/const SPEC_VERSION* = "nightly"/' nimbus-eth2/beacon_chain/spec/datatypes/base.nim
 
     - name: Delete old test reports
-      run: rm -rf docs/reports/lighthouse
+      run: rm -rf docs/reports/nimbus
 
     - name: Run tests
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CONSENSUS_TEST_VECTOR_VERSIONS: nightly
       run: |
-        mkdir -p docs/reports/lighthouse
-        cd lighthouse
+        mkdir -p docs/reports/nimbus
+        cd nimbus-eth2
 
         start=$(date +%s.%N)
-        if make run-ef-nightly-tests > ../docs/reports/lighthouse/test.txt 2>&1; then
+        if make test > ../docs/reports/nimbus/test.txt 2>&1; then
           echo "TEST_SUCCESS=true" >> "$GITHUB_ENV"
         else
           echo "TEST_SUCCESS=false" >> "$GITHUB_ENV"
@@ -41,7 +47,7 @@ jobs:
         echo "TEST_DURATION=${duration}" >> "$GITHUB_ENV"
 
     - name: Summarize
-      run: python3 scripts/make_lighthouse_summary.py
+      run: python3 scripts/make_nimbus_summary.py
 
     - name: Commit
       env:
@@ -51,14 +57,14 @@ jobs:
         git config --global user.email "actions@github.com"
         git fetch origin
 
-        git add docs/reports/lighthouse
-        git add docs/summaries/lighthouse.json
+        git add docs/reports/nimbus
+        git add docs/summaries/nimbus.json
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
         fi
 
-        git commit -m "Update lighthouse status"
+        git commit -m "Update nimbus status"
         for i in {1..5}; do
           git pull --rebase origin HEAD && \
           git push && break || {
