@@ -143,37 +143,40 @@
     const tbody = document.getElementById("summaries");
     tbody.innerHTML = "";
 
-    CLIENTS.forEach(({ name, report = "test.txt" }) => {
-      const file = name.toLowerCase();
-      fetch(`summaries/${file}.json`)
-        .then(res => res.json())
-        .then(data => {
-          const updated = data.timestamp ? timeAgo(data.timestamp) : "";
-          const { test_status, test_duration } = data;
-          const statusMark = test_status === true ? "✅" : "❌";
-          const duration = test_duration || "—";
-          const reportLink = `<a href="reports/${file}/${report}" target="_blank">report</a>`;
+    Promise.all(
+      CLIENTS.map(({ name, report = "test.txt" }) => {
+        const file = name.toLowerCase();
+        return fetch(`summaries/${file}.json`)
+          .then(res => res.json())
+          .then(data => {
+            const updated = data.timestamp ? timeAgo(data.timestamp) : "";
+            const { test_status, test_duration } = data;
+            const statusMark = test_status === true ? "✅" : "❌";
+            const duration = test_duration || "—";
+            const reportLink = `<a href="reports/${file}/${report}" target="_blank">report</a>`;
 
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${name}</td>
-            <td class="status">${statusMark}</td>
-            <td class="duration">${duration}</td>
-            <td class="link">${reportLink}</td>
-            <td>${updated}</td>
-          `;
-          tbody.appendChild(row);
-        })
-        .catch(err => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${name}</td>
-            <td class="status">⚠️</td>
-            <td colspan="3"><pre style="margin:0;">${err.message || err}</pre></td>
-          `;
-          tbody.appendChild(row);
-          console.error(err);
-        });
+            return `
+              <tr>
+                <td>${name}</td>
+                <td class="status">${statusMark}</td>
+                <td class="duration">${duration}</td>
+                <td class="link">${reportLink}</td>
+                <td>${updated}</td>
+              </tr>
+            `;
+          })
+          .catch(err => {
+            return `
+              <tr>
+                <td>${name}</td>
+                <td class="status">⚠️</td>
+                <td colspan="3"><pre style="margin:0;">${err.message || err}</pre></td>
+              </tr>
+            `;
+          });
+      })
+    ).then(rows => {
+      tbody.innerHTML = rows.join("");
     });
   </script>
 
