@@ -5,277 +5,194 @@
   <title>Nyx - Nightly Client Tests</title>
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 600px;
-      margin: 2rem auto;
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto 6rem auto;
       padding: 1rem;
-      background: #f7f7f7;
+      background: #f4f6f8;
+      color: #333;
     }
+
     h1 {
       text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
-    .client-summary {
-      background: white;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
       border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      table-layout: auto;
     }
-    .client-summary a {
-      text-decoration: none;
+
+    thead {
+      background: #f0f0f0;
+    }
+
+    th, td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 0.95rem;
+    }
+
+    th:first-child, td:first-child {
+      text-align: left;
+      width: 1%;
+      white-space: nowrap;
+    }
+
+    th:not(:first-child),
+    td:not(:first-child) {
+      text-align: right;
+    }
+
+    th {
+      font-weight: 600;
+      color: #555;
+    }
+
+    td.status {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    td.duration {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    td.link a {
       color: #007acc;
+      text-decoration: none;
     }
-    .client-meta {
-      margin-top: 0.5em;
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #f4f6f8;
+      text-align: center;
+      padding: 1rem;
+      color: #888;
       font-size: 0.9em;
-      color: #666;
+      line-height: 1.4;
+    }
+    .github-link {
+      margin: 0.25rem 0;
+    }
+    .github-link a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .github-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.25rem;
+      width: 16px;
+      height: 16px;
+      fill: #007acc;
     }
   </style>
 </head>
 <body>
   <h1>Nyx - Nightly Client Tests</h1>
-  <div id="summaries">Loading…</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Client</th>
+        <th>Status</th>
+        <th>Duration</th>
+        <th>Report</th>
+        <th>Updated</th>
+      </tr>
+    </thead>
+    <tbody id="summaries">
+      <tr><td colspan="5" style="text-align:center;">Loading…</td></tr>
+    </tbody>
+  </table>
 
   <script>
+    const CLIENTS = [
+      { name: "Grandine" },
+      { name: "Lighthouse" },
+      { name: "Lodestar" },
+      { name: "Prysm" },
+      { name: "Nimbus" },
+      { name: "Teku", report: "index.html" }
+    ];
+
     function timeAgo(timestamp) {
       const now = new Date();
       const then = new Date(timestamp);
-      const diffMs = now - then;
-      const diffMins = Math.floor(diffMs / 60000);
-      if (diffMins < 1) return "just now";
-      if (diffMins === 1) return "1 minute ago";
-      if (diffMins < 60) return `${diffMins} minutes ago`;
-      const diffHours = Math.floor(diffMins / 60);
-      if (diffHours === 1) return "1 hour ago";
-      if (diffHours < 24) return `${diffHours} hours ago`;
-      const diffDays = Math.floor(diffHours / 24);
-      return diffDays === 1 ? "1 day ago" : `${diffDays} days ago`;
+      const diff = Math.floor((now - then) / 60000);
+      if (diff < 1) return "just now";
+      if (diff === 1) return "1 min ago";
+      if (diff < 60) return `${diff} mins ago`;
+      const hours = Math.floor(diff / 60);
+      if (hours === 1) return "1 hr ago";
+      if (hours < 24) return `${hours} hrs ago`;
+      const days = Math.floor(hours / 24);
+      return days === 1 ? "1 day ago" : `${days} days ago`;
     }
 
-    const summariesDiv = document.getElementById('summaries');
-    summariesDiv.innerHTML = '';
+    const tbody = document.getElementById("summaries");
+    tbody.innerHTML = "";
 
-    fetch('summaries/grandine.json')
-      .then(res => res.json())
-      .then(data => {
-        const {
-          build_status,
-          build_duration,
-          test_status,
-          test_duration,
-          timestamp
-        } = data;
+    CLIENTS.forEach(({ name, report = "test.txt" }) => {
+      const file = name.toLowerCase();
+      fetch(`summaries/${file}.json`)
+        .then(res => res.json())
+        .then(data => {
+          const updated = data.timestamp ? timeAgo(data.timestamp) : "";
+          const { test_status, test_duration } = data;
+          const statusMark = test_status === true ? "✅" : "❌";
+          const duration = test_duration || "—";
+          const reportLink = `<a href="reports/${file}/${report}" target="_blank">report</a>`;
 
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        let content = `<strong>Grandine</strong> — `;
-
-        if (!build_status) {
-          content += `❌ build failed (build: <code>${build_duration}</code>)`;
-        } else if (test_status === false) {
-          content += `❌ tests failed (build: <code>${build_duration}</code>, test: <code>${test_duration}</code>)`;
-        } else if (test_status === true) {
-          content += `✅ passed (build: <code>${build_duration}</code>, test: <code>${test_duration}</code>)`;
-        }
-
-        content += `<div class="client-meta">`;
-
-        if (build_status == false) {
-          content += `<a href="reports/grandine/build.txt" target="_blank">build output</a>`;
-        } else {
-          content += `<a href="reports/grandine/test.txt" target="_blank">test output</a>`;
-        }
-
-        content += ` — ${updatedText}</div>`;
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = content;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Grandine</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
-
-    fetch('summaries/lighthouse.json')
-      .then(res => res.json())
-      .then(data => {
-        const {
-          test_status,
-          test_duration,
-          passed,
-          failed,
-          ignored,
-          timestamp
-        } = data;
-
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        const status = `${test_status === true ? '✅ ' : '❌ '} passed ${passed}, failed ${failed}, ignored ${ignored}`
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = `
-          <strong>Lighthouse</strong> — ${status} (<code>${test_duration}</code>)
-          <div class="client-meta"><a href="reports/lighthouse/test.txt" target="_blank">test output</a> — ${updatedText}</div>
-        `;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Lighthouse</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
-
-    fetch('summaries/lodestar.json')
-      .then(res => res.json())
-      .then(data => {
-        const {
-          test_status,
-          test_duration,
-          timestamp
-        } = data;
-
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        const status = test_status === true ? '✅ passed' : '❌ failed';
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = `
-          <strong>Lodestar</strong> — ${status} (<code>${test_duration}</code>)
-          <div class="client-meta"><a href="reports/lodestar/test.txt" target="_blank">test output</a> — ${updatedText}</div>
-        `;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Lodestar</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
-
-    fetch('summaries/prysm.json')
-      .then(res => res.json())
-      .then(data => {
-        const {
-          test_status,
-          test_duration,
-          timestamp
-        } = data;
-
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        const status = test_status === true ? '✅ passed' : '❌ failed';
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = `
-          <strong>Prysm</strong> — ${status} (<code>${test_duration}</code>)
-          <div class="client-meta"><a href="reports/prysm/test.txt" target="_blank">test output</a> — ${updatedText}</div>
-        `;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Prysm</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
-
-    fetch('summaries/nimbus.json')
-      .then(res => res.json())
-      .then(data => {
-        const {
-          test_status,
-          test_duration,
-          timestamp
-        } = data;
-
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        const status = test_status === true ? '✅ passed' : '❌ failed';
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = `
-          <strong>Nimbus</strong> — ${status} (<code>${test_duration}</code>)
-          <div class="client-meta"><a href="reports/nimbus/test.txt" target="_blank">test output</a> — ${updatedText}</div>
-        `;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Nimbus</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
-
-    fetch('summaries/teku.json')
-      .then(res => res.json())
-      .then(data => {
-        const { passed, failed, ignored, duration, timestamp } = data;
-        const status = failed === 0 ? '✅' : '❌';
-        const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-        div.innerHTML = `
-          <strong>Teku</strong> — ${status}
-          passed ${passed}, failed ${failed}, ignored ${ignored} (<code>${duration}</code>)
-          <div class="client-meta"><a href="reports/teku/index.html" target="_blank">full report</a> — ${updatedText}</div>
-        `;
-        summariesDiv.appendChild(div);
-      })
-      .catch(err => {
-        const div = document.createElement('div');
-        div.className = 'client-summary';
-
-        div.innerHTML = `
-          <strong>Teku</strong> — error loading test summary
-          <div class="client-meta"><pre>${err.message || err}</pre></div>
-        `;
-
-        summariesDiv.appendChild(div);
-        console.error(err);
-      });
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${name}</td>
+            <td class="status">${statusMark}</td>
+            <td class="duration">${duration}</td>
+            <td class="link">${reportLink}</td>
+            <td>${updated}</td>
+          `;
+          tbody.appendChild(row);
+        })
+        .catch(err => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${name}</td>
+            <td class="status">⚠️</td>
+            <td colspan="3"><pre style="margin:0;">${err.message || err}</pre></td>
+          `;
+          tbody.appendChild(row);
+          console.error(err);
+        });
+    });
   </script>
 
-  <footer style="text-align: center; margin-top: 4rem; color: #666;">
-    Made with ❤️ by Ethereum core devs
-  </footer>
-
-  <footer style="text-align: center; margin-top: 0.5rem; color: #888; font-size: 0.9em;">
-    <a href="https://en.wikipedia.org/wiki/Nyx" target="_blank" style="color: #007acc; text-decoration: none;">Nyx</a>, the goddess of the night
+  <footer>
+    <div class="github-link">
+      <a href="https://github.com/jtraglia/nyx" target="_blank">
+        Contribute on GitHub
+        <svg class="github-icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+            -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+            -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82.64-.18
+            1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.27.82
+            2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013
+            8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+      </a>
+    </div>
+    <div><a href="https://en.wikipedia.org/wiki/Nyx" target="_blank">Nyx</a>, the goddess of the night</div>
   </footer>
 </body>
 </html>

@@ -17,10 +17,7 @@ duration = get_counter("duration")
 
 with open("docs/summaries/teku.json", "w") as out:
     json.dump({
-        "total": total,
-        "failed": failed,
-        "ignored": ignored,
-        "passed": total - failed - ignored,
-        "duration": duration,
+        "test_status": total > 0 and failed == 0,
+        "test_duration": duration,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }, out, indent=2)

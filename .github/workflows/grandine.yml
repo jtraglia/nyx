@@ -60,23 +60,7 @@ jobs:
     - name: Delete old test reports
       run: rm -rf docs/reports/grandine
 
-    - name: Build tests
-      run: |
-        mkdir -p docs/reports/grandine
-        cd grandine
-
-        start=$(date +%s.%N)
-        if cargo test --release --no-run > ../docs/reports/grandine/build.txt 2>&1; then
-          echo "BUILD_SUCCESS=true" >> "$GITHUB_ENV"
-        else
-          echo "BUILD_SUCCESS=false" >> "$GITHUB_ENV"
-        fi
-        end=$(date +%s.%N)
-        duration=$(echo "$end - $start" | bc)
-        echo "BUILD_DURATION=${duration}" >> "$GITHUB_ENV"
-
     - name: Run tests
-      if: env.BUILD_SUCCESS == 'true'
       run: |
         cd grandine
 

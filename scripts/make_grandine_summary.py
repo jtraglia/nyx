@@ -21,14 +21,10 @@ def format_duration(seconds: float) -> str:
     else:
         return f"{secs:.2f}s"
 
-build_status = getenv_bool("BUILD_SUCCESS")
-build_duration = getenv_float("BUILD_DURATION")
-test_status = getenv_bool("TEST_SUCCESS") if build_status else None
-test_duration = getenv_float("TEST_DURATION") if build_status else None
+test_status = getenv_bool("TEST_SUCCESS")
+test_duration = getenv_float("TEST_DURATION")
 
 summary = {
-    "build_status": build_status,
-    "build_duration": format_duration(build_duration),
     "test_status": test_status,
     "test_duration": format_duration(test_duration) if test_duration else None,
     "timestamp": datetime.now(timezone.utc).isoformat(),
