@@ -1,5 +1,6 @@
-import os
 import json
+import os
+import re
 
 from datetime import datetime, timezone
 
@@ -24,9 +25,25 @@ def format_duration(seconds: float) -> str:
 test_status = getenv_bool("TEST_SUCCESS")
 test_duration = getenv_float("TEST_DURATION")
 
+passed = 0
+failed = 0
+ignored = 0
+
+with open("docs/reports/lighthouse/test.txt") as f:
+    for line in f:
+        match = re.search(r"(\d+)\s+passed;\s+(\d+)\s+failed;\s+(\d+)\s+ignored;", line)
+        if match:
+            print(line)
+            passed += int(match.group(1))
+            failed += int(match.group(2))
+            ignored += int(match.group(3))
+
 summary = {
     "test_status": test_status,
     "test_duration": format_duration(test_duration),
+    "passed": passed,
+    "failed": failed,
+    "ignored": ignored,
     "timestamp": datetime.now(timezone.utc).isoformat(),
 }
 

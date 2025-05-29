@@ -111,11 +111,14 @@
         const {
           test_status,
           test_duration,
+          passed,
+          failed,
+          ignored,
           timestamp
         } = data;
 
         const updatedText = timestamp ? `last updated: ${timeAgo(timestamp)}` : '';
-        const status = test_status === true ? '✅ passed' : '❌ failed';
+        const status = `${test_status === true ? '✅ ' : '❌ '} passed ${passed}, failed ${failed}, ignored ${ignored}`
 
         const div = document.createElement('div');
         div.className = 'client-summary';
