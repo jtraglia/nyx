@@ -7,9 +7,9 @@ def getenv_bool(name):
     val = os.getenv(name, "").lower()
     return val == "true"
 
-def getenv_int(name):
+def getenv_float(name):
     try:
-        return int(os.getenv(name, "0"))
+        return float(os.getenv(name, "0"))
     except ValueError:
         return 0
 
@@ -22,9 +22,9 @@ def format_duration(seconds: float) -> str:
         return f"{secs:.2f}s"
 
 build_status = getenv_bool("BUILD_SUCCESS")
-build_duration = getenv_int("BUILD_DURATION")
+build_duration = getenv_float("BUILD_DURATION")
 test_status = getenv_bool("TEST_SUCCESS") if build_status else None
-test_duration = getenv_int("TEST_DURATION") if build_status else None
+test_duration = getenv_float("TEST_DURATION") if build_status else None
 
 summary = {
     "build_status": build_status,
