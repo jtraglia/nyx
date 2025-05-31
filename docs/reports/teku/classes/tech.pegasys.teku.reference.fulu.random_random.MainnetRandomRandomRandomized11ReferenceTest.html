@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.660s</div>
+<div class="counter">0.455s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">randomized_11</td>
 <td class="success">testRandomized11()</td>
-<td class="success">0.660s</td>
+<td class="success">0.455s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,66 +89,56 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-05-30 00:47:01.033+00:00 | Test worker | INFO  | AbstractEpochProcessor | Beacon chain is in inactivity leak
-2025-05-30 00:47:01.086+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-05-30 00:47:01.087+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 264 found to be 6
-2025-05-30 00:47:01.104+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 512 to state
-2025-05-30 00:47:01.105+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 513 to state
-2025-05-30 00:47:01.105+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 514 to state
-2025-05-30 00:47:01.105+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 515 to state
-2025-05-30 00:47:01.105+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 516 to state
-2025-05-30 00:47:01.105+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 517 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 518 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 519 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 520 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 521 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 522 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 523 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 524 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 525 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 526 to state
-2025-05-30 00:47:01.106+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 527 to state
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 10 withdrawal request to process from block at slot 8448
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xbe197a44ab8c424966aeb0a707f7f7b9cbe92f8a}, validator_pubkey=SszByteVector{0x8759069459a4de6d6c55c5e33d45ff307e68f09ceaad0076ff4c322600370d472e6530d20d39a77561c19e7ea6dc95ba}, amount=32773238675}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xbe197a44ab8c424966aeb0a707f7f7b9cbe92f8a does not match validator 424 withdrawal credentials 0x5e7f7e431c5d031931ebd32afa3c19fa5de9fd67
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xbe32f89739d6ab2bb01aceba7a61b59376041a04}, validator_pubkey=SszByteVector{0x9417af4462cc8d542f6f6c479866f1c9fa4768069ef145f9acdd50221b8956b891ceec3ef4ec77c54006b00e38156cee}, amount=11119214663}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 106 does not have withdrawal credentials set
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xe13ad21c124a32088e5f2cfe31ffcae900599b45}, validator_pubkey=SszByteVector{0xa3da1537d6be2d03ac16e619c6d39d7405c53596690ace9cf6520c29235bbba28e788288d9e380253f985b3e5ca538b9}, amount=55954696908}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xe13ad21c124a32088e5f2cfe31ffcae900599b45 does not match validator 393 withdrawal credentials 0xe7c1a6ee1dd08e77d48beef88dcb02a75fe7183d
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x67491854feb0e68a980e499d6df046c51e29f3cf}, validator_pubkey=SszByteVector{0x8de33130da37b8e73d676f4b53b9799109179afd55a431966c9da38d54c024d893f26b4fe8b70f1a0f0c168077869c88}, amount=1053155244}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 353 does not have withdrawal credentials set
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x035879a609f05df740fefa0a034bde1978c4fa73}, validator_pubkey=SszByteVector{0xb818ac1f7c2e41fc2a5a05675f29e0f4002dfd072a256019bb02703200add4bb9e004f385054671ff0e7ff9727061d94}, amount=4112793616}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 312 does not have withdrawal credentials set
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x9ea69d7980415d24ba1119ebbdc5ea6324f11f86}, validator_pubkey=SszByteVector{0xb574e7b1d3e0035172a66ab35a0549e2e474b8086b9252c2770fc2bfbcf526f4a07e4414192d8807ddd144835d02e4ce}, amount=4865558546}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x9ea69d7980415d24ba1119ebbdc5ea6324f11f86 does not match validator 413 withdrawal credentials 0x3504c91b1625cb88e3a57e094ccfbd015eba2264
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x817ff0b3190a6b41c6df4106ed3a4700633fe3b7}, validator_pubkey=SszByteVector{0xa74fb46295a7ba2f570e09c4b8047a5833db7bf9fea68be8401bd455430418fe5485be0b41c49bd369f850dbfd991ce3}, amount=5695657032}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x817ff0b3190a6b41c6df4106ed3a4700633fe3b7 does not match validator 214 withdrawal credentials 0x6230a80d94e0e55e3c3152c949f2f7c4bce071bb
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xfb2bc6a176f3bf3a308521b60881985cb117535d}, validator_pubkey=SszByteVector{0x882dd92e4588f5b64de84e9282a5d01b632f9b7de08dd0b8e7d397c2856bf98698535023d4f4c092c30c4fa3d8ceac0b}, amount=15016077051}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 348 does not have withdrawal credentials set
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xabdcc50f9fda8c46974c712b7fa9b05c8174abc6}, validator_pubkey=SszByteVector{0xb29043a7273d0a2dbc2b747dcf6a5eccbd7ccb44b2d72e985537b117929bc3fd3a99001481327788ad040b4077c47c0d}, amount=8240653526}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xabdcc50f9fda8c46974c712b7fa9b05c8174abc6 does not match validator 30 withdrawal credentials 0x4242424242424242424242424242424242424242
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xbc972a8319ffe689bfa29f38d0e66b5aa55105ca}, validator_pubkey=SszByteVector{0x8341fabc9c113ef266c3f1515fdf341c573db3e411cdef8e26ef525a5f4fdc8618fa214d9c485a85db49c224cbe8c59a}, amount=14419700534}
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xbc972a8319ffe689bfa29f38d0e66b5aa55105ca does not match validator 472 withdrawal credentials 0xe2033b95abeef704513fc51f7d53595dfef4ce5c
-2025-05-30 00:47:01.154+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 8448
-2025-05-30 00:47:01.403+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-05-30 00:47:01.403+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 266 found to be 6
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 528 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 529 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 530 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 531 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 532 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 533 to state
-2025-05-30 00:47:01.415+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 534 to state
-2025-05-30 00:47:01.416+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 535 to state
-2025-05-30 00:47:01.416+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 536 to state
-2025-05-30 00:47:01.416+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 537 to state
-2025-05-30 00:47:01.425+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 2 withdrawal request to process from block at slot 8512
-2025-05-30 00:47:01.425+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x07320b87a9a4eba760b4913d59062c867ff10acc}, validator_pubkey=SszByteVector{0xb9b30c8d8e078077db50d40173aa9ef57bcdd01b40207c5320c42cb0314d700c610cbd6629689fc5c95e990d22773987}, amount=26455388092}
-2025-05-30 00:47:01.426+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 485 does not have withdrawal credentials set
-2025-05-30 00:47:01.426+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x032e4e0c766e75a5387b050c9adf7e245d4ec976}, validator_pubkey=SszByteVector{0xa1555b4e598691b619c576bad04f322fc6fe5898a53865d330097460e035e9d0e9169089a276f15f8977a39f27f9aec3}, amount=25507356626}
-2025-05-30 00:47:01.426+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 233 does not have withdrawal credentials set
-2025-05-30 00:47:01.426+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 1 consolidation requests to process from block at slot 8512
-2025-05-30 00:47:01.426+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
+<pre>2025-05-31 00:45:10.731+00:00 | Test worker | INFO  | AbstractEpochProcessor | Beacon chain is in inactivity leak
+2025-05-31 00:45:10.748+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-05-31 00:45:10.748+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 264 found to be 6
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 512 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 513 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 514 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 515 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 516 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 517 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 518 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 519 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 520 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 521 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 522 to state
+2025-05-31 00:45:10.761+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 523 to state
+2025-05-31 00:45:10.762+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 524 to state
+2025-05-31 00:45:10.762+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 525 to state
+2025-05-31 00:45:10.762+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 526 to state
+2025-05-31 00:45:10.762+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 527 to state
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 4 withdrawal request to process from block at slot 8449
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x40089fa57b01e3c2c1348d72d15de08b8c88802b}, validator_pubkey=SszByteVector{0x815c0c9f90323633f00c1382199b8c8325d66fda9b93e7147f6dee80484c5fc4ef8b4b1ec6c64fab0e23f198beefa9ea}, amount=2304546010}
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 136 does not have withdrawal credentials set
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xf444cc9b28708ca53a667ba73f4d60a9160424c1}, validator_pubkey=SszByteVector{0xafa13f8df0f9f32409fbef213e0c75cc7c5ead19b5d83e8d34288ff4af0014a77073917af0b4a73adac44585a39c6dd9}, amount=27240339484}
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xf444cc9b28708ca53a667ba73f4d60a9160424c1 does not match validator 298 withdrawal credentials 0x9fd6cef056c22a26423f58cd5cc6b70dc62f6ee3
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x8e5149d79521bb2b22190bdf71c0bbe8a9ab0190}, validator_pubkey=SszByteVector{0xb4bc8e6bb1976181e1dcec69afe9be78d31328b89d62bdf8a1b99056731a484cfc4574ad4b925a469be9f500cd334500}, amount=19115348771}
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x8e5149d79521bb2b22190bdf71c0bbe8a9ab0190 does not match validator 282 withdrawal credentials 0x314860e6e6dbb176cc7e56d3a6388c6054e817aa
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xcd090befc5006d3e32e119bbd568fc91a652bfe0}, validator_pubkey=SszByteVector{0xb3069371aff43832e0047b77194efed270b200f86b10f639b925edc61eecee15769dddee816b4615e74e879120607b87}, amount=10346723579}
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 371 does not have withdrawal credentials set
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 1 consolidation requests to process from block at slot 8449
+2025-05-31 00:45:10.772+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
+2025-05-31 00:45:10.891+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-05-31 00:45:10.892+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 266 found to be 6
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 528 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 529 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 530 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 531 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 532 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 533 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 534 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 535 to state
+2025-05-31 00:45:10.902+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 536 to state
+2025-05-31 00:45:10.903+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 537 to state
+2025-05-31 00:45:10.931+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 3 withdrawal request to process from block at slot 8512
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xb2fb76b5ce36022b909282b484088270aef205c5}, validator_pubkey=SszByteVector{0xb0675bcee7652a66c92dc254157eef380726c396b1c2f5b4e1905fff912003b7e790f31fb5542df57f1f465e0915e7a0}, amount=2846893792}
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xb2fb76b5ce36022b909282b484088270aef205c5 does not match validator 73 withdrawal credentials 0x97b579c7e6a7b23720b5db9b7fa700330339466f
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xc69f1b1fe876ce1deebd217f5ed1de11fa3681a9}, validator_pubkey=SszByteVector{0x8eb7dd3ccc06165c3862d4e32d7fd09a383e0226fa06909ddf4e693802fd5c4324407d86c32df1fdc4438853368db6ce}, amount=16729108153}
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xc69f1b1fe876ce1deebd217f5ed1de11fa3681a9 does not match validator 197 withdrawal credentials 0xfba5503cdb67b35c1a9897ebdb5b1b2f9b970cce
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xc707e1a99bcd84727ed14cdfb99c8ce23ae67591}, validator_pubkey=SszByteVector{0x8141d6e8a4885c937894dd229bd8a876ef590c1e9324a3a51fd1b276cb0ad1ab0455757f540c6746a603a290bd947fdd}, amount=30974176599}
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xc707e1a99bcd84727ed14cdfb99c8ce23ae67591 does not match validator 454 withdrawal credentials 0x56d038a2d492e30beb83722d177f1eebee84da5f
+2025-05-31 00:45:10.932+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 8512
 </pre>
 </span>
 </div>
@@ -160,7 +150,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 30, 2025, 12:48:37 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at May 31, 2025, 12:46:50 AM</p>
 </div>
 </div>
 </body>
