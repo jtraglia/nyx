@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.056s</div>
+<div class="counter">0.036s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_incorrect_proposer_index_sig_from_expected_proposer</td>
 <td class="success">testInvalidIncorrectProposerIndexSigFromExpectedProposer()</td>
-<td class="success">0.056s</td>
+<td class="success">0.036s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,18 +89,18 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-06-02 00:42:35.332+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that proposer index is the correct index
-2025-06-02 00:42:35.332+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x50b8be4b406a3dc9767c2e1997ed7acd98a0decee8e52c9506bda808e8c4d6d1)
+<pre>2025-06-03 00:40:48.308+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that proposer index is the correct index
+2025-06-03 00:40:48.308+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x50b8be4b406a3dc9767c2e1997ed7acd98a0decee8e52c9506bda808e8c4d6d1)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_block_header: Verify that proposer index is the correct index
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:882) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:356) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlock(AbstractBlockProcessor.java:340) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.altair.block.BlockProcessorAltair.processBlock(BlockProcessorAltair.java:128) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:882) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:356) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlock(AbstractBlockProcessor.java:340) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.altair.block.BlockProcessorAltair.processBlock(BlockProcessorAltair.java:128) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -195,8 +195,8 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that proposer index is the correct index
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:145) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:361) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:875) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:361) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:875) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
 	... 100 more
 </pre>
 </span>
@@ -209,7 +209,7 @@ Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 2, 2025, 12:50:14 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 3, 2025, 12:48:31 AM</p>
 </div>
 </div>
 </body>

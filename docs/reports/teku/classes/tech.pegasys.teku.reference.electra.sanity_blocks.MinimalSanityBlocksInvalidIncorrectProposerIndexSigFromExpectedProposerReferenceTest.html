@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.008s</div>
+<div class="counter">0.006s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_incorrect_proposer_index_sig_from_expected_proposer</td>
 <td class="success">testInvalidIncorrectProposerIndexSigFromExpectedProposer()</td>
-<td class="success">0.008s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,17 +89,17 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-06-02 00:47:12.660+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that proposer index is the correct index
-2025-06-02 00:47:12.660+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x24db3b2b423fa8d65f06df5def569739c74757f0a68ea3e3477ce849f34bc626)
+<pre>2025-06-03 00:45:23.427+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that proposer index is the correct index
+2025-06-03 00:45:23.427+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x24db3b2b423fa8d65f06df5def569739c74757f0a68ea3e3477ce849f34bc626)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_block_header: Verify that proposer index is the correct index
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:882) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:356) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:98) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:882) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:356) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:98) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -194,8 +194,8 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that proposer index is the correct index
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:145) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:361) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:875) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:361) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:875) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
 	... 99 more
 </pre>
 </span>
@@ -208,7 +208,7 @@ Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 2, 2025, 12:50:17 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 3, 2025, 12:48:34 AM</p>
 </div>
 </div>
 </body>

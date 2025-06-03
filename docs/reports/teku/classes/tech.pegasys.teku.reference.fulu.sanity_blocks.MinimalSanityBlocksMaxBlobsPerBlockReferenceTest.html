@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.014s</div>
+<div class="counter">0.015s</div>
 <p>duration</p>
 </div>
 </td>
@@ -198,7 +198,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">max_blobs_per_block</td>
 <td class="failures">testMaxBlobsPerBlock()</td>
-<td class="failures">0.014s</td>
+<td class="failures">0.015s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -206,20 +206,20 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-06-02 00:48:58.013+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-06-02 00:48:58.013+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
-2025-06-02 00:48:58.013+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x958126d5b09dbd8885cb5370a6112e477f8034bb056ec09fce9ca3856acaefb2)
+<pre>2025-06-03 00:47:20.060+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-06-03 00:47:20.060+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 0 found to be 6
+2025-06-03 00:47:20.060+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x7cb3f94dc938196b3cdb59675bd1a576aa1e9b3c1b8d6f062e1a6fc6c1dbf354)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Number of kzg commitments in block exceeds max blobs per block
-	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:86) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:125) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:115) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:106) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:100) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+8-g1a45cebda7]
+	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:86) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:125) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:115) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:106) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:100) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:328) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+10-g8e89065090]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
 	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
@@ -318,7 +318,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 2, 2025, 12:50:18 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 3, 2025, 12:48:35 AM</p>
 </div>
 </div>
 </body>
