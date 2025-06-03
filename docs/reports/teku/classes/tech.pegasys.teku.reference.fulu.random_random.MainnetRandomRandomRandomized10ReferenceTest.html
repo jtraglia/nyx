@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.399s</div>
+<div class="counter">0.025s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,113 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testRandomized10()"></a>
+<h3 class="failures">randomized_10</h3>
+<span class="code">
+<pre>tech.pegasys.teku.infrastructure.ssz.sos.SszDeserializeException: First variable element offset doesn't match the end of fixed part
+	at app//tech.pegasys.teku.infrastructure.ssz.schema.impl.AbstractSszContainerSchema.sszDeserializeTree(AbstractSszContainerSchema.java:304)
+	at app//tech.pegasys.teku.infrastructure.ssz.schema.SszSchema.sszDeserialize(SszSchema.java:80)
+	at app//tech.pegasys.teku.infrastructure.ssz.schema.SszSchema.sszDeserialize(SszSchema.java:84)
+	at app//tech.pegasys.teku.reference.TestDataUtils.loadSsz(TestDataUtils.java:58)
+	at app//tech.pegasys.teku.reference.TestDataUtils.loadSsz(TestDataUtils.java:49)
+	at app//tech.pegasys.teku.reference.TestDataUtils.loadStateFromSsz(TestDataUtils.java:78)
+	at app//tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:54)
+	at app//tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at app//tech.pegasys.teku.reference.fulu.random_random.MainnetRandomRandomRandomized10ReferenceTest.testRandomized10(MainnetRandomRandomRandomized10ReferenceTest.java:28)
+	at java.base@21.0.7/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.7/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -79,109 +179,12 @@
 </tr>
 </thead>
 <tr>
-<td class="success">randomized_10</td>
-<td class="success">testRandomized10()</td>
-<td class="success">0.399s</td>
-<td class="success">passed</td>
+<td class="failures">randomized_10</td>
+<td class="failures">testRandomized10()</td>
+<td class="failures">0.025s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>2025-06-03 00:46:50.507+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-06-03 00:46:50.507+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 263 found to be 6
-2025-06-03 00:46:50.525+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 512 to state
-2025-06-03 00:46:50.525+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 513 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 514 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 515 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 516 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 517 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 518 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 519 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 520 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 521 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 522 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 523 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 524 to state
-2025-06-03 00:46:50.526+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 525 to state
-2025-06-03 00:46:50.527+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 526 to state
-2025-06-03 00:46:50.527+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 527 to state
-2025-06-03 00:46:50.531+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 10 withdrawal request to process from block at slot 8447
-2025-06-03 00:46:50.531+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x603d0e05b502464c2d3746a82314598011eb2aa4}, validator_pubkey=SszByteVector{0x9929f70ba8c05847beb74c26dd03b4ec04ca8895bc6d9f31d70bd4231329c2f35799d4404a64f737e918db55eec72d25}, amount=24288213718}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x603d0e05b502464c2d3746a82314598011eb2aa4 does not match validator 193 withdrawal credentials 0xfc6b3ec9e24e86d60b6cb4526becf211de25b412
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x0de63b5ffb5fdfe4cd3b4c3d4ac359c6f7355ee0}, validator_pubkey=SszByteVector{0x81e8619e4ed244053a4d44272fe5333ea8c0f6ccec5973c4cfc065b2a81f645f575494cbe7a3dc9e173da2fb940fe1b4}, amount=4186457833}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 260 does not have withdrawal credentials set
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x250bd45e7409628db41d6db7c746dc23163953f8}, validator_pubkey=SszByteVector{0x85ae0ef8d9ca996dbfebb49fa6ec7a1a95dff2d280b24f97c613b8e00b389e580f0f08aa5a9d5e4816a6532aaebc23bf}, amount=1527627596}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x250bd45e7409628db41d6db7c746dc23163953f8 does not match validator 162 withdrawal credentials 0x4242424242424242424242424242424242424242
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xad56d631cfa78ded9318d62c9d51e4f0d1ae9ee7}, validator_pubkey=SszByteVector{0x8025cdadf2afc5906b2602574a799f4089d90f36d73f94c1cf317cfc1a207c57f232bca6057924dd34cff5bde87f1930}, amount=28416341242}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 255 does not have withdrawal credentials set
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xa88d6c8f05a8685cc67cf1d319128a35b95f75e6}, validator_pubkey=SszByteVector{0xa72841987e4f219d54f2b6a9eac5fe6e78704644753c3579e776a3691bc123743f8c63770ed0f72a71e9e964dbf58f43}, amount=18620064594}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xa88d6c8f05a8685cc67cf1d319128a35b95f75e6 does not match validator 31 withdrawal credentials 0x69955e64cc8dabe39a0e6302db278f9a76e5cbfc
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x5d248ae8feea56716a67a102c82e7188ab261227}, validator_pubkey=SszByteVector{0x8141d6e8a4885c937894dd229bd8a876ef590c1e9324a3a51fd1b276cb0ad1ab0455757f540c6746a603a290bd947fdd}, amount=13403860044}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x5d248ae8feea56716a67a102c82e7188ab261227 does not match validator 454 withdrawal credentials 0x56d038a2d492e30beb83722d177f1eebee84da5f
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x463488082fc8e4b76321c371a26eea5fefc372c4}, validator_pubkey=SszByteVector{0xa8e1bc8a6493fc7ed293f44c99b28d31561c4818984891e5817c92d270c9408241ceaca44ab079409d13cc0df9e2e187}, amount=5614347810}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 118 does not have withdrawal credentials set
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xb1de03419835eb5d8be941e52db1531facbf0c04}, validator_pubkey=SszByteVector{0xb88b54fe7990227c6d6baa95d668d2217626b088579ddb9773faf4e8f9386108c78ddd084a91e69e3bdb8a90456030c6}, amount=39544711160}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xb1de03419835eb5d8be941e52db1531facbf0c04 does not match validator 146 withdrawal credentials 0xeae5537527e4d6f6417e4338a4d3cb751c375554
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x9e75fe0a497711fb420e8d3fbb00242780baa6df}, validator_pubkey=SszByteVector{0xb4e374888e64fe04f49ea9a6410aadc95ebb41b3a22f96ba97d74dc4b2a335a9ccc163b278154d1b6fd59d12a68159c2}, amount=7952698623}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x9e75fe0a497711fb420e8d3fbb00242780baa6df does not match validator 308 withdrawal credentials 0x09ad9a5cd3f646cfbbdd9d1e15b1c6deff694187
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xc43f1299d705b09bae2f6891a9494256f5598255}, validator_pubkey=SszByteVector{0x90239bd66450f4cc08a38402adc026444230fd893b752c7dfc4699539044a1fd39ba133cbdc330b7fc19538e224725cb}, amount=19872629519}
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xc43f1299d705b09bae2f6891a9494256f5598255 does not match validator 249 withdrawal credentials 0x81aeeab84b24f951b65176255d754504076d4cb9
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 2 consolidation requests to process from block at slot 8447
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
-2025-06-03 00:46:50.532+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
-2025-06-03 00:46:50.613+00:00 | Test worker | INFO  | AbstractEpochProcessor | Beacon chain is in inactivity leak
-2025-06-03 00:46:50.642+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 16, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-06-03 00:46:50.642+00:00 | Test worker | DEBUG | MiscHelpersFulu | Max blobs at epoch 264 found to be 6
-2025-06-03 00:46:50.654+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 528 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 529 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 530 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 531 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 532 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 533 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 534 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 535 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 536 to state
-2025-06-03 00:46:50.655+00:00 | Test worker | DEBUG | BeaconStateMutators | Adding new validator with index 537 to state
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 16 withdrawal request to process from block at slot 8479
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x40bcd2ef30a454f9f9556a33ba303fc8771fdbc3}, validator_pubkey=SszByteVector{0x819c6d8b2fdaa30c79fdccf6bbf00152e3fa1cf2a76ff130603756da5cb28b289cf5680c7e0413f01a1bebb3a3376bef}, amount=34612619176}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x40bcd2ef30a454f9f9556a33ba303fc8771fdbc3 does not match validator 497 withdrawal credentials 0x888514d3ed36a06002436a662a28196898afeeeb
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x3fec952190f2d572516b55e6e58cf3a893996e04}, validator_pubkey=SszByteVector{0x99da0b920d8e33c37a32f48d8915552bd83bdcd0b15ccbbba204885daeae329332e4a2fbcc41e112fce16b1500d46624}, amount=9486825744}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 416 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xd95569bc487178a9c824ea1131f14cdee0ed02b3}, validator_pubkey=SszByteVector{0xab45f95c012229c112bf748eac77f140e7b70d16defed0043f9d733c9a6ee058b12174a9531c59582c1f91f11fd62fe7}, amount=10829964447}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 429 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xdd4296ec0e0bd8d16e5c09ac76308c1d4ed43922}, validator_pubkey=SszByteVector{0x8cf35a4ce5cdb8ffdca361452c01df226ac5c8c596196511d29a02f919e020f244758e9db4ac4d0951a70e20cdf5fb68}, amount=3683391262}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 336 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xd5fdf1eb3a6b22bfedf588dc4934f2f21b867818}, validator_pubkey=SszByteVector{0xab452f30ab849acfe7f67a13331081873ae421a4a9b538a91ee91f970607204966c16c61c137c36c72faddd2202ab6e0}, amount=9586166967}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 256 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x7136d7c16f49be4a63fcf7736f97ddd9502f3156}, validator_pubkey=SszByteVector{0xa468d81de4d3a3d31963a32f6cc7a5cb816efc49a470f18bd51be1c89c9e7ae043803ef9ed6710b490c8b25a7ad8af79}, amount=14003344076}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 484 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x95c6f37c2d533fb213c0a4257a354ca888a07d3a}, validator_pubkey=SszByteVector{0x84700adeeda73adb2109638e3ae5013a551fc45a143577c57f228aa871d9454812d9ee4b516e115deb57d7534b806c0c}, amount=14890502986}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x95c6f37c2d533fb213c0a4257a354ca888a07d3a does not match validator 264 withdrawal credentials 0x5cdb0c945a569b4847a29e0722e912db2af6c283
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x727f7535ad397c603e8184b83d082f3ca04c5529}, validator_pubkey=SszByteVector{0x8beba9e09f24162ba7206e013114dbb33046358689510e7a44f6c7608ec1a6991d476fed04e7e5c8d260f3a715789cf8}, amount=14385429986}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 440 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xfd701599086c1ea6634a0bdacd554b08599ca764}, validator_pubkey=SszByteVector{0x98536b398e5b7f1276f7cb426fba0ec2b8b0b64fba7785ea528bebed6ae56c0dee59f5d295fa4c97a1c621ecacfc4ec3}, amount=45374505206}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xfd701599086c1ea6634a0bdacd554b08599ca764 does not match validator 58 withdrawal credentials 0x47774725627796c4ee7ad6315deba74edfbaeff1
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x354a5ff56188ba63ab4bc5ff41a9190d4583c760}, validator_pubkey=SszByteVector{0x9662efa1885ec1390fff45523af7f04ade36e4118ab6b8ecb43f4b70b18f4c653f31da51117656ec68794036b9fa48d5}, amount=21548576024}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x354a5ff56188ba63ab4bc5ff41a9190d4583c760 does not match validator 501 withdrawal credentials 0x4190035991c5b7a11a78289ff92e05510eb65140
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x81bb27b451c8bb570189e850804e5885b3960d9d}, validator_pubkey=SszByteVector{0xb91ab4aed4387ed938900552662885cdb648deaf73e6fca210df81c1703eb0a9cbed00cecf5ecf28337b4336830c30c8}, amount=4197791947}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 132 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xf38208c8aeaffee888c54a7ff8d76f1886acd823}, validator_pubkey=SszByteVector{0xb66cce78824d9703c91d1eaf87f1f8a4d7eec2d936695c4d58940a4fba416df3f0b1f3cf0bba5737063b7e9da4c12b60}, amount=18354347731}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xf38208c8aeaffee888c54a7ff8d76f1886acd823 does not match validator 258 withdrawal credentials 0x22f25b9eef7c7f1a6c06d800c625283d6422bf51
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x510dab689ca641bc9c95f219765cba4a87e9279a}, validator_pubkey=SszByteVector{0x968e2f8230cdc18ab49b4133f248c06fdfddebbc16c20cebf056546db383e8d0960f6f5a17aec67706b6b35e447eec76}, amount=23942062986}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0x510dab689ca641bc9c95f219765cba4a87e9279a does not match validator 411 withdrawal credentials 0x6845b25eee558201d884a674342a09e197739ca6
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x98b41620370c2c3509f2103b8096802128bb9349}, validator_pubkey=SszByteVector{0x8aea7d8eb22063bcfe882e2b7efc0b3713e1a48dd8343bed523b1ab4546114be84d00f896d33c605d1f67456e8e2ed93}, amount=1092921621}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: validator index 50 does not have withdrawal credentials set
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xcb2739634dc34fbb734bb83852faab98c4e0b1d8}, validator_pubkey=SszByteVector{0x9725ff209f8243ab7aceda34f117b4c402e963cc2a3a85d890f6d6d3c0c96e0b0acbed787fe4fa7b37197c049ab307ea}, amount=24539073519}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xcb2739634dc34fbb734bb83852faab98c4e0b1d8 does not match validator 173 withdrawal credentials 0xcee4761b0017482fa373c6d0b7b49883ce98fa4b
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0xed71d767b129708bf4ce3861521b99b28e7e1c32}, validator_pubkey=SszByteVector{0xb8fe853a48b89e3444b0c400eb30065a364b0cb4bd9751c6684e7e7c1402e323a70d03415bcf181f2a8d3c91120cf846}, amount=6665673746}
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: WithdrawalRequest source_address 0xed71d767b129708bf4ce3861521b99b28e7e1c32 does not match validator 387 withdrawal credentials 0xef7f15d77ed5b363264b5794918307aa4e194075
-2025-06-03 00:46:50.686+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 2 consolidation requests to process from block at slot 8479
-2025-06-03 00:46:50.687+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
-2025-06-03 00:46:50.687+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: not enough consolidation churn limit available
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -191,7 +194,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 3, 2025, 12:48:35 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 3, 2025, 4:21:59 PM</p>
 </div>
 </div>
 </body>
