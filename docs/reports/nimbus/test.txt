@@ -214,6 +214,8 @@ Tip of the day: this will probably build faster if you use "make -j4 ...".
 [92mBuilding:[39m build/test_libnimbus_lc
 [92mBuild completed successfully:[39m build/test_libnimbus_lc
 [92mBuilding:[39m build/all_tests
+syncio.nim(157)          raiseEIO
+Error: unhandled exception: errno: 32 `Broken pipe` [IOError]
 /home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(560, 13) template/generic instantiation of `toValidationError` from here
 /home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(542, 17) Warning: implicit conversion to 'cstring' from a non-const location: $error(r); this will become a compile time error in the future [CStringConv]
 /home/runner/work/nyx/nyx/nimbus-eth2/beacon_chain/gossip_processing/light_client_processor.nim(575, 13) template/generic instantiation of `toValidationError` from here
@@ -224,12 +226,12 @@ Downloading consensus spec test vectors
 Running consensus_spec_tests_minimal --xml:build/consensus_spec_tests_minimal.xml --console
 
 EF - Phase 0 - Operations - Attestation  [Preset: minimal] ......................................... (0.04s)
-EF - Phase 0 - Operations - Attester Slashing  [Preset: minimal] .............................. (0.05s)
+EF - Phase 0 - Operations - Attester Slashing  [Preset: minimal] .............................. (0.08s)
 EF - Phase 0 - Operations - Block Header  [Preset: minimal] ...... (0.00s)
-EF - Phase 0 - Operations - Deposit  [Preset: minimal] ................. (0.06s)
+EF - Phase 0 - Operations - Deposit  [Preset: minimal] ................. (0.11s)
 EF - Phase 0 - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Phase 0 - Operations - Voluntary Exit  [Preset: minimal] .......... (0.01s)
-EF - Phase 0 - SSZ consensus objects  [Preset: minimal] ........................... (0.28s)
+EF - Phase 0 - SSZ consensus objects  [Preset: minimal] ........................... (0.20s)
 EF - Phase 0 - Rewards  [Preset: minimal] ................................................. (0.01s)
 EF - Phase 0 - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Phase 0 - Epoch Processing - Rewards and penalties [Preset: minimal] ................... (0.01s)
@@ -241,7 +243,7 @@ EF - Phase 0 - Epoch Processing - Slashings reset [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - RANDAO mixes reset [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - Historical roots update [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - Participation record updates [Preset: minimal] . (0.00s)
-EF - Electra - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.19s)
+EF - Electra - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
 EF - Deneb - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
 EF - Capella - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
 EF - Altair - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
@@ -252,7 +254,7 @@ EF - Altair - Operations - Deposit  [Preset: minimal] ................... (0.02s
 EF - Altair - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Altair - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
 EF - Altair - Operations - Voluntary Exit  [Preset: minimal] .......... (0.01s)
-EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.23s)
+EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.22s)
 EF - Altair - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Altair - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Altair - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -319,7 +321,7 @@ EF - Deneb - Operations - BLS to execution change  [Preset: minimal] ...........
 EF - Deneb - Operations - Deposit  [Preset: minimal] ..................... (0.02s)
 EF - Deneb - Operations - Execution Payload  [Preset: minimal] ........................................ (0.01s)
 EF - Deneb - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Deneb - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
 EF - Deneb - Operations - Withdrawals  [Preset: minimal] ...................................................... (0.01s)
 EF - Deneb - SSZ consensus objects  [Preset: minimal] ................................................ (0.35s)
@@ -349,7 +351,7 @@ EF - Electra - Operations - Proposer Slashing  [Preset: minimal] ...............
 EF - Electra - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
 EF - Electra - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.02s)
 EF - Electra - Operations - Withdrawals  [Preset: minimal] ................................................................................. (0.02s)
-EF - Electra - SSZ consensus objects  [Preset: minimal] ........................................................ (0.40s)
+EF - Electra - SSZ consensus objects  [Preset: minimal] ........................................................ (0.39s)
 EF - Electra - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Electra - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Electra - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -381,40 +383,40 @@ EF - Fulu - Operations - Attestation  [Preset: minimal] Traceback (most recent c
 SSZ load issue for file "/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-eth2-scenarios/tests-nightly/minimal/fulu/operations/attestation/pyspec_tests/incorrect_target_included_at_epoch_delay/pre.ssz_snappy"
 Serialisation error while processing /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-eth2-scenarios/tests-nightly/minimal/fulu/operations/attestation/pyspec_tests/incorrect_target_included_at_epoch_delay/pre.ssz_snappy:SSZ BeaconState: object dynamic portion starts at invalid offset
 
-[Summary] 2391 tests run (4.05s): 2391 OK, 0 FAILED, 0 SKIPPED
+[Summary] 2391 tests run (4.02s): 2391 OK, 0 FAILED, 0 SKIPPED
 
 consensus_spec_tests_minimal --xml:build/consensus_spec_tests_minimal.xml --console failed; Last 5000 lines from the log:
-{"lvl":"TRC","ts":"2025-06-06 01:15:29.819+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:29.866+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:29.868+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:29.869+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.558+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.565+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.569+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.571+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.571+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.991+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:31.996+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.000+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.002+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.003+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.010+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.492+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.497+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.501+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.503+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.503+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:32.511+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.059+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.065+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.069+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.070+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.071+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.078+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.734+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.739+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.743+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.745+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.745+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-06-06 01:15:33.753+00:00","msg":"Skipping deposit with invalid signature","tid":28358,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:27.579+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:27.627+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:27.629+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:27.629+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.256+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.263+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.267+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.268+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.269+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.686+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.691+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.695+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.697+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.697+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:29.705+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.181+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.187+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.191+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.192+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.193+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.200+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.743+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.748+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.752+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.754+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.755+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:30.762+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.411+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.417+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.421+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.422+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.423+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-06-07 01:12:31.431+00:00","msg":"Skipping deposit with invalid signature","tid":28363,"file":"state_transition_block.nim:337","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
 make: *** [Makefile:389: test] Error 1
