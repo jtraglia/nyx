@@ -89,20 +89,20 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-06-18 00:47:39.075+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-06-18 00:47:39.076+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_operations: Verify that outstanding deposits are processed up to the maximum number of deposits
-2025-06-18 00:47:39.076+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xaf25b33839a73cb9f6e7b0a0b7c83896fa40ec2db624599b5944e32c3d30a13c)
+<pre>2025-06-19 00:49:13.628+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-06-19 00:49:13.629+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_operations: Verify that outstanding deposits are processed up to the maximum number of deposits
+2025-06-19 00:49:13.629+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xaf25b33839a73cb9f6e7b0a0b7c83896fa40ec2db624599b5944e32c3d30a13c)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_operations: Verify that outstanding deposits are processed up to the maximum number of deposits
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.processOperationsNoValidation(BlockProcessorElectra.java:160) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:812) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.processOperationsNoValidation(BlockProcessorElectra.java:160) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:809) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -197,9 +197,9 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_operations: Verify that outstanding deposits are processed up to the maximum number of deposits
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:145) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.verifyOutstandingDepositsAreProcessed(BlockProcessorElectra.java:191) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:446) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.5.0+41-g25bfce9c44]
+	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.verifyOutstandingDepositsAreProcessed(BlockProcessorElectra.java:191) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:446) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.5.0+45-gaacaf14dfe]
 	... 101 more
 </pre>
 </span>
@@ -212,7 +212,7 @@ Caused by: java.lang.IllegalArgumentException: process_operations: Verify that o
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 18, 2025, 12:49:21 AM</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at Jun 19, 2025, 12:50:44 AM</p>
 </div>
 </div>
 </body>
