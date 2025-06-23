@@ -40,6 +40,7 @@ jobs:
         start=$(date +%s.%N)
         if bazel test //... \
           --test_tag_filters=spectest \
+          --test_timeout=1800 \
           --repo_env=CONSENSUS_SPEC_TESTS_VERSION=nightly \
           --spawn_strategy=standalone \
           --nobuild_runfile_links \
