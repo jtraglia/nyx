@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.006s</div>
+<div class="counter">0.009s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_withdrawal_fail_second_block_payload_isnt_compatible</td>
 <td class="success">testInvalidWithdrawalFailSecondBlockPayloadIsntCompatible()</td>
-<td class="success">0.006s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,17 +89,17 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-07-22 00:44:12.233+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that the parent matches
-2025-07-22 00:44:12.233+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 3 (0xa6f8d1232faf7b0612eadf4a822ae6c5327ac938304b297587d464370197d87b)
+<pre>2025-07-23 00:44:35.265+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_block_header: Verify that the parent matches
+2025-07-23 00:44:35.265+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 3 (0xa6f8d1232faf7b0612eadf4a822ae6c5327ac938304b297587d464370197d87b)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_block_header: Verify that the parent matches
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:357) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:98) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:818) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processBlockHeader(AbstractBlockProcessor.java:357) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:98) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:818) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.3.jar:?]
@@ -201,8 +201,8 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that the parent matches
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:145) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:366) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.0+19-gb825013b4f]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processBlockHeader$8(AbstractBlockProcessor.java:366) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.0+24-gdb9688f499]
 	... 106 more
 </pre>
 </span>
@@ -215,7 +215,7 @@ Caused by: java.lang.IllegalArgumentException: process_block_header: Verify that
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Jul 22, 2025, 12:50:37 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Jul 23, 2025, 12:51:10 AM</p>
 </div>
 </div>
 </body>
