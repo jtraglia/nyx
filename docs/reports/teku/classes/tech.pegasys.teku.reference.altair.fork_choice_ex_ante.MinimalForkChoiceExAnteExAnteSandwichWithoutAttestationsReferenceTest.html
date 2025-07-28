@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.116s</div>
+<div class="counter">0.088s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">ex_ante_sandwich_without_attestations</td>
 <td class="success">testExAnteSandwichWithoutAttestations()</td>
-<td class="success">0.116s</td>
+<td class="success">0.088s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,45 +89,45 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-07-27 00:44:09.526+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
-2025-07-27 00:44:09.526+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
-2025-07-27 00:44:09.530+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
-2025-07-27 00:44:09.537+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=0}
-2025-07-27 00:44:09.537+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 0 Epoch: 0
-2025-07-27 00:44:09.537+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=0, head={slot=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-07-27 00:44:09.540+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=6}
-2025-07-27 00:44:09.542+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 1 Epoch: 0
-2025-07-27 00:44:09.542+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=6, head={slot=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-07-27 00:44:09.545+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xcc32911aa541e9edc858bc9e62dfeb34bff074b4012c79e71efc8b8367228796, valid=true}
-2025-07-27 00:44:09.546+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380 at slot 1 with parent 0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c
-2025-07-27 00:44:09.546+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380:1 arrived at 0 ms into slot 1, timeliness limit is 2000 ms. result: true
-2025-07-27 00:44:09.554+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 1, block_root: 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.554+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.559+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=6, head={slot=1, root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}}
-2025-07-27 00:44:09.559+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=18}
-2025-07-27 00:44:09.560+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 3 Epoch: 0
-2025-07-27 00:44:09.560+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=1, root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-07-27 00:44:09.560+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0x18f1c29f2d3c5216e2889204179c2d5fd9975186996bcb54f3b6a08c6d4dff45, valid=true}
-2025-07-27 00:44:09.561+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2 at slot 3 with parent 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380
-2025-07-27 00:44:09.561+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2:3 arrived at 0 ms into slot 3, timeliness limit is 2000 ms. result: true
-2025-07-27 00:44:09.571+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 3, block_root: 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.571+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.572+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=3, root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}}
-2025-07-27 00:44:09.576+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0x6a56de671a0c45f6a075c0a89c76604e0272078c13697777940e7678fcbe8481, valid=true}
-2025-07-27 00:44:09.577+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c at slot 2 with parent 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380
-2025-07-27 00:44:09.577+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c:2 is before computed slot 3, timeliness set to false.
-2025-07-27 00:44:09.585+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 2, block_root: 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.588+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.589+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=3, root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}}
-2025-07-27 00:44:09.590+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=24}
-2025-07-27 00:44:09.590+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 4 Epoch: 0
-2025-07-27 00:44:09.590+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=2, root=0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
-2025-07-27 00:44:09.591+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xca72051882c26b71af0cc957bb0340608685d7c88e73e582a47c995ddcd1a8df, valid=true}
-2025-07-27 00:44:09.593+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230 at slot 4 with parent 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c
-2025-07-27 00:44:09.593+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230:4 arrived at 0 ms into slot 4, timeliness limit is 2000 ms. result: true
-2025-07-27 00:44:09.600+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 4, block_root: 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.600+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
-2025-07-27 00:44:09.602+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=4, root=0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230}}
+<pre>2025-07-28 00:44:07.035+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
+2025-07-28 00:44:07.037+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
+2025-07-28 00:44:07.039+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
+2025-07-28 00:44:07.042+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=0}
+2025-07-28 00:44:07.042+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 0 Epoch: 0
+2025-07-28 00:44:07.042+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=0, head={slot=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-07-28 00:44:07.043+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=6}
+2025-07-28 00:44:07.044+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 1 Epoch: 0
+2025-07-28 00:44:07.045+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=6, head={slot=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-07-28 00:44:07.045+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xcc32911aa541e9edc858bc9e62dfeb34bff074b4012c79e71efc8b8367228796, valid=true}
+2025-07-28 00:44:07.046+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380 at slot 1 with parent 0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c
+2025-07-28 00:44:07.047+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380:1 arrived at 0 ms into slot 1, timeliness limit is 2000 ms. result: true
+2025-07-28 00:44:07.052+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 1, block_root: 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.053+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.054+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=6, head={slot=1, root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}}
+2025-07-28 00:44:07.056+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=18}
+2025-07-28 00:44:07.057+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 3 Epoch: 0
+2025-07-28 00:44:07.057+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=1, root=0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-07-28 00:44:07.057+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0x18f1c29f2d3c5216e2889204179c2d5fd9975186996bcb54f3b6a08c6d4dff45, valid=true}
+2025-07-28 00:44:07.058+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2 at slot 3 with parent 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380
+2025-07-28 00:44:07.058+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2:3 arrived at 0 ms into slot 3, timeliness limit is 2000 ms. result: true
+2025-07-28 00:44:07.063+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 3, block_root: 0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.063+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.064+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=3, root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}}
+2025-07-28 00:44:07.065+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0x6a56de671a0c45f6a075c0a89c76604e0272078c13697777940e7678fcbe8481, valid=true}
+2025-07-28 00:44:07.066+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c at slot 2 with parent 0xd8073ffdd11c559cb3d12141c5a5253b92dcf6d22deb5316704dba72313e1380
+2025-07-28 00:44:07.066+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c:2 is before computed slot 3, timeliness set to false.
+2025-07-28 00:44:07.075+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 2, block_root: 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.075+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.076+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=18, head={slot=3, root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x72c539f41a700f2dc81199693fa9c1d3bd32a2c10cf254e515d2437629118dc2}}
+2025-07-28 00:44:07.077+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {tick=24}
+2025-07-28 00:44:07.077+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Current slot: 4 Epoch: 0
+2025-07-28 00:44:07.077+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=2, root=0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0x0000000000000000000000000000000000000000000000000000000000000000}}
+2025-07-28 00:44:07.078+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {block=block_0xca72051882c26b71af0cc957bb0340608685d7c88e73e582a47c995ddcd1a8df, valid=true}
+2025-07-28 00:44:07.079+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Importing block 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230 at slot 4 with parent 0xea3c8ed996989515ff6aec481cafee5e915f3e0752d519c62279e3eef324e08c
+2025-07-28 00:44:07.079+00:00 | Test worker | DEBUG | LateBlockReorgLogic | Block 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230:4 arrived at 0 ms into slot 4, timeliness limit is 2000 ms. result: true
+2025-07-28 00:44:07.090+00:00 | Test worker | DEBUG | ForkChoice | Availability check for slot: 4, block_root: 0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230 result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.090+00:00 | Test worker | DEBUG | ForkChoice | Sidecars validation result: DataAndValidationResult{validationResult=NOT_REQUIRED, dataSize=0, cause=Optional.empty}
+2025-07-28 00:44:07.092+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={time=24, head={slot=4, root=0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230}, justified_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, finalized_checkpoint={epoch=0, root=0x5d73a3ff836ece90d81ab395b970c56ec848e5d9fc6438d801aca923edf74c7c}, proposer_boost_root=0xf3b481bf14a230cdca36157dd4627fd9dcc950d82ce81f101e1ded3280b82230}}
 </pre>
 </span>
 </div>
@@ -139,7 +139,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Jul 27, 2025, 12:52:56 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Jul 28, 2025, 12:52:52 AM</p>
 </div>
 </div>
 </body>
