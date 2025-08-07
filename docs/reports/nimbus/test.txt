@@ -134,7 +134,7 @@ Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libbacktrace/vend
 Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libbacktrace/vendor/whereami'...
 Submodule path 'vendor/nim-libbacktrace/vendor/libbacktrace-upstream': checked out '793921876c981ce49759114d7bb89bb89b2d3a2d'
 Submodule path 'vendor/nim-libbacktrace/vendor/whereami': checked out 'dcb52a058dc14530ba9ae05e4339bd3ddfae0e0e'
-Submodule path 'vendor/nim-libp2p': checked out 'd803352bd63fe2215e149a5f72de98229cfb7867'
+Submodule path 'vendor/nim-libp2p': checked out 'b517b692dfcdf39943963e60e39c7cff1fc6f289'
 Submodule path 'vendor/nim-metrics': checked out '11d0cddfb0e711aa2a8c75d1892ae24a64c299fc'
 Submodule path 'vendor/nim-minilru': checked out '0c4b2bce959591f0a862e9b541ba43c6d0cf3476'
 Submodule path 'vendor/nim-nat-traversal': checked out '981821197e839dc0544fe49c58e0da3f8a6104bf'
@@ -151,7 +151,7 @@ Submodule path 'vendor/nim-secp256k1': checked out 'f808ed5e7a7bfc42204ec7830f14
 Submodule 'secp256k1_wrapper/secp256k1' (https://github.com/bitcoin-core/secp256k1.git) registered for path 'vendor/nim-secp256k1/vendor/secp256k1'
 Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-secp256k1/vendor/secp256k1'...
 Submodule path 'vendor/nim-secp256k1/vendor/secp256k1': checked out '0cdc758a56360bf58a851fe91085a327ec97685a'
-Submodule path 'vendor/nim-serialization': checked out '0ac7a86fc69d50a9e4c3bf29075515646e1f04d9'
+Submodule path 'vendor/nim-serialization': checked out '12ada99c0c88a7ed4b45c7af0aebcce3ef7f926a'
 Submodule path 'vendor/nim-snappy': checked out '829133735113951b219e3b108a6bd2146209300b'
 Submodule 'tests/snappycpp' (https://github.com/google/snappy) registered for path 'vendor/nim-snappy/tests/snappycpp'
 Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-snappy/tests/snappycpp'...
@@ -214,10 +214,13 @@ Tip of the day: this will probably build faster if you use "make -j4 ...".
 [92mBuilding:[39m build/test_libnimbus_lc
 [92mBuild completed successfully:[39m build/test_libnimbus_lc
 [92mBuilding:[39m build/all_tests
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/transports/wstransport.nim(186, 35) template/generic instantiation of `async` from here
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/transports/wstransport.nim(196, 17) template/generic instantiation of `checkFutures` from here
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/transports/wstransport.nim(205, 35) template/generic instantiation of `async` from here
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/transports/wstransport.nim(215, 17) template/generic instantiation of `checkFutures` from here
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/errors.nim(30, 24) template/generic instantiation of `readError` from here
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-chronos/chronos/internal/raisesfutures.nim(247, 12) Warning: No exceptions possible with this operation, `readError` always raises [User]
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-libp2p/libp2p/muxers/yamux/yamux.nim(225, 17) template/generic instantiation of `fail` from here
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-chronos/chronos/internal/asyncfutures.nim(235, 14) template/generic instantiation of `checkRaises` from here
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-chronos/chronos/internal/raisesfutures.nim(218, 26) Warning: Can't verify `fail` exception type at compile time - expected one of [CancelledError, LPStreamError], got `CatchableError` [User]
 [92mBuild completed successfully:[39m build/all_tests
 Downloading consensus spec test vectors
 
@@ -229,7 +232,7 @@ EF - Phase 0 - Operations - Block Header  [Preset: minimal] ...... (0.00s)
 EF - Phase 0 - Operations - Deposit  [Preset: minimal] ................. (0.01s)
 EF - Phase 0 - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Phase 0 - Operations - Voluntary Exit  [Preset: minimal] .......... (0.01s)
-EF - Phase 0 - SSZ consensus objects  [Preset: minimal] ........................... (0.17s)
+EF - Phase 0 - SSZ consensus objects  [Preset: minimal] ........................... (0.49s)
 EF - Phase 0 - Rewards  [Preset: minimal] ................................................. (0.01s)
 EF - Phase 0 - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Phase 0 - Epoch Processing - Rewards and penalties [Preset: minimal] ................... (0.01s)
@@ -241,9 +244,9 @@ EF - Phase 0 - Epoch Processing - Slashings reset [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - RANDAO mixes reset [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - Historical roots update [Preset: minimal] . (0.00s)
 EF - Phase 0 - Epoch Processing - Participation record updates [Preset: minimal] . (0.00s)
-EF - Electra - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
-EF - Deneb - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
-EF - Capella - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
+EF - Electra - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.19s)
+EF - Deneb - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.18s)
+EF - Capella - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.18s)
 EF - Altair - Unittests - Light client - Sync protocol [Preset: minimal] .... (0.17s)
 EF - Altair - Operations - Attestation  [Preset: minimal] ......................................... (0.03s)
 EF - Altair - Operations - Attester Slashing  [Preset: minimal] .............................. (0.05s)
@@ -252,7 +255,7 @@ EF - Altair - Operations - Deposit  [Preset: minimal] ................... (0.02s
 EF - Altair - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Altair - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
 EF - Altair - Operations - Voluntary Exit  [Preset: minimal] .......... (0.01s)
-EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.24s)
+EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.23s)
 EF - Altair - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Altair - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Altair - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -272,9 +275,9 @@ EF - Bellatrix - Operations - Block Header  [Preset: minimal] ...... (0.00s)
 EF - Bellatrix - Operations - Deposit  [Preset: minimal] .................... (0.02s)
 EF - Bellatrix - Operations - Execution Payload  [Preset: minimal] .......................... (0.01s)
 EF - Bellatrix - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Bellatrix - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Bellatrix - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Bellatrix - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
-EF - Bellatrix - SSZ consensus objects  [Preset: minimal] .......................................... (0.28s)
+EF - Bellatrix - SSZ consensus objects  [Preset: minimal] .......................................... (0.26s)
 EF - Bellatrix - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Bellatrix - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Bellatrix - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -295,10 +298,10 @@ EF - Capella - Operations - BLS to execution change  [Preset: minimal] .........
 EF - Capella - Operations - Deposit  [Preset: minimal] ..................... (0.02s)
 EF - Capella - Operations - Execution Payload  [Preset: minimal] .......................... (0.01s)
 EF - Capella - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Capella - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Capella - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Capella - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
 EF - Capella - Operations - Withdrawals  [Preset: minimal] ...................................................... (0.01s)
-EF - Capella - SSZ consensus objects  [Preset: minimal] .............................................. (0.29s)
+EF - Capella - SSZ consensus objects  [Preset: minimal] .............................................. (0.31s)
 EF - Capella - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Capella - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Capella - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -319,10 +322,10 @@ EF - Deneb - Operations - BLS to execution change  [Preset: minimal] ...........
 EF - Deneb - Operations - Deposit  [Preset: minimal] ..................... (0.02s)
 EF - Deneb - Operations - Execution Payload  [Preset: minimal] ........................................ (0.01s)
 EF - Deneb - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Deneb - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
 EF - Deneb - Operations - Withdrawals  [Preset: minimal] ...................................................... (0.01s)
-EF - Deneb - SSZ consensus objects  [Preset: minimal] ................................................ (0.36s)
+EF - Deneb - SSZ consensus objects  [Preset: minimal] ................................................ (0.35s)
 EF - Deneb - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Deneb - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Deneb - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -347,9 +350,9 @@ EF - Electra - Operations - Execution Payload  [Preset: minimal] ...............
 EF - Electra - Operations - Withdrawal Request  [Preset: minimal] ............................. (0.01s)
 EF - Electra - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Electra - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
-EF - Electra - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.03s)
+EF - Electra - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.02s)
 EF - Electra - Operations - Withdrawals  [Preset: minimal] ................................................................................. (0.02s)
-EF - Electra - SSZ consensus objects  [Preset: minimal] ........................................................ (0.49s)
+EF - Electra - SSZ consensus objects  [Preset: minimal] ........................................................ (0.40s)
 EF - Electra - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Electra - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Electra - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -368,7 +371,7 @@ EF - Electra - Epoch Processing - Sync committee updates [Preset: minimal] .....
 EF - Fulu - Operations - Attestation  [Preset: minimal] ................................................. (0.04s)
 EF - Fulu - Operations - Attester Slashing  [Preset: minimal] .............................. (0.05s)
 EF - Fulu - Operations - Block Header  [Preset: minimal] ...... (0.00s)
-EF - Fulu - Operations - BLS to execution change  [Preset: minimal] .............. (0.01s)
+EF - Fulu - Operations - BLS to execution change  [Preset: minimal] .............. (0.02s)
 EF - Fulu - Operations - Consolidation Request  [Preset: minimal] ..................................... (0.03s)
 EF - Fulu - Operations - Deposit  [Preset: minimal] ..................... (0.02s)
 EF - Fulu - Operations - Deposit Request  [Preset: minimal] ........... (0.00s)
@@ -378,7 +381,7 @@ EF - Fulu - Operations - Proposer Slashing  [Preset: minimal] ............... (0
 EF - Fulu - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Fulu - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.02s)
 EF - Fulu - Operations - Withdrawals  [Preset: minimal] ................................................................................. (0.02s)
-EF - Fulu - SSZ consensus objects  [Preset: minimal] ........................................................... (0.43s)
+EF - Fulu - SSZ consensus objects  [Preset: minimal] ........................................................... (0.55s)
 EF - Fulu - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Fulu - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Fulu - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -404,33 +407,33 @@ EF - Fulu - Fork  [Preset: minimal] ................. (0.03s)
 EF - ForkChoice [Preset: minimal] 
 ForkChoice ...........ss..........ss................s........ssss...........ss..........................s...................ss..........ss....................s....................ss..........ss................s...................ss...........ss....................s....................ss...........ss.........................s................ (24.8s)
 EF - Sync [Preset: minimal] 
-Sync ..... (4.44s)
-EF - Light client - Data collection [Preset: minimal] ......... (1.92s)
+Sync ..... (4.43s)
+EF - Light client - Data collection [Preset: minimal] ......... (1.94s)
 EF - Light client - Single merkle proof [Preset: minimal] ..............s..... (0.00s)
-EF - Light client - Sync [Preset: minimal] ................................... (0.18s)
+EF - Light client - Sync [Preset: minimal] ................................... (0.19s)
 EF - Light client - Update ranking [Preset: minimal] ..... (0.01s)
 EF - Merkle proof [Preset: minimal] s....s............ (0.01s)
-EF - Fulu - Sanity - Blocks  [Preset: minimal] ........................................................................................ (1.09s)
-EF - Fulu - Finality  [Preset: minimal] ..... (0.49s)
-EF - Fulu - Random  [Preset: minimal] ................ (3.42s)
-EF - Electra - Sanity - Blocks  [Preset: minimal] ..................................................................................................... (1.21s)
+EF - Fulu - Sanity - Blocks  [Preset: minimal] ........................................................................................ (1.08s)
+EF - Fulu - Finality  [Preset: minimal] ..... (0.48s)
+EF - Fulu - Random  [Preset: minimal] ................ (3.35s)
+EF - Electra - Sanity - Blocks  [Preset: minimal] ..................................................................................................... (1.20s)
 EF - Electra - Finality  [Preset: minimal] ..... (0.49s)
-EF - Electra - Random  [Preset: minimal] ................ (3.12s)
+EF - Electra - Random  [Preset: minimal] ................ (3.10s)
 EF - Deneb - Sanity - Blocks  [Preset: minimal] .............................................................................. (1.04s)
 EF - Deneb - Finality  [Preset: minimal] ..... (0.62s)
-EF - Deneb - Random  [Preset: minimal] ................ (4.53s)
-EF - Capella - Sanity - Blocks  [Preset: minimal] ..................................................................... (1.02s)
+EF - Deneb - Random  [Preset: minimal] ................ (4.52s)
+EF - Capella - Sanity - Blocks  [Preset: minimal] ..................................................................... (1.01s)
 EF - Capella - Finality  [Preset: minimal] ..... (0.62s)
-EF - Capella - Random  [Preset: minimal] ................ (5.11s)
-EF - Bellatrix - Sanity - Blocks  [Preset: minimal] ....................................................... (0.83s)
+EF - Capella - Random  [Preset: minimal] ................ (5.10s)
+EF - Bellatrix - Sanity - Blocks  [Preset: minimal] ....................................................... (0.82s)
 EF - Bellatrix - Finality  [Preset: minimal] ..... (0.62s)
-EF - Bellatrix - Random  [Preset: minimal] ................ (4.61s)
-EF - Altair - Sanity - Blocks  [Preset: minimal] .................................................... (0.82s)
-EF - Altair - Finality  [Preset: minimal] ..... (0.62s)
-EF - Altair - Random  [Preset: minimal] ................ (4.34s)
+EF - Bellatrix - Random  [Preset: minimal] ................ (4.60s)
+EF - Altair - Sanity - Blocks  [Preset: minimal] .................................................... (0.81s)
+EF - Altair - Finality  [Preset: minimal] ..... (0.61s)
+EF - Altair - Random  [Preset: minimal] ................ (4.33s)
 EF - Phase0 - Sanity - Blocks  [Preset: minimal] ............................................. (0.77s)
-EF - Phase0 - Finality  [Preset: minimal] ..... (0.62s)
-EF - Phase0 - Random  [Preset: minimal] ................ (4.58s)
+EF - Phase0 - Finality  [Preset: minimal] ..... (0.61s)
+EF - Phase0 - Random  [Preset: minimal] ................ (4.55s)
 EF - Phase 0 - Sanity - Slots  [Preset: minimal] ....... (0.00s)
 EF - Altair - Sanity - Slots  [Preset: minimal] ....... (0.01s)
 EF - Bellatrix - Sanity - Slots  [Preset: minimal] ....... (0.01s)
@@ -438,40 +441,40 @@ EF - Capella - Sanity - Slots  [Preset: minimal] ....... (0.01s)
 EF - Deneb - Sanity - Slots  [Preset: minimal] ....... (0.01s)
 EF - Electra - Sanity - Slots  [Preset: minimal] ............... (0.02s)
 EF - Fulu - Sanity - Slots  [Preset: minimal] ............... (0.04s)
-EF - Altair - Transition  [Preset: minimal] .......................... (1.77s)
-EF - Bellatrix - Transition  [Preset: minimal] .......................... (1.66s)
-EF - Capella - Transition  [Preset: minimal] .......................... (1.66s)
+EF - Altair - Transition  [Preset: minimal] .......................... (1.76s)
+EF - Bellatrix - Transition  [Preset: minimal] .......................... (1.65s)
+EF - Capella - Transition  [Preset: minimal] .......................... (1.65s)
 EF - Deneb - Transition  [Preset: minimal] .............................. (1.69s)
-EF - Electra - Transition  [Preset: minimal] ................................. (1.62s)
+EF - Electra - Transition  [Preset: minimal] ................................. (1.61s)
 
 10 longest individual test durations
 ------------------------------------
-  1.89s for Sync - minimal/fulu/sync/optimistic/pyspec_tests/from_syncing_to_invalid
+  1.88s for Sync - minimal/fulu/sync/optimistic/pyspec_tests/from_syncing_to_invalid
   1.10s for ForkChoice - minimal/fulu/fork_choice/on_block/pyspec_tests/on_block_peerdas__ok
   0.96s for Sync - minimal/electra/sync/optimistic/pyspec_tests/from_syncing_to_invalid
   0.58s for Sync - minimal/deneb/sync/optimistic/pyspec_tests/from_syncing_to_invalid
   0.51s for Sync - minimal/capella/sync/optimistic/pyspec_tests/from_syncing_to_invalid
   0.50s for Sync - minimal/bellatrix/sync/optimistic/pyspec_tests/from_syncing_to_invalid
-  0.45s for [Valid]   EF - Deneb - Random - randomized_7 [Preset: minimal]
   0.45s for Light client - Data collection - minimal/capella/light_client/data_collection/pyspec_tests/deneb_electra_reorg_unaligned
+  0.45s for [Valid]   EF - Deneb - Random - randomized_7 [Preset: minimal]
   0.45s for Light client - Data collection - minimal/bellatrix/light_client/data_collection/pyspec_tests/capella_deneb_reorg_unaligned
   0.43s for [Valid]   EF - Bellatrix - Random - randomized_2 [Preset: minimal]
   0.43s for [Valid]   EF - Capella - Random - randomized_14 [Preset: minimal]
-[Summary] 4379 tests run (85.3s): 4344 OK, 0 FAILED, 35 SKIPPED
+[Summary] 4379 tests run (85.5s): 4344 OK, 0 FAILED, 35 SKIPPED
 
 Running consensus_spec_tests_mainnet --xml:build/consensus_spec_tests_mainnet.xml --console
 
-EF - Phase 0 - Operations - Attestation  [Preset: mainnet] ......................................... (0.43s)
-EF - Phase 0 - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
+EF - Phase 0 - Operations - Attestation  [Preset: mainnet] ......................................... (0.41s)
+EF - Phase 0 - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.26s)
 EF - Phase 0 - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
-EF - Phase 0 - Operations - Deposit  [Preset: mainnet] ................. (0.28s)
+EF - Phase 0 - Operations - Deposit  [Preset: mainnet] ................. (0.29s)
 EF - Phase 0 - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.09s)
 EF - Phase 0 - Operations - Voluntary Exit  [Preset: mainnet] ......... (0.07s)
 EF - Phase 0 - SSZ consensus objects  [Preset: mainnet] ........................... (0.07s)
 EF - Phase 0 - Rewards  [Preset: mainnet] ................................................. (0.12s)
-EF - Phase 0 - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.18s)
-EF - Phase 0 - Epoch Processing - Rewards and penalties [Preset: mainnet] ................... (0.36s)
-EF - Phase 0 - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.18s)
+EF - Phase 0 - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
+EF - Phase 0 - Epoch Processing - Rewards and penalties [Preset: mainnet] ................... (0.34s)
+EF - Phase 0 - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.19s)
 EF - Phase 0 - Epoch Processing - Slashings [Preset: mainnet] ..... (0.09s)
 EF - Phase 0 - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Phase 0 - Epoch Processing - Effective balance updates [Preset: mainnet] . (0.02s)
@@ -479,153 +482,153 @@ EF - Phase 0 - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Phase 0 - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Phase 0 - Epoch Processing - Historical roots update [Preset: mainnet] . (0.02s)
 EF - Phase 0 - Epoch Processing - Participation record updates [Preset: mainnet] . (0.02s)
-EF - Electra - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.07s)
-EF - Deneb - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.07s)
-EF - Capella - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.08s)
-EF - Altair - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.08s)
-EF - Altair - Operations - Attestation  [Preset: mainnet] ......................................... (0.41s)
-EF - Altair - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.26s)
+EF - Electra - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.10s)
+EF - Deneb - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.11s)
+EF - Capella - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.10s)
+EF - Altair - Unittests - Light client - Sync protocol [Preset: mainnet] .... (2.09s)
+EF - Altair - Operations - Attestation  [Preset: mainnet] ......................................... (0.43s)
+EF - Altair - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
 EF - Altair - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
-EF - Altair - Operations - Deposit  [Preset: mainnet] ................... (0.35s)
+EF - Altair - Operations - Deposit  [Preset: mainnet] ................... (0.33s)
 EF - Altair - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.10s)
-EF - Altair - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.43s)
-EF - Altair - Operations - Voluntary Exit  [Preset: mainnet] ......... (0.08s)
+EF - Altair - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.44s)
+EF - Altair - Operations - Voluntary Exit  [Preset: mainnet] ......... (0.07s)
 EF - Altair - SSZ consensus objects  [Preset: mainnet] ....................................... (0.07s)
 EF - Altair - Rewards  [Preset: mainnet] .................................. (0.08s)
-EF - Altair - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
-EF - Altair - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
-EF - Altair - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.29s)
+EF - Altair - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.18s)
+EF - Altair - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.39s)
+EF - Altair - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.30s)
 EF - Altair - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.19s)
-EF - Altair - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
+EF - Altair - Epoch Processing - Slashings [Preset: mainnet] ..... (0.09s)
 EF - Altair - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Altair - Epoch Processing - Effective balance updates [Preset: mainnet] . (0.02s)
 EF - Altair - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Altair - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Altair - Epoch Processing - Historical roots update [Preset: mainnet] . (0.02s)
-EF - Altair - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Bellatrix - Operations - Attestation  [Preset: mainnet] ......................................... (0.41s)
-EF - Bellatrix - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.26s)
+EF - Altair - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Bellatrix - Operations - Attestation  [Preset: mainnet] ......................................... (0.43s)
+EF - Bellatrix - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
 EF - Bellatrix - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
 EF - Bellatrix - Operations - Deposit  [Preset: mainnet] .................... (0.36s)
-EF - Bellatrix - Operations - Execution Payload  [Preset: mainnet] .......................... (0.42s)
+EF - Bellatrix - Operations - Execution Payload  [Preset: mainnet] .......................... (0.43s)
 EF - Bellatrix - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.10s)
-EF - Bellatrix - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.43s)
+EF - Bellatrix - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.42s)
 EF - Bellatrix - Operations - Voluntary Exit  [Preset: mainnet] ............... (0.13s)
 EF - Bellatrix - SSZ consensus objects  [Preset: mainnet] .......................................... (0.07s)
-EF - Bellatrix - Rewards  [Preset: mainnet] .................................. (0.09s)
-EF - Bellatrix - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
-EF - Bellatrix - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
+EF - Bellatrix - Rewards  [Preset: mainnet] .................................. (0.08s)
+EF - Bellatrix - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.20s)
+EF - Bellatrix - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.43s)
 EF - Bellatrix - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.28s)
-EF - Bellatrix - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.19s)
+EF - Bellatrix - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.21s)
 EF - Bellatrix - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
 EF - Bellatrix - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Bellatrix - Epoch Processing - Effective balance updates [Preset: mainnet] . (0.02s)
 EF - Bellatrix - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Bellatrix - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Bellatrix - Epoch Processing - Historical roots update [Preset: mainnet] . (0.02s)
-EF - Bellatrix - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Capella - Operations - Attestation  [Preset: mainnet] ......................................... (0.41s)
-EF - Capella - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.26s)
+EF - Bellatrix - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Capella - Operations - Attestation  [Preset: mainnet] ......................................... (0.43s)
+EF - Capella - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
 EF - Capella - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
 EF - Capella - Operations - BLS to execution change  [Preset: mainnet] ............... (0.18s)
-EF - Capella - Operations - Deposit  [Preset: mainnet] ..................... (0.38s)
+EF - Capella - Operations - Deposit  [Preset: mainnet] ..................... (0.37s)
 EF - Capella - Operations - Execution Payload  [Preset: mainnet] .......................... (0.41s)
 EF - Capella - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.10s)
-EF - Capella - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.43s)
+EF - Capella - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.42s)
 EF - Capella - Operations - Voluntary Exit  [Preset: mainnet] ............... (0.13s)
-EF - Capella - Operations - Withdrawals  [Preset: mainnet] ..................................................... (0.69s)
+EF - Capella - Operations - Withdrawals  [Preset: mainnet] ..................................................... (0.75s)
 EF - Capella - SSZ consensus objects  [Preset: mainnet] .............................................. (0.07s)
-EF - Capella - Rewards  [Preset: mainnet] .................................. (0.09s)
-EF - Capella - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
-EF - Capella - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
-EF - Capella - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.27s)
-EF - Capella - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.18s)
+EF - Capella - Rewards  [Preset: mainnet] .................................. (0.08s)
+EF - Capella - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.20s)
+EF - Capella - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.43s)
+EF - Capella - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.29s)
+EF - Capella - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.20s)
 EF - Capella - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
 EF - Capella - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Capella - Epoch Processing - Effective balance updates [Preset: mainnet] . (0.02s)
 EF - Capella - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Capella - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Capella - Epoch Processing - Historical summaries update [Preset: mainnet] . (0.02s)
-EF - Capella - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Deneb - Operations - Attestation  [Preset: mainnet] ......................................... (0.41s)
+EF - Capella - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Deneb - Operations - Attestation  [Preset: mainnet] ......................................... (0.43s)
 EF - Deneb - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
 EF - Deneb - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
 EF - Deneb - Operations - BLS to execution change  [Preset: mainnet] .............. (0.16s)
 EF - Deneb - Operations - Deposit  [Preset: mainnet] ..................... (0.38s)
-EF - Deneb - Operations - Execution Payload  [Preset: mainnet] ........................................ (0.72s)
+EF - Deneb - Operations - Execution Payload  [Preset: mainnet] ........................................ (0.74s)
 EF - Deneb - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.10s)
 EF - Deneb - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.42s)
 EF - Deneb - Operations - Voluntary Exit  [Preset: mainnet] ............... (0.13s)
-EF - Deneb - Operations - Withdrawals  [Preset: mainnet] ..................................................... (0.66s)
-EF - Deneb - SSZ consensus objects  [Preset: mainnet] ................................................ (0.07s)
+EF - Deneb - Operations - Withdrawals  [Preset: mainnet] ..................................................... (0.76s)
+EF - Deneb - SSZ consensus objects  [Preset: mainnet] ................................................ (0.08s)
 EF - Deneb - Rewards  [Preset: mainnet] .................................. (0.08s)
-EF - Deneb - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
-EF - Deneb - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
-EF - Deneb - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.27s)
-EF - Deneb - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.19s)
+EF - Deneb - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.20s)
+EF - Deneb - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.43s)
+EF - Deneb - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.28s)
+EF - Deneb - Epoch Processing - Registry updates [Preset: mainnet] ........... (0.20s)
 EF - Deneb - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
 EF - Deneb - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Deneb - Epoch Processing - Effective balance updates [Preset: mainnet] . (0.02s)
 EF - Deneb - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Deneb - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Deneb - Epoch Processing - Historical summaries update [Preset: mainnet] . (0.02s)
-EF - Deneb - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Electra - Operations - Attestation  [Preset: mainnet] ............................................. (0.89s)
+EF - Deneb - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Electra - Operations - Attestation  [Preset: mainnet] ............................................. (0.87s)
 EF - Electra - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.52s)
 EF - Electra - Operations - Block Header  [Preset: mainnet] ...... (0.14s)
 EF - Electra - Operations - BLS to execution change  [Preset: mainnet] .............. (0.16s)
-EF - Electra - Operations - Consolidation Request  [Preset: mainnet] .......... (0.32s)
-EF - Electra - Operations - Deposit  [Preset: mainnet] ..................... (0.38s)
-EF - Electra - Operations - Deposit Request  [Preset: mainnet] ........... (0.20s)
-EF - Electra - Operations - Execution Payload  [Preset: mainnet] ........................................ (0.71s)
-EF - Electra - Operations - Withdrawal Request  [Preset: mainnet] ................... (0.36s)
+EF - Electra - Operations - Consolidation Request  [Preset: mainnet] .......... (0.33s)
+EF - Electra - Operations - Deposit  [Preset: mainnet] ..................... (0.37s)
+EF - Electra - Operations - Deposit Request  [Preset: mainnet] ........... (0.21s)
+EF - Electra - Operations - Execution Payload  [Preset: mainnet] ........................................ (0.74s)
+EF - Electra - Operations - Withdrawal Request  [Preset: mainnet] ................... (0.35s)
 EF - Electra - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.18s)
-EF - Electra - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.97s)
-EF - Electra - Operations - Voluntary Exit  [Preset: mainnet] ......................... (0.29s)
-EF - Electra - Operations - Withdrawals  [Preset: mainnet] ................................................................................ (1.17s)
+EF - Electra - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.94s)
+EF - Electra - Operations - Voluntary Exit  [Preset: mainnet] ......................... (0.28s)
+EF - Electra - Operations - Withdrawals  [Preset: mainnet] ................................................................................ (1.21s)
 EF - Electra - SSZ consensus objects  [Preset: mainnet] ........................................................ (0.08s)
-EF - Electra - Rewards  [Preset: mainnet] .................................. (0.09s)
-EF - Electra - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.18s)
-EF - Electra - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
-EF - Electra - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.27s)
-EF - Electra - Epoch Processing - Registry updates [Preset: mainnet] ................ (0.28s)
-EF - Electra - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
+EF - Electra - Rewards  [Preset: mainnet] .................................. (0.08s)
+EF - Electra - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.19s)
+EF - Electra - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.39s)
+EF - Electra - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.28s)
+EF - Electra - Epoch Processing - Registry updates [Preset: mainnet] ................ (0.29s)
+EF - Electra - Epoch Processing - Slashings [Preset: mainnet] ..... (0.09s)
 EF - Electra - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Electra - Epoch Processing - Effective balance updates [Preset: mainnet] .. (0.04s)
 EF - Electra - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Electra - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Electra - Epoch Processing - Historical summaries update [Preset: mainnet] . (0.02s)
-EF - Electra - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Electra - Epoch Processing - Pending deposits [Preset: mainnet] ........................................... (0.82s)
-EF - Electra - Epoch Processing - Pending consolidations [Preset: mainnet] ............. (0.24s)
-EF - Fulu - Operations - Attestation  [Preset: mainnet] ............................................. (0.42s)
-EF - Fulu - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.27s)
+EF - Electra - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Electra - Epoch Processing - Pending deposits [Preset: mainnet] ........................................... (0.84s)
+EF - Electra - Epoch Processing - Pending consolidations [Preset: mainnet] ............. (0.25s)
+EF - Fulu - Operations - Attestation  [Preset: mainnet] ............................................. (0.41s)
+EF - Fulu - Operations - Attester Slashing  [Preset: mainnet] .............................. (0.26s)
 EF - Fulu - Operations - Block Header  [Preset: mainnet] ...... (0.03s)
 EF - Fulu - Operations - BLS to execution change  [Preset: mainnet] .............. (0.16s)
-EF - Fulu - Operations - Consolidation Request  [Preset: mainnet] .......... (0.32s)
-EF - Fulu - Operations - Deposit  [Preset: mainnet] ..................... (0.36s)
-EF - Fulu - Operations - Deposit Request  [Preset: mainnet] ........... (0.21s)
+EF - Fulu - Operations - Consolidation Request  [Preset: mainnet] .......... (0.33s)
+EF - Fulu - Operations - Deposit  [Preset: mainnet] ..................... (0.38s)
+EF - Fulu - Operations - Deposit Request  [Preset: mainnet] ........... (0.20s)
 EF - Fulu - Operations - Execution Payload  [Preset: mainnet] ........................................ (0.73s)
-EF - Fulu - Operations - Withdrawal Request  [Preset: mainnet] ................... (0.36s)
-EF - Fulu - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.09s)
-EF - Fulu - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.42s)
+EF - Fulu - Operations - Withdrawal Request  [Preset: mainnet] ................... (0.35s)
+EF - Fulu - Operations - Proposer Slashing  [Preset: mainnet] ............... (0.10s)
+EF - Fulu - Operations - Sync Aggregate  [Preset: mainnet] .......................... (0.41s)
 EF - Fulu - Operations - Voluntary Exit  [Preset: mainnet] ......................... (0.28s)
-EF - Fulu - Operations - Withdrawals  [Preset: mainnet] ................................................................................ (1.16s)
+EF - Fulu - Operations - Withdrawals  [Preset: mainnet] ................................................................................ (1.20s)
 EF - Fulu - SSZ consensus objects  [Preset: mainnet] ........................................................... (0.08s)
-EF - Fulu - Rewards  [Preset: mainnet] .................................. (0.09s)
+EF - Fulu - Rewards  [Preset: mainnet] .................................. (0.08s)
 EF - Fulu - Epoch Processing - Justification & Finalization [Preset: mainnet] .......... (0.18s)
 EF - Fulu - Epoch Processing - Inactivity [Preset: mainnet] ..................... (0.40s)
-EF - Fulu - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.29s)
-EF - Fulu - Epoch Processing - Registry updates [Preset: mainnet] ................ (0.29s)
-EF - Fulu - Epoch Processing - Slashings [Preset: mainnet] ..... (0.10s)
+EF - Fulu - Epoch Processing - Rewards and penalties [Preset: mainnet] ............... (0.28s)
+EF - Fulu - Epoch Processing - Registry updates [Preset: mainnet] ................ (0.28s)
+EF - Fulu - Epoch Processing - Slashings [Preset: mainnet] ..... (0.09s)
 EF - Fulu - Epoch Processing - Eth1 data reset [Preset: mainnet] .. (0.04s)
 EF - Fulu - Epoch Processing - Effective balance updates [Preset: mainnet] .. (0.04s)
 EF - Fulu - Epoch Processing - Slashings reset [Preset: mainnet] . (0.02s)
 EF - Fulu - Epoch Processing - RANDAO mixes reset [Preset: mainnet] . (0.02s)
 EF - Fulu - Epoch Processing - Historical summaries update [Preset: mainnet] . (0.02s)
-EF - Fulu - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.18s)
-EF - Fulu - Epoch Processing - Pending deposits [Preset: mainnet] ........................................... (0.86s)
-EF - Fulu - Epoch Processing - Pending consolidations [Preset: mainnet] ............. (0.25s)
+EF - Fulu - Epoch Processing - Participation flag updates [Preset: mainnet] .......... (0.19s)
+EF - Fulu - Epoch Processing - Pending deposits [Preset: mainnet] ........................................... (0.83s)
+EF - Fulu - Epoch Processing - Pending consolidations [Preset: mainnet] ............. (0.24s)
 EF - Fulu - Epoch Processing - Proposer lookahead [Preset: mainnet] .. (0.10s)
 EF - Altair - Fork  [Preset: mainnet] .............. (1.51s)
 EF - Bellatrix - Fork  [Preset: mainnet] ............ (0.23s)
@@ -634,89 +637,89 @@ EF - Deneb - Fork  [Preset: mainnet] ............ (0.23s)
 EF - Electra - Fork  [Preset: mainnet] ................... (0.36s)
 EF - Fulu - Fork  [Preset: mainnet] ............... (1.16s)
 EF - ForkChoice [Preset: mainnet] 
-ForkChoice .....ss......s...s..ssss.....ss.........s.......ss......s.......s........ss......s...s.......ss......s.......s........ss......s............s.......... (32.3s)
+ForkChoice .....ss......s...s..ssss.....ss.........s.......ss......s.......s........ss......s...s.......ss......s.......s........ss......s............s.......... (34.1s)
 EF - Sync [Preset: mainnet] 
-Sync ..... (10.3s)
+Sync ..... (10.4s)
 EF - Light client - Data collection [Preset: mainnet] 
 EF - Light client - Single merkle proof [Preset: mainnet] ..............s..... (0.14s)
 EF - Light client - Sync [Preset: mainnet] 
 EF - Light client - Update ranking [Preset: mainnet] 
 EF - Merkle proof [Preset: mainnet] s....s............ (0.03s)
-EF - Fulu - Sanity - Blocks  [Preset: mainnet] ............................................................................ (5.50s)
-EF - Fulu - Finality  [Preset: mainnet] ..... (2.59s)
-EF - Fulu - Random  [Preset: mainnet] ................ (6.61s)
-EF - Electra - Sanity - Blocks  [Preset: mainnet] ......................................................................................... (8.20s)
+EF - Fulu - Sanity - Blocks  [Preset: mainnet] ............................................................................ (5.75s)
+EF - Fulu - Finality  [Preset: mainnet] ..... (2.60s)
+EF - Fulu - Random  [Preset: mainnet] ................ (6.59s)
+EF - Electra - Sanity - Blocks  [Preset: mainnet] ......................................................................................... (8.46s)
 EF - Electra - Finality  [Preset: mainnet] ..... (2.79s)
-EF - Electra - Random  [Preset: mainnet] ................ (5.82s)
-EF - Deneb - Sanity - Blocks  [Preset: mainnet] ....................................................................... (4.48s)
-EF - Deneb - Finality  [Preset: mainnet] ..... (2.18s)
-EF - Deneb - Random  [Preset: mainnet] ................ (5.98s)
-EF - Capella - Sanity - Blocks  [Preset: mainnet] .............................................................. (4.04s)
+EF - Electra - Random  [Preset: mainnet] ................ (5.77s)
+EF - Deneb - Sanity - Blocks  [Preset: mainnet] ....................................................................... (4.72s)
+EF - Deneb - Finality  [Preset: mainnet] ..... (2.19s)
+EF - Deneb - Random  [Preset: mainnet] ................ (6.02s)
+EF - Capella - Sanity - Blocks  [Preset: mainnet] .............................................................. (4.21s)
 EF - Capella - Finality  [Preset: mainnet] ..... (2.19s)
-EF - Capella - Random  [Preset: mainnet] ................ (6.25s)
-EF - Bellatrix - Sanity - Blocks  [Preset: mainnet] .................................................. (3.36s)
-EF - Bellatrix - Finality  [Preset: mainnet] ..... (2.18s)
-EF - Bellatrix - Random  [Preset: mainnet] ................ (5.32s)
-EF - Altair - Sanity - Blocks  [Preset: mainnet] ............................................... (3.19s)
-EF - Altair - Finality  [Preset: mainnet] ..... (2.18s)
-EF - Altair - Random  [Preset: mainnet] ................ (5.02s)
-EF - Phase0 - Sanity - Blocks  [Preset: mainnet] ........................................ (2.68s)
-EF - Phase0 - Finality  [Preset: mainnet] ..... (2.15s)
-EF - Phase0 - Random  [Preset: mainnet] ................ (5.16s)
-EF - Phase 0 - Sanity - Slots  [Preset: mainnet] ....... (0.45s)
-EF - Altair - Sanity - Slots  [Preset: mainnet] ....... (0.57s)
-EF - Bellatrix - Sanity - Slots  [Preset: mainnet] ....... (0.58s)
-EF - Capella - Sanity - Slots  [Preset: mainnet] ....... (0.58s)
-EF - Deneb - Sanity - Slots  [Preset: mainnet] ....... (0.58s)
-EF - Electra - Sanity - Slots  [Preset: mainnet] ............... (1.50s)
-EF - Fulu - Sanity - Slots  [Preset: mainnet] ............... (9.15s)
-EF - Altair - Transition  [Preset: mainnet] ...................... (9.56s)
-EF - Bellatrix - Transition  [Preset: mainnet] ...................... (7.76s)
-EF - Capella - Transition  [Preset: mainnet] ...................... (7.79s)
-EF - Deneb - Transition  [Preset: mainnet] ......................... (8.25s)
-EF - Electra - Transition  [Preset: mainnet] ........................... (10.9s)
+EF - Capella - Random  [Preset: mainnet] ................ (6.28s)
+EF - Bellatrix - Sanity - Blocks  [Preset: mainnet] .................................................. (3.53s)
+EF - Bellatrix - Finality  [Preset: mainnet] ..... (2.19s)
+EF - Bellatrix - Random  [Preset: mainnet] ................ (5.36s)
+EF - Altair - Sanity - Blocks  [Preset: mainnet] ............................................... (3.32s)
+EF - Altair - Finality  [Preset: mainnet] ..... (2.17s)
+EF - Altair - Random  [Preset: mainnet] ................ (5.05s)
+EF - Phase0 - Sanity - Blocks  [Preset: mainnet] ........................................ (2.79s)
+EF - Phase0 - Finality  [Preset: mainnet] ..... (2.16s)
+EF - Phase0 - Random  [Preset: mainnet] ................ (5.20s)
+EF - Phase 0 - Sanity - Slots  [Preset: mainnet] ....... (0.47s)
+EF - Altair - Sanity - Slots  [Preset: mainnet] ....... (0.59s)
+EF - Bellatrix - Sanity - Slots  [Preset: mainnet] ....... (0.61s)
+EF - Capella - Sanity - Slots  [Preset: mainnet] ....... (0.61s)
+EF - Deneb - Sanity - Slots  [Preset: mainnet] ....... (0.61s)
+EF - Electra - Sanity - Slots  [Preset: mainnet] ............... (1.56s)
+EF - Fulu - Sanity - Slots  [Preset: mainnet] ............... (9.20s)
+EF - Altair - Transition  [Preset: mainnet] ...................... (9.79s)
+EF - Bellatrix - Transition  [Preset: mainnet] ...................... (8.01s)
+EF - Capella - Transition  [Preset: mainnet] ...................... (8.03s)
+EF - Deneb - Transition  [Preset: mainnet] ......................... (8.50s)
+EF - Electra - Transition  [Preset: mainnet] ........................... (11.2s)
 
 10 longest individual test durations
 ------------------------------------
-  8.35s for Sync - mainnet/fulu/sync/optimistic/pyspec_tests/from_syncing_to_invalid
-  8.00s for EF - Fulu - Slots - historical_accumulator [Preset: mainnet]
-  1.32s for ForkChoice - mainnet/fulu/fork_choice/on_block/pyspec_tests/on_block_peerdas__ok
+  8.39s for Sync - mainnet/fulu/sync/optimistic/pyspec_tests/from_syncing_to_invalid
+  8.01s for EF - Fulu - Slots - historical_accumulator [Preset: mainnet]
+  1.33s for ForkChoice - mainnet/fulu/fork_choice/on_block/pyspec_tests/on_block_peerdas__ok
   1.12s for EF - Electra - Transition - transition_with_no_attestations_until_after_fork [Preset: mainnet]
-  1.04s for EF - Electra - Transition - transition_with_finality [Preset: mainnet]
-  1.04s for EF - Electra - Transition - transition_with_random_half_participation [Preset: mainnet]
-  1.04s for EF - Electra - Transition - transition_with_random_three_quarters_participation [Preset: mainnet]
+  1.05s for EF - Electra - Transition - transition_with_finality [Preset: mainnet]
+  1.05s for EF - Electra - Transition - transition_with_random_three_quarters_participation [Preset: mainnet]
+  1.05s for EF - Electra - Transition - transition_with_random_half_participation [Preset: mainnet]
+  1.00s for EF - Altair - Transition - transition_with_random_three_quarters_participation [Preset: mainnet]
+  1.00s for EF - Altair - Transition - transition_with_no_attestations_until_after_fork [Preset: mainnet]
+  1.00s for EF - Altair - Transition - transition_with_random_half_participation [Preset: mainnet]
   0.99s for EF - Altair - Transition - transition_with_finality [Preset: mainnet]
-  0.99s for EF - Altair - Transition - transition_with_no_attestations_until_after_fork [Preset: mainnet]
-  0.99s for EF - Altair - Transition - transition_with_random_three_quarters_participation [Preset: mainnet]
-  0.99s for EF - Altair - Transition - transition_with_random_half_participation [Preset: mainnet]
-[Summary] 3910 tests run (236.1s): 3880 OK, 0 FAILED, 30 SKIPPED
+[Summary] 3910 tests run (241.5s): 3880 OK, 0 FAILED, 30 SKIPPED
 
 Running all_tests --xml:build/all_tests.xml --console
 
 subnet tracker ... (0.00s)
-Attestation pool processing [Preset: mainnet] ............ (5.94s)
-Attestation pool electra processing [Preset: mainnet] ....... (111.4s)
-Beacon chain DB [Preset: mainnet] .................................. (4.07s)
+Attestation pool processing [Preset: mainnet] ............ (5.91s)
+Attestation pool electra processing [Preset: mainnet] ....... (111.1s)
+Beacon chain DB [Preset: mainnet] .................................. (4.09s)
 Quarantine [Preset: mainnet] .. (0.02s)
 FinalizedBlocks [Preset: mainnet] . (0.00s)
 Beacon time .. (0.00s)
-Block pool processing [Preset: mainnet] ..... (0.64s)
+Block pool processing [Preset: mainnet] ..... (0.63s)
 Block pool altair processing [Preset: mainnet] . (0.46s)
-chain DAG finalization tests [Preset: mainnet] .... (3.23s)
+chain DAG finalization tests [Preset: mainnet] .... (3.22s)
 Old database versions [Preset: mainnet] . (0.06s)
 Diverging hardforks .. (0.33s)
 Backfill .... (0.91s)
 Starting states . (0.09s)
-Latest valid hash [Preset: mainnet] . (1.31s)
-Pruning . (4.83s)
+Latest valid hash [Preset: mainnet] . (1.27s)
+Pruning . (4.74s)
 State history . (0.24s)
-Ancestry . (0.51s)
-Shufflings .. (54.8s)
-Shufflings (merged) .. (19.5s)
+Ancestry . (0.50s)
+Shufflings .. (54.9s)
+Shufflings (merged) .. (19.2s)
 BlockRef and helpers .. (0.00s)
 BlockSlot and helpers .. (0.00s)
 BlockId and helpers .. (0.00s)
-Block processor [Preset: mainnet] .. (1.31s)
+Block processor [Preset: mainnet] .. (1.27s)
 Block quarantine .... (0.01s)
 Configuration parsing 
 weak-subjectivity-checkpoint ......... (0.00s)
@@ -732,12 +735,12 @@ EL Configuration ..... (0.00s)
 Specific field types .. (0.00s)
 Size bounds . (0.00s)
 Type helpers . (0.00s)
-Forked SSZ readers ............ (0.08s)
+Forked SSZ readers ............ (0.09s)
 Gossip fork transition . (0.00s)
 Gossip validation  [Preset: mainnet] .. (1.08s)
-Gossip validation - Altair .. (9.82s)
+Gossip validation - Altair .. (9.61s)
 Spec helpers ... (0.54s)
-Honest validator ........ (2.48s)
+Honest validator ........ (2.43s)
 KeyStorage testing suite ............ (4.41s)
 eth2.0-deposits-cli compatibility .. (0.02s)
 removeValidatorFiles() ... (0.00s)
@@ -745,8 +748,8 @@ removeValidatorFiles() multiple keystore types ...... (0.00s)
 createValidatorFiles() ........ (3.64s)
 saveKeystore() ........ (0.01s)
 Key spliting .... (0.19s)
-Light client processor [Preset: mainnet] ............ (3.00s)
-Light client [Preset: mainnet] ... (116.5s)
+Light client processor [Preset: mainnet] ............ (2.97s)
+Light client [Preset: mainnet] ... (116.0s)
 Message signatures ........ (0.05s)
 Network metadata .. (0.04s)
 PeerPool testing suite ............. (1.73s)
@@ -756,201 +759,201 @@ Remove keystore testing suite ..... (0.00s)
 REST JSON encoding and decoding ..... (0.01s)
 Serialization/deserialization test suite ... (0.00s)
 Beacon state [Preset: mainnet] ...... (0.31s)
-state diff tests [Preset: mainnet] . (1.31s)
+state diff tests [Preset: mainnet] . (1.27s)
 Sync committee pool ....... (0.00s)
 SyncManager test suite ........................ (0.15s)
 Blinded block conversions ..... (0.01s)
 ValidatorPubKey bucket sort .. (0.00s)
-Validator change pool testing suite ....... (5.19s)
-Validator pool .... (0.18s)
+Validator change pool testing suite ....... (5.14s)
+Validator pool .... (0.05s)
 Zero signature sanity checks ... (0.00s)
 Nimbus remote signer/signing test (web3signer) ................ (0.56s)
 
-===== `nimbus_signing_node` process [30047] exited with [137] =====
-NTC 2025-08-06 01:36:53.795+00:00 Launching signing node                     version=v25.7.1-993115-stateofus cmdParams="["--non-interactive=true", "--log-level=DEBUG", "--data-dir=test-signing-node/signing-node", "--bind-address=127.0.0.1", "--bind-port=29964", "--request-timeout=1"]" config="(configFile: none(InputFile), logLevel: DEBUG, logStdout: auto, logFile: none(OutFile), nonInteractive: true, dataDir: test-signing-node/signing-node, validatorsDirFlag: none(InputDir), secretsDirFlag: none(InputDir), expectedFeeRecipient: none(Address), serverIdent: none(string), requestTimeout: 1, bindPort: 29964, bindAddress: 127.0.0.1, tlsEnabled: false, tlsCertificate: none(InputFile), tlsPrivateKey: none(InputFile))"
-INF 2025-08-06 01:36:53.795+00:00 Initializing validators                    path=test-signing-node/signing-node/validators
-NTC 2025-08-06 01:36:53.796+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:53.796+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:53.796+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:53.796+00:00 REST service started                       address=127.0.0.1:29964
-DBG 2025-08-06 01:36:54.296+00:00 Received request                           peer=127.0.0.1:47186 meth=GET uri=/upcheck
-DBG 2025-08-06 01:36:54.296+00:00 Serving API request                        peer=127.0.0.1:47186 meth=GET uri=/upcheck path_params=[] query_params=[] content_body=(None)
-DBG 2025-08-06 01:36:54.296+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:47186 uri=/upcheck content_type=application/json content_size=16
-DBG 2025-08-06 01:36:54.297+00:00 Received request                           peer=127.0.0.1:47188 meth=GET uri=/api/v1/eth2/publicKeys
-DBG 2025-08-06 01:36:54.297+00:00 Serving API request                        peer=127.0.0.1:47188 meth=GET uri=/api/v1/eth2/publicKeys path_params=[] query_params=[] content_body=(None)
-DBG 2025-08-06 01:36:54.297+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:47188 uri=/api/v1/eth2/publicKeys content_type=application/json content_size=306
-DBG 2025-08-06 01:36:54.299+00:00 Received request                           peer=127.0.0.1:47194 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.300+00:00 Serving API request                        peer=127.0.0.1:47194 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 253 bytes)"
-DBG 2025-08-06 01:36:54.300+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47194 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.301+00:00 Received request                           peer=127.0.0.1:47208 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.301+00:00 Serving API request                        peer=127.0.0.1:47208 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 254 bytes)"
-DBG 2025-08-06 01:36:54.301+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47208 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.302+00:00 Received request                           peer=127.0.0.1:47212 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.302+00:00 Serving API request                        peer=127.0.0.1:47212 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 255 bytes)"
-DBG 2025-08-06 01:36:54.302+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47212 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.305+00:00 Received request                           peer=127.0.0.1:47228 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.305+00:00 Serving API request                        peer=127.0.0.1:47228 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 248 bytes)"
-DBG 2025-08-06 01:36:54.305+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47228 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.306+00:00 Received request                           peer=127.0.0.1:47238 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.306+00:00 Serving API request                        peer=127.0.0.1:47238 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 249 bytes)"
-DBG 2025-08-06 01:36:54.306+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47238 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.307+00:00 Received request                           peer=127.0.0.1:47250 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.307+00:00 Serving API request                        peer=127.0.0.1:47250 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 250 bytes)"
-DBG 2025-08-06 01:36:54.307+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47250 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.309+00:00 Received request                           peer=127.0.0.1:47264 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.309+00:00 Serving API request                        peer=127.0.0.1:47264 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 354 bytes)"
-DBG 2025-08-06 01:36:54.310+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47264 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.310+00:00 Received request                           peer=127.0.0.1:47274 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.310+00:00 Serving API request                        peer=127.0.0.1:47274 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 355 bytes)"
-DBG 2025-08-06 01:36:54.311+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47274 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.311+00:00 Received request                           peer=127.0.0.1:47278 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.311+00:00 Serving API request                        peer=127.0.0.1:47278 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 356 bytes)"
-DBG 2025-08-06 01:36:54.312+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47278 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.314+00:00 Received request                           peer=127.0.0.1:47284 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.314+00:00 Serving API request                        peer=127.0.0.1:47284 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 306 bytes)"
-DBG 2025-08-06 01:36:54.315+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47284 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.315+00:00 Received request                           peer=127.0.0.1:47288 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.315+00:00 Serving API request                        peer=127.0.0.1:47288 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 307 bytes)"
-DBG 2025-08-06 01:36:54.316+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47288 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.316+00:00 Received request                           peer=127.0.0.1:47300 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.316+00:00 Serving API request                        peer=127.0.0.1:47300 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 308 bytes)"
-DBG 2025-08-06 01:36:54.317+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47300 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.319+00:00 Received request                           peer=127.0.0.1:47306 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.319+00:00 Serving API request                        peer=127.0.0.1:47306 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 913 bytes)"
-DBG 2025-08-06 01:36:54.319+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47306 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.320+00:00 Received request                           peer=127.0.0.1:47318 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.320+00:00 Serving API request                        peer=127.0.0.1:47318 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 913 bytes)"
-DBG 2025-08-06 01:36:54.320+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47318 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.321+00:00 Received request                           peer=127.0.0.1:47326 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.321+00:00 Serving API request                        peer=127.0.0.1:47326 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 913 bytes)"
-DBG 2025-08-06 01:36:54.322+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47326 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.324+00:00 Received request                           peer=127.0.0.1:47336 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.324+00:00 Serving API request                        peer=127.0.0.1:47336 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 541 bytes)"
-DBG 2025-08-06 01:36:54.324+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47336 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.325+00:00 Received request                           peer=127.0.0.1:47350 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.325+00:00 Serving API request                        peer=127.0.0.1:47350 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 541 bytes)"
-DBG 2025-08-06 01:36:54.325+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47350 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.326+00:00 Received request                           peer=127.0.0.1:47364 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.326+00:00 Serving API request                        peer=127.0.0.1:47364 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 541 bytes)"
-DBG 2025-08-06 01:36:54.326+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47364 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.329+00:00 Received request                           peer=127.0.0.1:47380 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.329+00:00 Serving API request                        peer=127.0.0.1:47380 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1053 bytes)"
-DBG 2025-08-06 01:36:54.329+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47380 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.330+00:00 Received request                           peer=127.0.0.1:47392 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.330+00:00 Serving API request                        peer=127.0.0.1:47392 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1053 bytes)"
-DBG 2025-08-06 01:36:54.330+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47392 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.331+00:00 Received request                           peer=127.0.0.1:47402 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.331+00:00 Serving API request                        peer=127.0.0.1:47402 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1053 bytes)"
-DBG 2025-08-06 01:36:54.331+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47402 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.333+00:00 Received request                           peer=127.0.0.1:47412 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.334+00:00 Serving API request                        peer=127.0.0.1:47412 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1123 bytes)"
-DBG 2025-08-06 01:36:54.334+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47412 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.335+00:00 Received request                           peer=127.0.0.1:47424 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.335+00:00 Serving API request                        peer=127.0.0.1:47424 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1123 bytes)"
-DBG 2025-08-06 01:36:54.335+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47424 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.336+00:00 Received request                           peer=127.0.0.1:47434 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.336+00:00 Serving API request                        peer=127.0.0.1:47434 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1123 bytes)"
-DBG 2025-08-06 01:36:54.336+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47434 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.339+00:00 Received request                           peer=127.0.0.1:47450 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.339+00:00 Serving API request                        peer=127.0.0.1:47450 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 456 bytes)"
-DBG 2025-08-06 01:36:54.339+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47450 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.339+00:00 Received request                           peer=127.0.0.1:47452 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.340+00:00 Serving API request                        peer=127.0.0.1:47452 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 456 bytes)"
-DBG 2025-08-06 01:36:54.340+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47452 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.341+00:00 Received request                           peer=127.0.0.1:47466 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.341+00:00 Serving API request                        peer=127.0.0.1:47466 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 456 bytes)"
-DBG 2025-08-06 01:36:54.341+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47466 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.343+00:00 Received request                           peer=127.0.0.1:47478 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.343+00:00 Serving API request                        peer=127.0.0.1:47478 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 271 bytes)"
-DBG 2025-08-06 01:36:54.344+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47478 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.344+00:00 Received request                           peer=127.0.0.1:47490 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.344+00:00 Serving API request                        peer=127.0.0.1:47490 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 271 bytes)"
-DBG 2025-08-06 01:36:54.345+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47490 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.345+00:00 Received request                           peer=127.0.0.1:47500 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.345+00:00 Serving API request                        peer=127.0.0.1:47500 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 271 bytes)"
-DBG 2025-08-06 01:36:54.346+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47500 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.348+00:00 Received request                           peer=127.0.0.1:47512 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.348+00:00 Serving API request                        peer=127.0.0.1:47512 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 283 bytes)"
-DBG 2025-08-06 01:36:54.349+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47512 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.349+00:00 Received request                           peer=127.0.0.1:47518 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.349+00:00 Serving API request                        peer=127.0.0.1:47518 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 283 bytes)"
-DBG 2025-08-06 01:36:54.350+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47518 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.350+00:00 Received request                           peer=127.0.0.1:47534 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.350+00:00 Serving API request                        peer=127.0.0.1:47534 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 283 bytes)"
-DBG 2025-08-06 01:36:54.351+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47534 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.353+00:00 Received request                           peer=127.0.0.1:47542 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.353+00:00 Serving API request                        peer=127.0.0.1:47542 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.353+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47542 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.354+00:00 Received request                           peer=127.0.0.1:47558 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.354+00:00 Serving API request                        peer=127.0.0.1:47558 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.355+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47558 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.355+00:00 Received request                           peer=127.0.0.1:47564 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.355+00:00 Serving API request                        peer=127.0.0.1:47564 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.356+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47564 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.357+00:00 Remote peer disconnected                   peer=ok(127.0.0.1:47576) reason=DisconnectError
-DBG 2025-08-06 01:36:54.357+00:00 Received request                           peer=127.0.0.1:47590 meth=POST uri=/reload
-DBG 2025-08-06 01:36:54.357+00:00 Serving API request                        peer=127.0.0.1:47590 meth=POST uri=/reload path_params=[] query_params=[] content_body=(None)
-NTC 2025-08-06 01:36:54.358+00:00 Local validator attached                   topics="val_pool" pubkey=a73469094bf134f32a4e91fce07101290c85ffb259f277c97308310ffd0ef1aa3bd90eea1a8217d060b727b7a0154c34 validator=a7346909 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.358+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.358+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.358+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-DBG 2025-08-06 01:36:54.358+00:00 Received status response from handler      status=200 meth=POST peer=127.0.0.1:47590 uri=/reload
-DBG 2025-08-06 01:36:54.358+00:00 Received request                           peer=127.0.0.1:47606 meth=GET uri=/api/v1/eth2/publicKeys
-DBG 2025-08-06 01:36:54.358+00:00 Serving API request                        peer=127.0.0.1:47606 meth=GET uri=/api/v1/eth2/publicKeys path_params=[] query_params=[] content_body=(None)
-DBG 2025-08-06 01:36:54.358+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:47606 uri=/api/v1/eth2/publicKeys content_type=application/json content_size=408
+===== `nimbus_signing_node` process [30084] exited with [137] =====
+NTC 2025-08-07 01:37:11.761+00:00 Launching signing node                     version=v25.7.1-8431af-stateofus cmdParams="["--non-interactive=true", "--log-level=DEBUG", "--data-dir=test-signing-node/signing-node", "--bind-address=127.0.0.1", "--bind-port=29964", "--request-timeout=1"]" config="(configFile: none(InputFile), logLevel: DEBUG, logStdout: auto, logFile: none(OutFile), nonInteractive: true, dataDir: test-signing-node/signing-node, validatorsDirFlag: none(InputDir), secretsDirFlag: none(InputDir), expectedFeeRecipient: none(Address), serverIdent: none(string), requestTimeout: 1, bindPort: 29964, bindAddress: 127.0.0.1, tlsEnabled: false, tlsCertificate: none(InputFile), tlsPrivateKey: none(InputFile))"
+INF 2025-08-07 01:37:11.761+00:00 Initializing validators                    path=test-signing-node/signing-node/validators
+NTC 2025-08-07 01:37:11.761+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:11.761+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:11.761+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:11.761+00:00 REST service started                       address=127.0.0.1:29964
+DBG 2025-08-07 01:37:12.261+00:00 Received request                           peer=127.0.0.1:46818 meth=GET uri=/upcheck
+DBG 2025-08-07 01:37:12.261+00:00 Serving API request                        peer=127.0.0.1:46818 meth=GET uri=/upcheck path_params=[] query_params=[] content_body=(None)
+DBG 2025-08-07 01:37:12.261+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:46818 uri=/upcheck content_type=application/json content_size=16
+DBG 2025-08-07 01:37:12.262+00:00 Received request                           peer=127.0.0.1:46826 meth=GET uri=/api/v1/eth2/publicKeys
+DBG 2025-08-07 01:37:12.262+00:00 Serving API request                        peer=127.0.0.1:46826 meth=GET uri=/api/v1/eth2/publicKeys path_params=[] query_params=[] content_body=(None)
+DBG 2025-08-07 01:37:12.262+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:46826 uri=/api/v1/eth2/publicKeys content_type=application/json content_size=306
+DBG 2025-08-07 01:37:12.265+00:00 Received request                           peer=127.0.0.1:46834 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.265+00:00 Serving API request                        peer=127.0.0.1:46834 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 253 bytes)"
+DBG 2025-08-07 01:37:12.265+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46834 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.266+00:00 Received request                           peer=127.0.0.1:46840 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.266+00:00 Serving API request                        peer=127.0.0.1:46840 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 254 bytes)"
+DBG 2025-08-07 01:37:12.266+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46840 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.267+00:00 Received request                           peer=127.0.0.1:46842 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.267+00:00 Serving API request                        peer=127.0.0.1:46842 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 255 bytes)"
+DBG 2025-08-07 01:37:12.267+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46842 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.270+00:00 Received request                           peer=127.0.0.1:46844 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.270+00:00 Serving API request                        peer=127.0.0.1:46844 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 248 bytes)"
+DBG 2025-08-07 01:37:12.270+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46844 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.271+00:00 Received request                           peer=127.0.0.1:46852 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.271+00:00 Serving API request                        peer=127.0.0.1:46852 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 249 bytes)"
+DBG 2025-08-07 01:37:12.271+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46852 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.272+00:00 Received request                           peer=127.0.0.1:46854 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.272+00:00 Serving API request                        peer=127.0.0.1:46854 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 250 bytes)"
+DBG 2025-08-07 01:37:12.272+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46854 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.274+00:00 Received request                           peer=127.0.0.1:46860 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.275+00:00 Serving API request                        peer=127.0.0.1:46860 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 354 bytes)"
+DBG 2025-08-07 01:37:12.275+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46860 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.276+00:00 Received request                           peer=127.0.0.1:46866 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.276+00:00 Serving API request                        peer=127.0.0.1:46866 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 355 bytes)"
+DBG 2025-08-07 01:37:12.276+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46866 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.277+00:00 Received request                           peer=127.0.0.1:46868 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.277+00:00 Serving API request                        peer=127.0.0.1:46868 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 356 bytes)"
+DBG 2025-08-07 01:37:12.277+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46868 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.279+00:00 Received request                           peer=127.0.0.1:46874 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.279+00:00 Serving API request                        peer=127.0.0.1:46874 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 306 bytes)"
+DBG 2025-08-07 01:37:12.280+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46874 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.280+00:00 Received request                           peer=127.0.0.1:46884 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.280+00:00 Serving API request                        peer=127.0.0.1:46884 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 307 bytes)"
+DBG 2025-08-07 01:37:12.281+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46884 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.281+00:00 Received request                           peer=127.0.0.1:46894 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.281+00:00 Serving API request                        peer=127.0.0.1:46894 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 308 bytes)"
+DBG 2025-08-07 01:37:12.282+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46894 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.284+00:00 Received request                           peer=127.0.0.1:46896 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.284+00:00 Serving API request                        peer=127.0.0.1:46896 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 913 bytes)"
+DBG 2025-08-07 01:37:12.285+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46896 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.285+00:00 Received request                           peer=127.0.0.1:46904 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.285+00:00 Serving API request                        peer=127.0.0.1:46904 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 913 bytes)"
+DBG 2025-08-07 01:37:12.286+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46904 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.286+00:00 Received request                           peer=127.0.0.1:46906 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.286+00:00 Serving API request                        peer=127.0.0.1:46906 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 913 bytes)"
+DBG 2025-08-07 01:37:12.287+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46906 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.289+00:00 Received request                           peer=127.0.0.1:46910 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.289+00:00 Serving API request                        peer=127.0.0.1:46910 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 541 bytes)"
+DBG 2025-08-07 01:37:12.289+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46910 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.290+00:00 Received request                           peer=127.0.0.1:46922 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.290+00:00 Serving API request                        peer=127.0.0.1:46922 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 541 bytes)"
+DBG 2025-08-07 01:37:12.290+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46922 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.291+00:00 Received request                           peer=127.0.0.1:46928 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.291+00:00 Serving API request                        peer=127.0.0.1:46928 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 541 bytes)"
+DBG 2025-08-07 01:37:12.291+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46928 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.294+00:00 Received request                           peer=127.0.0.1:46930 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.294+00:00 Serving API request                        peer=127.0.0.1:46930 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1053 bytes)"
+DBG 2025-08-07 01:37:12.294+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46930 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.295+00:00 Received request                           peer=127.0.0.1:46934 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.295+00:00 Serving API request                        peer=127.0.0.1:46934 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1053 bytes)"
+DBG 2025-08-07 01:37:12.295+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46934 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.296+00:00 Received request                           peer=127.0.0.1:46938 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.296+00:00 Serving API request                        peer=127.0.0.1:46938 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1053 bytes)"
+DBG 2025-08-07 01:37:12.296+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46938 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.299+00:00 Received request                           peer=127.0.0.1:46950 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.299+00:00 Serving API request                        peer=127.0.0.1:46950 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1123 bytes)"
+DBG 2025-08-07 01:37:12.299+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46950 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.300+00:00 Received request                           peer=127.0.0.1:46958 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.300+00:00 Serving API request                        peer=127.0.0.1:46958 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1123 bytes)"
+DBG 2025-08-07 01:37:12.300+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46958 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.301+00:00 Received request                           peer=127.0.0.1:46962 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.301+00:00 Serving API request                        peer=127.0.0.1:46962 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1123 bytes)"
+DBG 2025-08-07 01:37:12.301+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46962 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.304+00:00 Received request                           peer=127.0.0.1:46974 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.304+00:00 Serving API request                        peer=127.0.0.1:46974 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 456 bytes)"
+DBG 2025-08-07 01:37:12.304+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46974 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.305+00:00 Received request                           peer=127.0.0.1:46986 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.305+00:00 Serving API request                        peer=127.0.0.1:46986 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 456 bytes)"
+DBG 2025-08-07 01:37:12.305+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46986 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.306+00:00 Received request                           peer=127.0.0.1:46990 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.306+00:00 Serving API request                        peer=127.0.0.1:46990 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 456 bytes)"
+DBG 2025-08-07 01:37:12.306+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:46990 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.308+00:00 Received request                           peer=127.0.0.1:47002 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.308+00:00 Serving API request                        peer=127.0.0.1:47002 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 271 bytes)"
+DBG 2025-08-07 01:37:12.309+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47002 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.309+00:00 Received request                           peer=127.0.0.1:47016 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.309+00:00 Serving API request                        peer=127.0.0.1:47016 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 271 bytes)"
+DBG 2025-08-07 01:37:12.310+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47016 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.310+00:00 Received request                           peer=127.0.0.1:47026 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.310+00:00 Serving API request                        peer=127.0.0.1:47026 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 271 bytes)"
+DBG 2025-08-07 01:37:12.311+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47026 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.313+00:00 Received request                           peer=127.0.0.1:47042 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.313+00:00 Serving API request                        peer=127.0.0.1:47042 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 283 bytes)"
+DBG 2025-08-07 01:37:12.314+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47042 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.314+00:00 Received request                           peer=127.0.0.1:47046 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.314+00:00 Serving API request                        peer=127.0.0.1:47046 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 283 bytes)"
+DBG 2025-08-07 01:37:12.315+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47046 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.315+00:00 Received request                           peer=127.0.0.1:47056 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.315+00:00 Serving API request                        peer=127.0.0.1:47056 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 283 bytes)"
+DBG 2025-08-07 01:37:12.316+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47056 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.318+00:00 Received request                           peer=127.0.0.1:47064 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.318+00:00 Serving API request                        peer=127.0.0.1:47064 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.319+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47064 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.319+00:00 Received request                           peer=127.0.0.1:47076 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.319+00:00 Serving API request                        peer=127.0.0.1:47076 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.320+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47076 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.320+00:00 Received request                           peer=127.0.0.1:47080 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.320+00:00 Serving API request                        peer=127.0.0.1:47080 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.321+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:47080 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.322+00:00 Remote peer disconnected                   peer=ok(127.0.0.1:47094) reason=DisconnectError
+DBG 2025-08-07 01:37:12.322+00:00 Received request                           peer=127.0.0.1:47108 meth=POST uri=/reload
+DBG 2025-08-07 01:37:12.322+00:00 Serving API request                        peer=127.0.0.1:47108 meth=POST uri=/reload path_params=[] query_params=[] content_body=(None)
+NTC 2025-08-07 01:37:12.323+00:00 Local validator attached                   topics="val_pool" pubkey=a73469094bf134f32a4e91fce07101290c85ffb259f277c97308310ffd0ef1aa3bd90eea1a8217d060b727b7a0154c34 validator=a7346909 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.323+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.323+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.323+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+DBG 2025-08-07 01:37:12.323+00:00 Received status response from handler      status=200 meth=POST peer=127.0.0.1:47108 uri=/reload
+DBG 2025-08-07 01:37:12.323+00:00 Received request                           peer=127.0.0.1:47116 meth=GET uri=/api/v1/eth2/publicKeys
+DBG 2025-08-07 01:37:12.323+00:00 Serving API request                        peer=127.0.0.1:47116 meth=GET uri=/api/v1/eth2/publicKeys path_params=[] query_params=[] content_body=(None)
+DBG 2025-08-07 01:37:12.324+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:47116 uri=/api/v1/eth2/publicKeys content_type=application/json content_size=408
 
 Nimbus remote signer/signing test (verifying-web3signer) .. (0.51s)
 
-===== `nimbus_signing_node` process [30048] exited with [137] =====
-NTC 2025-08-06 01:36:54.361+00:00 Launching signing node                     version=v25.7.1-993115-stateofus cmdParams="["--non-interactive=true", "--log-level=DEBUG", "--data-dir=test-signing-node-verifying-web3signer/signing-node", "--bind-address=127.0.0.1", "--bind-port=29965", "--expected-fee-recipient=0x000095e79eac4d76aab57cb2c1f091d553b36ca0", "--request-timeout=1"]" config="(configFile: none(InputFile), logLevel: DEBUG, logStdout: auto, logFile: none(OutFile), nonInteractive: true, dataDir: test-signing-node-verifying-web3signer/signing-node, validatorsDirFlag: none(InputDir), secretsDirFlag: none(InputDir), expectedFeeRecipient: some(0x000095e79eac4d76aab57cb2c1f091d553b36ca0), serverIdent: none(string), requestTimeout: 1, bindPort: 29965, bindAddress: 127.0.0.1, tlsEnabled: false, tlsCertificate: none(InputFile), tlsPrivateKey: none(InputFile))"
-INF 2025-08-06 01:36:54.361+00:00 Initializing validators                    path=test-signing-node-verifying-web3signer/signing-node/validators
-NTC 2025-08-06 01:36:54.362+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.362+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.362+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
-NTC 2025-08-06 01:36:54.362+00:00 REST service started                       address=127.0.0.1:29965
-DBG 2025-08-06 01:36:54.862+00:00 Received request                           peer=127.0.0.1:37012 meth=GET uri=/upcheck
-DBG 2025-08-06 01:36:54.862+00:00 Serving API request                        peer=127.0.0.1:37012 meth=GET uri=/upcheck path_params=[] query_params=[] content_body=(None)
-DBG 2025-08-06 01:36:54.862+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:37012 uri=/upcheck content_type=application/json content_size=16
-DBG 2025-08-06 01:36:54.865+00:00 Received request                           peer=127.0.0.1:37024 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.865+00:00 Serving API request                        peer=127.0.0.1:37024 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.866+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:37024 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.867+00:00 Received request                           peer=127.0.0.1:37030 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.867+00:00 Serving API request                        peer=127.0.0.1:37030 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.867+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:37030 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.868+00:00 Received request                           peer=127.0.0.1:37042 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.868+00:00 Serving API request                        peer=127.0.0.1:37042 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.868+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:37042 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
-DBG 2025-08-06 01:36:54.869+00:00 Received request                           peer=127.0.0.1:37052 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.869+00:00 Serving API request                        peer=127.0.0.1:37052 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.869+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37052 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=46
-DBG 2025-08-06 01:36:54.869+00:00 Received request                           peer=127.0.0.1:37054 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.869+00:00 Serving API request                        peer=127.0.0.1:37054 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.870+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37054 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=46
-DBG 2025-08-06 01:36:54.870+00:00 Received request                           peer=127.0.0.1:37068 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.870+00:00 Serving API request                        peer=127.0.0.1:37068 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1213 bytes)"
-DBG 2025-08-06 01:36:54.870+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37068 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=46
-DBG 2025-08-06 01:36:54.871+00:00 Received request                           peer=127.0.0.1:37084 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.871+00:00 Serving API request                        peer=127.0.0.1:37084 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.871+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37084 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=45
-DBG 2025-08-06 01:36:54.871+00:00 Received request                           peer=127.0.0.1:37094 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.871+00:00 Serving API request                        peer=127.0.0.1:37094 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.871+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37094 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=45
-DBG 2025-08-06 01:36:54.871+00:00 Received request                           peer=127.0.0.1:37100 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.871+00:00 Serving API request                        peer=127.0.0.1:37100 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 555 bytes)"
-DBG 2025-08-06 01:36:54.872+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37100 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=45
-DBG 2025-08-06 01:36:54.872+00:00 Received request                           peer=127.0.0.1:37108 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
-DBG 2025-08-06 01:36:54.872+00:00 Serving API request                        peer=127.0.0.1:37108 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 567 bytes)"
-DBG 2025-08-06 01:36:54.872+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37108 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=45
-DBG 2025-08-06 01:36:54.872+00:00 Received request                           peer=127.0.0.1:37116 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
-DBG 2025-08-06 01:36:54.872+00:00 Serving API request                        peer=127.0.0.1:37116 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 567 bytes)"
-DBG 2025-08-06 01:36:54.872+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37116 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=45
-DBG 2025-08-06 01:36:54.873+00:00 Received request                           peer=127.0.0.1:37124 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
-DBG 2025-08-06 01:36:54.873+00:00 Serving API request                        peer=127.0.0.1:37124 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 567 bytes)"
-DBG 2025-08-06 01:36:54.873+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:37124 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=45
+===== `nimbus_signing_node` process [30085] exited with [137] =====
+NTC 2025-08-07 01:37:12.326+00:00 Launching signing node                     version=v25.7.1-8431af-stateofus cmdParams="["--non-interactive=true", "--log-level=DEBUG", "--data-dir=test-signing-node-verifying-web3signer/signing-node", "--bind-address=127.0.0.1", "--bind-port=29965", "--expected-fee-recipient=0x000095e79eac4d76aab57cb2c1f091d553b36ca0", "--request-timeout=1"]" config="(configFile: none(InputFile), logLevel: DEBUG, logStdout: auto, logFile: none(OutFile), nonInteractive: true, dataDir: test-signing-node-verifying-web3signer/signing-node, validatorsDirFlag: none(InputDir), secretsDirFlag: none(InputDir), expectedFeeRecipient: some(0x000095e79eac4d76aab57cb2c1f091d553b36ca0), serverIdent: none(string), requestTimeout: 1, bindPort: 29965, bindAddress: 127.0.0.1, tlsEnabled: false, tlsCertificate: none(InputFile), tlsPrivateKey: none(InputFile))"
+INF 2025-08-07 01:37:12.327+00:00 Initializing validators                    path=test-signing-node-verifying-web3signer/signing-node/validators
+NTC 2025-08-07 01:37:12.327+00:00 Local validator attached                   topics="val_pool" pubkey=acf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d validator=acf31f9b initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.327+00:00 Local validator attached                   topics="val_pool" pubkey=aa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 validator=aa19751e initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.327+00:00 Local validator attached                   topics="val_pool" pubkey=99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 validator=99a8df08 initial_fee_recipient=0000000000000000000000000000000000000000 initial_gas_limit=45000000
+NTC 2025-08-07 01:37:12.327+00:00 REST service started                       address=127.0.0.1:29965
+DBG 2025-08-07 01:37:12.827+00:00 Received request                           peer=127.0.0.1:41418 meth=GET uri=/upcheck
+DBG 2025-08-07 01:37:12.827+00:00 Serving API request                        peer=127.0.0.1:41418 meth=GET uri=/upcheck path_params=[] query_params=[] content_body=(None)
+DBG 2025-08-07 01:37:12.827+00:00 Received response from handler             status=200 meth=GET peer=127.0.0.1:41418 uri=/upcheck content_type=application/json content_size=16
+DBG 2025-08-07 01:37:12.830+00:00 Received request                           peer=127.0.0.1:41428 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.830+00:00 Serving API request                        peer=127.0.0.1:41428 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.831+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:41428 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.832+00:00 Received request                           peer=127.0.0.1:41432 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.832+00:00 Serving API request                        peer=127.0.0.1:41432 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.832+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:41432 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.833+00:00 Received request                           peer=127.0.0.1:41440 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.833+00:00 Serving API request                        peer=127.0.0.1:41440 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.833+00:00 Received response from handler             status=200 meth=POST peer=127.0.0.1:41440 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=application/json content_size=211
+DBG 2025-08-07 01:37:12.834+00:00 Received request                           peer=127.0.0.1:41444 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.834+00:00 Serving API request                        peer=127.0.0.1:41444 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.834+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41444 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=46
+DBG 2025-08-07 01:37:12.834+00:00 Received request                           peer=127.0.0.1:41446 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.834+00:00 Serving API request                        peer=127.0.0.1:41446 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.834+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41446 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=46
+DBG 2025-08-07 01:37:12.835+00:00 Received request                           peer=127.0.0.1:41458 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.835+00:00 Serving API request                        peer=127.0.0.1:41458 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 1213 bytes)"
+DBG 2025-08-07 01:37:12.835+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41458 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=46
+DBG 2025-08-07 01:37:12.835+00:00 Received request                           peer=127.0.0.1:41462 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.835+00:00 Serving API request                        peer=127.0.0.1:41462 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.835+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41462 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=45
+DBG 2025-08-07 01:37:12.836+00:00 Received request                           peer=127.0.0.1:41472 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.836+00:00 Serving API request                        peer=127.0.0.1:41472 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.836+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41472 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=45
+DBG 2025-08-07 01:37:12.836+00:00 Received request                           peer=127.0.0.1:41476 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.836+00:00 Serving API request                        peer=127.0.0.1:41476 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 555 bytes)"
+DBG 2025-08-07 01:37:12.836+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41476 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=45
+DBG 2025-08-07 01:37:12.837+00:00 Received request                           peer=127.0.0.1:41492 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407
+DBG 2025-08-07 01:37:12.837+00:00 Serving API request                        peer=127.0.0.1:41492 meth=POST uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 path_params="[(validator_key, 0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407)]" query_params=[] content_body="(application/json, 567 bytes)"
+DBG 2025-08-07 01:37:12.837+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41492 uri=/api/v1/eth2/sign/0x99a8df087e253a874c3ca31e0d1115500a671ed8714800d503e99c2c887331a968a7fa7f0290c3a0698675eee138b407 content_type=text/plain content_size=45
+DBG 2025-08-07 01:37:12.837+00:00 Received request                           peer=127.0.0.1:41506 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352
+DBG 2025-08-07 01:37:12.837+00:00 Serving API request                        peer=127.0.0.1:41506 meth=POST uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 path_params="[(validator_key, 0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352)]" query_params=[] content_body="(application/json, 567 bytes)"
+DBG 2025-08-07 01:37:12.837+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41506 uri=/api/v1/eth2/sign/0xaa19751eb240a04a17b8720e2334acf1d78182ab496e77c51b3bb9e887d50295a478d499abcf6434efbc1aa4c4c4f352 content_type=text/plain content_size=45
+DBG 2025-08-07 01:37:12.837+00:00 Received request                           peer=127.0.0.1:41518 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d
+DBG 2025-08-07 01:37:12.837+00:00 Serving API request                        peer=127.0.0.1:41518 meth=POST uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d path_params="[(validator_key, 0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d)]" query_params=[] content_body="(application/json, 567 bytes)"
+DBG 2025-08-07 01:37:12.837+00:00 Received response from handler             status=400 meth=POST peer=127.0.0.1:41518 uri=/api/v1/eth2/sign/0xacf31f9b1ecf65dbb198e380599b6c81fc1a1f5db4457482cc697d81b1fdfb6e49cf8eff4980477f6e32749eef61dc4d content_type=text/plain content_size=45
 
-EF - Fulu - BPO forkdigests ... (0.00s)
-EF - KZG ............................................................................................................................................................................................................................................................. (2.65s)
-EF - KZG - PeerDAS ................................................................... (3.27s)
+EF - Fulu - BPO forkdigests .... (0.00s)
+EF - KZG ............................................................................................................................................................................................................................................................. (2.62s)
+EF - KZG - PeerDAS ................................................................... (3.26s)
 EF - PeerDAS - Networking [Preset: mainnet] ................ (0.00s)
 EF - SSZ generic types .....Unsupported **size** in type/size combination: array[0,uint8]
 Unsupported **size** in type/size combination: array[0,uint64]
@@ -961,22 +964,22 @@ Unsupported **size** in type/size combination: array[0,uint16]
 Unsupported **size** in type/size combination: array[0,bool]
 s...Unsupported BitVector of size 0
 s.. (0.07s)
-Slashing Interchange tests  [Preset: mainnet] ...........s.s.....................s.. (0.30s)
-Slashing Protection DB [Preset: mainnet] ............ (0.11s)
-Validator Client test suite ............... (4.67s)
+Slashing Interchange tests  [Preset: mainnet] ...........s.s.....................s.. (0.28s)
+Slashing Protection DB [Preset: mainnet] ............ (0.10s)
+Validator Client test suite ............... (4.65s)
 Beacon validators test suite . (0.00s)
-Beacon chain file test suite ..... (0.27s)
+Beacon chain file test suite ..... (0.26s)
 MEV calls serialization/deserialization and behavior test suite ......... (0.05s)
-BlobQuarantine data structure test suite  [Preset: mainnet] ......... (0.20s)
-ColumnQuarantine data structure test suite  [Preset: mainnet] ............ (0.28s)
+BlobQuarantine data structure test suite  [Preset: mainnet] ......... (0.19s)
+ColumnQuarantine data structure test suite  [Preset: mainnet] ............ (0.27s)
 Wrote test_keymanager_api/bootstrap_node.enr
 Serialization/deserialization [Beacon Node] [Preset: mainnet] . (0.00s)
-ListKeys requests [Beacon Node] [Preset: mainnet] .... (0.15s)
-ImportKeystores requests [Beacon Node] [Preset: mainnet] .... (3.04s)
+ListKeys requests [Beacon Node] [Preset: mainnet] .... (0.09s)
+ImportKeystores requests [Beacon Node] [Preset: mainnet] .... (3.18s)
 DeleteKeys requests [Beacon Node] [Preset: mainnet] .... (0.00s)
 ListRemoteKeys requests [Beacon Node] [Preset: mainnet] .... (0.00s)
-Fee recipient management [Beacon Node] [Preset: mainnet] ......... (0.02s)
-Gas limit management [Beacon Node] [Preset: mainnet] ......... (0.02s)
+Fee recipient management [Beacon Node] [Preset: mainnet] ......... (0.01s)
+Gas limit management [Beacon Node] [Preset: mainnet] ......... (0.01s)
 Graffiti management [Beacon Node] [Preset: mainnet] ....... (0.01s)
 ImportRemoteKeys/ListRemoteKeys/DeleteRemoteKeys [Beacon Node] [Preset: mainnet] .... (0.01s)
 DeleteRemoteKeys requests [Beacon Node] [Preset: mainnet] ..... (0.01s)
@@ -984,18 +987,18 @@ Combined scenarios [Beacon Node] [Preset: mainnet] .... (0.74s)
 
 10 longest individual test durations
 ------------------------------------
- 77.71s for EIP-7594: Compute Matrix
- 62.79s for EIP:7594: Recover Matrix
- 58.32s for Init from checkpoint
- 57.55s for Light client sync
- 54.73s for Accelerated shuffling computation
- 19.48s for Accelerated shuffling computation
- 16.75s for Can add and retrieve simple electra attestations [Preset: mainnet]
- 15.82s for Working with electra aggregates [Preset: mainnet]
- 15.78s for Cache coherence on chain aggregates [Preset: mainnet]
- 15.77s for Aggregating across committees [Preset: mainnet]
- 15.75s for Simple add and get with electra nonzero committee [Preset: mainnet]
-[Summary] 841 tests run (517.8s): 836 OK, 0 FAILED, 5 SKIPPED
+ 77.70s for EIP-7594: Compute Matrix
+ 62.85s for EIP:7594: Recover Matrix
+ 58.20s for Init from checkpoint
+ 57.21s for Light client sync
+ 54.90s for Accelerated shuffling computation
+ 19.12s for Accelerated shuffling computation
+ 16.71s for Can add and retrieve simple electra attestations [Preset: mainnet]
+ 15.74s for Working with electra aggregates [Preset: mainnet]
+ 15.73s for Aggregated attestations with disjoint comittee bits into a single on-chain aggregate [Preset: mainnet]
+ 15.73s for Attestations with disjoint comittee bits and equal data into single on-chain aggregate [Preset: mainnet]
+ 15.72s for Cache coherence on chain aggregates [Preset: mainnet]
+[Summary] 842 tests run (516.1s): 837 OK, 0 FAILED, 5 SKIPPED
 
 Running block_sim --validators=10000 --slots=192
 
@@ -1011,13 +1014,13 @@ Validators: 10000, epoch length: 32
 Validators per attestation (mean): 0.0
 All time are ms
      Average,       StdDev,          Min,          Max,      Samples,         Test
-       7.797,        2.216,        6.917,       37.710,          186, Process non-epoch slot with block
-     121.103,      116.745,       60.637,      358.652,            6, Process epoch slot with block
-       0.010,        0.001,        0.007,        0.021,          192, Tree-hash block
-       0.428,        0.007,        0.421,        0.464,          192, Sign block
-     110.058,        2.832,      103.559,      121.422,          192, Have committee attest to block
-     430.548,       10.103,      400.396,      453.863,          192, Produce sync committee actions
-      55.031,        0.000,       55.031,       55.031,            1, Replay all produced blocks
+       7.503,        2.196,        6.799,       37.206,          186, Process non-epoch slot with block
+     120.181,      117.522,       59.460,      359.322,            6, Process epoch slot with block
+       0.010,        0.001,        0.008,        0.025,          192, Tree-hash block
+       0.425,        0.006,        0.420,        0.452,          192, Sign block
+     109.992,        2.771,      103.457,      118.612,          192, Have committee attest to block
+     430.083,        9.945,      400.897,      453.230,          192, Produce sync committee actions
+      56.734,        0.000,       56.734,       56.734,            1, Replay all produced blocks
 
 Running test_libnimbus_lc 
 
