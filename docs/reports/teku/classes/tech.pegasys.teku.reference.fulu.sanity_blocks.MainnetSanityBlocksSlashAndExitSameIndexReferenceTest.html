@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.060s</div>
+<div class="counter">0.030s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">slash_and_exit_same_index</td>
 <td class="success">testSlashAndExitSameIndex()</td>
-<td class="success">0.060s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,23 +89,23 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-19 00:45:33.893+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-19 00:45:33.894+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_voluntary_exits: Validator has already initiated exit
-2025-08-19 00:45:33.894+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 8193 (0x6f1150f04bb2afae8052b009ecd4328301e8d2e40da2b360acdc75e704549bcf)
+<pre>2025-08-20 00:44:43.713+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-08-20 00:44:43.714+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_voluntary_exits: Validator has already initiated exit
+2025-08-20 00:44:43.714+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 8193 (0x6f1150f04bb2afae8052b009ecd4328301e8d2e40da2b360acdc75e704549bcf)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_voluntary_exits: Validator has already initiated exit
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processVoluntaryExitsNoValidation(AbstractBlockProcessor.java:807) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:454) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.processOperationsNoValidation(BlockProcessorElectra.java:160) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processVoluntaryExitsNoValidation(AbstractBlockProcessor.java:807) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:454) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.versions.electra.block.BlockProcessorElectra.processOperationsNoValidation(BlockProcessorElectra.java:160) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.4.jar:?]
@@ -207,8 +207,8 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_voluntary_exits: Validator has already initiated exit
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:220) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processVoluntaryExitsNoValidation$26(AbstractBlockProcessor.java:813) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.1+56-gd0a3f47cad]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processVoluntaryExitsNoValidation$26(AbstractBlockProcessor.java:813) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.7.1+59-g07db3f04e3]
 	... 111 more
 </pre>
 </span>
@@ -221,7 +221,7 @@ Caused by: java.lang.IllegalArgumentException: process_voluntary_exits: Validato
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 19, 2025, 12:47:38 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 20, 2025, 12:46:29 AM</p>
 </div>
 </div>
 </body>
