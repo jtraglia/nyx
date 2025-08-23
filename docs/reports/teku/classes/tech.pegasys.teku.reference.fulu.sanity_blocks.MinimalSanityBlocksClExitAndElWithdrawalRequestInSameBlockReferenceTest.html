@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.013s</div>
+<div class="counter">0.019s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,12 +61,44 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
+<a href="#">Failed tests</a>
+</li>
+<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard output</a>
 </li>
 </ul>
+<div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testClExitAndElWithdrawalRequestInSameBlock()"></a>
+<h3 class="failures">cl_exit_and_el_withdrawal_request_in_same_block</h3>
+<span class="code">
+<pre>java.lang.RuntimeException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.StateTransitionException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=14, parent_root=0xb9ab87cb5c84a76978ba0cb8a0e5a894d4baa13cf4802b0034e7abd909036189, state_root=0xa5d26b99a9661af6b7c5bfc46a0fa16f960ba6222a6301daf6c47ecd84c2edda, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x903aa50966b25a75eee4014900054801cc6b40115b9eb312f10937ee8694463e0f4bc05979465b894e7b8503d95951c800663f9165d8cecd06aea8f3719a158933bc74485e09f1ec760b0ce62ebaf694672af53904ea3ee252b2b2180becbd3c}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=0}, signature=0x9549f3d7b523371550ff50466650d9534265567a16a4cd72b87eefe51151def1ce7e81ecc9bfdbac32055ce1d860967c0c0272de4bb768e71027e062979ec835a36fd7e069ae64659ee725d08e0e56fd223b326499ee3c17c4b86238637086aa}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xd70eaf67c52aa41ab93b4b59882e88e3620a7b6d89f34e0b60b7c39c933c98c3, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=1: WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}}, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x85a4d8b9d5c0e920e5b0c8a4902329b93decbf6cad8327ddb84793eda0053db4016cb1d641238d8d5217d10c5a92cdce129972b75029f62f59bcf6ed6c157f9a8d31097b3515482c4730045161e242d5b413651482936afd29b1d6fea2329c4a}}
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:123)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72)
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at tech.pegasys.teku.reference.fulu.sanity_blocks.MinimalSanityBlocksClExitAndElWithdrawalRequestInSameBlockReferenceTest.testClExitAndElWithdrawalRequestInSameBlock(MinimalSanityBlocksClExitAndElWithdrawalRequestInSameBlockReferenceTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.StateTransitionException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=14, parent_root=0xb9ab87cb5c84a76978ba0cb8a0e5a894d4baa13cf4802b0034e7abd909036189, state_root=0xa5d26b99a9661af6b7c5bfc46a0fa16f960ba6222a6301daf6c47ecd84c2edda, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x903aa50966b25a75eee4014900054801cc6b40115b9eb312f10937ee8694463e0f4bc05979465b894e7b8503d95951c800663f9165d8cecd06aea8f3719a158933bc74485e09f1ec760b0ce62ebaf694672af53904ea3ee252b2b2180becbd3c}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=0}, signature=0x9549f3d7b523371550ff50466650d9534265567a16a4cd72b87eefe51151def1ce7e81ecc9bfdbac32055ce1d860967c0c0272de4bb768e71027e062979ec835a36fd7e069ae64659ee725d08e0e56fd223b326499ee3c17c4b86238637086aa}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xd70eaf67c52aa41ab93b4b59882e88e3620a7b6d89f34e0b60b7c39c933c98c3, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=1: WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}}, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x85a4d8b9d5c0e920e5b0c8a4902329b93decbf6cad8327ddb84793eda0053db4016cb1d641238d8d5217d10c5a92cdce129972b75029f62f59bcf6ed6c157f9a8d31097b3515482c4730045161e242d5b413651482936afd29b1d6fea2329c4a}}
+	at app//tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:194)
+	at app//tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846)
+	at app//tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113)
+	... 9 more
+Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=14, parent_root=0xb9ab87cb5c84a76978ba0cb8a0e5a894d4baa13cf4802b0034e7abd909036189, state_root=0xa5d26b99a9661af6b7c5bfc46a0fa16f960ba6222a6301daf6c47ecd84c2edda, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x903aa50966b25a75eee4014900054801cc6b40115b9eb312f10937ee8694463e0f4bc05979465b894e7b8503d95951c800663f9165d8cecd06aea8f3719a158933bc74485e09f1ec760b0ce62ebaf694672af53904ea3ee252b2b2180becbd3c}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=0}, signature=0x9549f3d7b523371550ff50466650d9534265567a16a4cd72b87eefe51151def1ce7e81ecc9bfdbac32055ce1d860967c0c0272de4bb768e71027e062979ec835a36fd7e069ae64659ee725d08e0e56fd223b326499ee3c17c4b86238637086aa}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xd70eaf67c52aa41ab93b4b59882e88e3620a7b6d89f34e0b60b7c39c933c98c3, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=1: WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}}, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x85a4d8b9d5c0e920e5b0c8a4902329b93decbf6cad8327ddb84793eda0053db4016cb1d641238d8d5217d10c5a92cdce129972b75029f62f59bcf6ed6c157f9a8d31097b3515482c4730045161e242d5b413651482936afd29b1d6fea2329c4a}}
+	at app//tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184)
+	... 11 more
+</pre>
+</span>
+</div>
+</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -79,21 +111,119 @@
 </tr>
 </thead>
 <tr>
-<td class="success">cl_exit_and_el_withdrawal_request_in_same_block</td>
-<td class="success">testClExitAndElWithdrawalRequestInSameBlock()</td>
-<td class="success">0.013s</td>
-<td class="success">passed</td>
+<td class="failures">cl_exit_and_el_withdrawal_request_in_same_block</td>
+<td class="failures">testClExitAndElWithdrawalRequestInSameBlock()</td>
+<td class="failures">0.019s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-22 00:45:44.913+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:45:44.913+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 1 withdrawal request to process from block at slot 513
-2025-08-22 00:45:44.913+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}
-2025-08-22 00:45:44.913+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: Validator 0 has already initiated exit
-2025-08-22 00:45:44.913+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
+<pre>2025-08-23 00:43:46.697+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-08-23 00:43:46.697+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 1 withdrawal request to process from block at slot 513
+2025-08-23 00:43:46.697+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: processing withdrawal request WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}
+2025-08-23 00:43:46.698+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: Validator 0 has already initiated exit
+2025-08-23 00:43:46.698+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
+2025-08-23 00:43:46.701+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0x33591447e550e8b96b8cc858c20628b065c21fc6b7c5e63d13d5265719e51375)
+tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=14, parent_root=0xb9ab87cb5c84a76978ba0cb8a0e5a894d4baa13cf4802b0034e7abd909036189, state_root=0xa5d26b99a9661af6b7c5bfc46a0fa16f960ba6222a6301daf6c47ecd84c2edda, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x903aa50966b25a75eee4014900054801cc6b40115b9eb312f10937ee8694463e0f4bc05979465b894e7b8503d95951c800663f9165d8cecd06aea8f3719a158933bc74485e09f1ec760b0ce62ebaf694672af53904ea3ee252b2b2180becbd3c}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=0}, signature=0x9549f3d7b523371550ff50466650d9534265567a16a4cd72b87eefe51151def1ce7e81ecc9bfdbac32055ce1d860967c0c0272de4bb768e71027e062979ec835a36fd7e069ae64659ee725d08e0e56fd223b326499ee3c17c4b86238637086aa}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xd70eaf67c52aa41ab93b4b59882e88e3620a7b6d89f34e0b60b7c39c933c98c3, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=1: WithdrawalRequest{source_address=SszByteVector{0x2222222222222222222222222222222222222222}, validator_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, amount=0}}, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x85a4d8b9d5c0e920e5b0c8a4902329b93decbf6cad8327ddb84793eda0053db4016cb1d641238d8d5217d10c5a92cdce129972b75029f62f59bcf6ed6c157f9a8d31097b3515482c4730045161e242d5b413651482936afd29b1d6fea2329c4a}}
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.7.1+69-g917caacd3a]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+69-g917caacd3a]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.fulu.sanity_blocks.MinimalSanityBlocksClExitAndElWithdrawalRequestInSameBlockReferenceTest.testClExitAndElWithdrawalRequestInSameBlock(MinimalSanityBlocksClExitAndElWithdrawalRequestInSameBlockReferenceTest.java:28) ~[referenceTest/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787) ~[junit-platform-commons-1.13.4.jar:1.13.4]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478) ~[junit-platform-commons-1.13.4.jar:1.13.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) [gradle-messaging-8.14.3.jar:8.14.3]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 </pre>
 </span>
 </div>
@@ -105,7 +235,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 22, 2025, 12:47:17 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 23, 2025, 12:45:17 AM</p>
 </div>
 </div>
 </body>

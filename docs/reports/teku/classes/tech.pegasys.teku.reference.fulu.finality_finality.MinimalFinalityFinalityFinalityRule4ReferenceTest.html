@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.120s</div>
+<div class="counter">0.011s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,12 +61,44 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
+<a href="#">Failed tests</a>
+</li>
+<li>
 <a href="#">Tests</a>
 </li>
 <li>
 <a href="#">Standard output</a>
 </li>
 </ul>
+<div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testFinalityRule4()"></a>
+<h3 class="failures">finality_rule_4</h3>
+<span class="code">
+<pre>java.lang.RuntimeException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.StateTransitionException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=17, proposer_index=29, parent_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, state_root=0xb5777e43a54e6e1288dd20a57e0719a47fd66e648ff4354feaae74628c2548aa, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8d8b23c469ab27e394e4d3426e8906f307bcb3c293eb0e8d457e7aa8e09de925b4ad6c40668c43fa1155e8d4def1fe9807ef6de6ebf3254472d79b05ca561c12dfd32ea3101555390cc4769fe41b534b4de28c842dffdbe7ebcd6ee2a35ad3a6}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=1: AttestationElectra{aggregation_bits=SszBitlist{size=8, 11111111}, data=AttestationData{slot=16, index=0, beacon_block_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=2, root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8}}, signature=SszByteVector{0xb8c209f0ef0a0de19e6a1e789a0b0600fca5522abd0c5660677d5e3633e12ca2e2b81b4010dda92de16740f2d332e97210d947b6017ac23b03268e216ce9e972ad8afbf6df908745962285791ec4421f80b146384e595cd6593790b6cc3a2712}, committee_bits=SszBitvector{size=4, 1100}}}, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0xfa768fd6beabac86f4404642a42bba69891c7c5d444f38e435e21486e19f330e, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0x86cbf49885b5fc6c6c2d4fa82b102dad13e8cb016172d9b4f45e841716a6f5f5, block_number=3, gas_limit=30000000, gas_used=0, timestamp=102, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x3d94abb8e800425251e02b92a97ef7b3d925c2e5d657c64f59541b1a2dac3c42, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xa688a318d67b653cb7596f9a2238bfbe7b84b5891dda9ac46a18072a6789a0f564eb58d7f7aba2fc967b8c91ea98e0d405970bf6488e004d42ced24e5851295b797a6662962db87824e1d1301ed6718204a3dc374a73862253d6f3bc1c8acd6d}}
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:123)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83)
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72)
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at tech.pegasys.teku.reference.fulu.finality_finality.MinimalFinalityFinalityFinalityRule4ReferenceTest.testFinalityRule4(MinimalFinalityFinalityFinalityRule4ReferenceTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.StateTransitionException: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=17, proposer_index=29, parent_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, state_root=0xb5777e43a54e6e1288dd20a57e0719a47fd66e648ff4354feaae74628c2548aa, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8d8b23c469ab27e394e4d3426e8906f307bcb3c293eb0e8d457e7aa8e09de925b4ad6c40668c43fa1155e8d4def1fe9807ef6de6ebf3254472d79b05ca561c12dfd32ea3101555390cc4769fe41b534b4de28c842dffdbe7ebcd6ee2a35ad3a6}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=1: AttestationElectra{aggregation_bits=SszBitlist{size=8, 11111111}, data=AttestationData{slot=16, index=0, beacon_block_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=2, root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8}}, signature=SszByteVector{0xb8c209f0ef0a0de19e6a1e789a0b0600fca5522abd0c5660677d5e3633e12ca2e2b81b4010dda92de16740f2d332e97210d947b6017ac23b03268e216ce9e972ad8afbf6df908745962285791ec4421f80b146384e595cd6593790b6cc3a2712}, committee_bits=SszBitvector{size=4, 1100}}}, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0xfa768fd6beabac86f4404642a42bba69891c7c5d444f38e435e21486e19f330e, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0x86cbf49885b5fc6c6c2d4fa82b102dad13e8cb016172d9b4f45e841716a6f5f5, block_number=3, gas_limit=30000000, gas_used=0, timestamp=102, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x3d94abb8e800425251e02b92a97ef7b3d925c2e5d657c64f59541b1a2dac3c42, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xa688a318d67b653cb7596f9a2238bfbe7b84b5891dda9ac46a18072a6789a0f564eb58d7f7aba2fc967b8c91ea98e0d405970bf6488e004d42ced24e5851295b797a6662962db87824e1d1301ed6718204a3dc374a73862253d6f3bc1c8acd6d}}
+	at app//tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:194)
+	at app//tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846)
+	at app//tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113)
+	... 9 more
+Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=17, proposer_index=29, parent_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, state_root=0xb5777e43a54e6e1288dd20a57e0719a47fd66e648ff4354feaae74628c2548aa, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8d8b23c469ab27e394e4d3426e8906f307bcb3c293eb0e8d457e7aa8e09de925b4ad6c40668c43fa1155e8d4def1fe9807ef6de6ebf3254472d79b05ca561c12dfd32ea3101555390cc4769fe41b534b4de28c842dffdbe7ebcd6ee2a35ad3a6}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=1: AttestationElectra{aggregation_bits=SszBitlist{size=8, 11111111}, data=AttestationData{slot=16, index=0, beacon_block_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=2, root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8}}, signature=SszByteVector{0xb8c209f0ef0a0de19e6a1e789a0b0600fca5522abd0c5660677d5e3633e12ca2e2b81b4010dda92de16740f2d332e97210d947b6017ac23b03268e216ce9e972ad8afbf6df908745962285791ec4421f80b146384e595cd6593790b6cc3a2712}, committee_bits=SszBitvector{size=4, 1100}}}, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0xfa768fd6beabac86f4404642a42bba69891c7c5d444f38e435e21486e19f330e, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0x86cbf49885b5fc6c6c2d4fa82b102dad13e8cb016172d9b4f45e841716a6f5f5, block_number=3, gas_limit=30000000, gas_used=0, timestamp=102, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x3d94abb8e800425251e02b92a97ef7b3d925c2e5d657c64f59541b1a2dac3c42, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xa688a318d67b653cb7596f9a2238bfbe7b84b5891dda9ac46a18072a6789a0f564eb58d7f7aba2fc967b8c91ea98e0d405970bf6488e004d42ced24e5851295b797a6662962db87824e1d1301ed6718204a3dc374a73862253d6f3bc1c8acd6d}}
+	at app//tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184)
+	... 11 more
+</pre>
+</span>
+</div>
+</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -79,64 +111,117 @@
 </tr>
 </thead>
 <tr>
-<td class="success">finality_rule_4</td>
-<td class="success">testFinalityRule4()</td>
-<td class="success">0.120s</td>
-<td class="success">passed</td>
+<td class="failures">finality_rule_4</td>
+<td class="failures">testFinalityRule4()</td>
+<td class="failures">0.011s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-22 00:44:11.482+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.483+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 17
-2025-08-22 00:44:11.483+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 17
-2025-08-22 00:44:11.491+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.491+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 18
-2025-08-22 00:44:11.491+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 18
-2025-08-22 00:44:11.500+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.500+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 19
-2025-08-22 00:44:11.500+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 19
-2025-08-22 00:44:11.508+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.508+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 20
-2025-08-22 00:44:11.508+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 20
-2025-08-22 00:44:11.516+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.517+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 21
-2025-08-22 00:44:11.517+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 21
-2025-08-22 00:44:11.525+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.525+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 22
-2025-08-22 00:44:11.525+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 22
-2025-08-22 00:44:11.533+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.533+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 23
-2025-08-22 00:44:11.533+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 23
-2025-08-22 00:44:11.543+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.543+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 24
-2025-08-22 00:44:11.543+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 24
-2025-08-22 00:44:11.550+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.550+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 25
-2025-08-22 00:44:11.550+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 25
-2025-08-22 00:44:11.554+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.555+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 26
-2025-08-22 00:44:11.555+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 26
-2025-08-22 00:44:11.559+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.559+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 27
-2025-08-22 00:44:11.559+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 27
-2025-08-22 00:44:11.564+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.564+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 28
-2025-08-22 00:44:11.564+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 28
-2025-08-22 00:44:11.569+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.569+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 29
-2025-08-22 00:44:11.569+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 29
-2025-08-22 00:44:11.573+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.573+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 30
-2025-08-22 00:44:11.573+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 30
-2025-08-22 00:44:11.578+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.578+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 31
-2025-08-22 00:44:11.578+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 31
-2025-08-22 00:44:11.585+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-08-22 00:44:11.585+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 32
-2025-08-22 00:44:11.585+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 32
+<pre>2025-08-23 00:42:38.451+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-08-23 00:42:38.451+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 17
+2025-08-23 00:42:38.451+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 17
+2025-08-23 00:42:38.453+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 17 (0xe7b99f23fd0cc7941cbb33465a5e2191b0df9bf069d9219f4116e4e9d80dbe19)
+tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=17, proposer_index=29, parent_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, state_root=0xb5777e43a54e6e1288dd20a57e0719a47fd66e648ff4354feaae74628c2548aa, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8d8b23c469ab27e394e4d3426e8906f307bcb3c293eb0e8d457e7aa8e09de925b4ad6c40668c43fa1155e8d4def1fe9807ef6de6ebf3254472d79b05ca561c12dfd32ea3101555390cc4769fe41b534b4de28c842dffdbe7ebcd6ee2a35ad3a6}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=1: AttestationElectra{aggregation_bits=SszBitlist{size=8, 11111111}, data=AttestationData{slot=16, index=0, beacon_block_root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=2, root=0x7d9e28f5418ce35d9cfeb33052afccde6a746f25609178f52acb4715567efdf8}}, signature=SszByteVector{0xb8c209f0ef0a0de19e6a1e789a0b0600fca5522abd0c5660677d5e3633e12ca2e2b81b4010dda92de16740f2d332e97210d947b6017ac23b03268e216ce9e972ad8afbf6df908745962285791ec4421f80b146384e595cd6593790b6cc3a2712}, committee_bits=SszBitvector{size=4, 1100}}}, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0xfa768fd6beabac86f4404642a42bba69891c7c5d444f38e435e21486e19f330e, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0x86cbf49885b5fc6c6c2d4fa82b102dad13e8cb016172d9b4f45e841716a6f5f5, block_number=3, gas_limit=30000000, gas_used=0, timestamp=102, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x3d94abb8e800425251e02b92a97ef7b3d925c2e5d657c64f59541b1a2dac3c42, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xa688a318d67b653cb7596f9a2238bfbe7b84b5891dda9ac46a18072a6789a0f564eb58d7f7aba2fc967b8c91ea98e0d405970bf6488e004d42ced24e5851295b797a6662962db87824e1d1301ed6718204a3dc374a73862253d6f3bc1c8acd6d}}
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.7.1+69-g917caacd3a]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+69-g917caacd3a]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.fulu.finality_finality.MinimalFinalityFinalityFinalityRule4ReferenceTest.testFinalityRule4(MinimalFinalityFinalityFinalityRule4ReferenceTest.java:28) ~[referenceTest/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787) ~[junit-platform-commons-1.13.4.jar:1.13.4]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478) ~[junit-platform-commons-1.13.4.jar:1.13.4]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-5.13.4.jar:5.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.13.4.jar:1.13.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.14.3.jar:8.14.3]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) [gradle-messaging-8.14.3.jar:8.14.3]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) [gradle-testing-base-infrastructure-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72) [gradle-worker-main-8.14.3.jar:8.14.3]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 </pre>
 </span>
 </div>
@@ -148,7 +233,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 22, 2025, 12:47:17 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 23, 2025, 12:45:17 AM</p>
 </div>
 </div>
 </body>
