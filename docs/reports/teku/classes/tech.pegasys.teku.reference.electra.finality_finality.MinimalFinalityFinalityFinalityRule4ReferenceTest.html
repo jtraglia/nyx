@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.018s</div>
+<div class="counter">0.020s</div>
 <p>duration</p>
 </div>
 </td>
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">finality_rule_4</td>
 <td class="failures">testFinalityRule4()</td>
-<td class="failures">0.018s</td>
+<td class="failures">0.020s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,13 +121,13 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-26 00:43:01.167+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsElectra
-2025-08-26 00:43:01.168+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 17
-2025-08-26 00:43:01.168+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 17
-2025-08-26 00:43:01.170+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 17 (0xac8332249613f9f415df7fcc8dcb3e0e7db1c464a339b409cb800e74a9e3d9f7)
+<pre>2025-08-27 00:42:48.146+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsElectra
+2025-08-27 00:42:48.146+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 17
+2025-08-27 00:42:48.146+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 17
+2025-08-27 00:42:48.149+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 17 (0xac8332249613f9f415df7fcc8dcb3e0e7db1c464a339b409cb800e74a9e3d9f7)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=17, proposer_index=29, parent_root=0x3785cf00c069eb3bdcebcfb2f1fafb95ff917c97b2c41c39f82380d8788f46d3, state_root=0xf94a72297c41b9c3eca2e348baf7823e50afe79f02874e5621b42761fce9970a, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0xb2bac5d5518283579ae120c4beff5cc4a2f004b24789507dc9620dbf8ea57c0bedad5ec68f378b03fbf5090a7678a0eb12d6d49ab2bd10ccc738944abf6dceff8bee84800cf07ec60b6cad7be2c6b0496f351384c68d5bdf2398d3fc9a40f305}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=1: AttestationElectra{aggregation_bits=SszBitlist{size=8, 11111111}, data=AttestationData{slot=16, index=0, beacon_block_root=0x3785cf00c069eb3bdcebcfb2f1fafb95ff917c97b2c41c39f82380d8788f46d3, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=2, root=0x3785cf00c069eb3bdcebcfb2f1fafb95ff917c97b2c41c39f82380d8788f46d3}}, signature=SszByteVector{0xab37582adb7f7d650a071d3d4b1586de4d7329326eef9be8fb67e50ea5215c5c2b14ada1c8ec2e5f4c0808c6a872c6ec14ddce68a2053222c67053ae67d52b035b8e0ab1757bc3929259d2af3529c82d3cc79ae65515b050e88012225c9c25e3}, committee_bits=SszBitvector{size=4, 1100}}}, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x0fb8a88a3eeea8c6f12830479af5d4d86afd183c23af3947ca56950651f2681c, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0x4cdce09968d5a3ed153c9f14335120280f2dbce0ec12db8bafd6ac1b1f4bc323, block_number=3, gas_limit=30000000, gas_used=0, timestamp=102, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xb1f64174600c1a7e67b1f1477c9e9e9ea4bc27d1894fb680018b5260dd8aa7f2, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xa4aa1b50bf42084596a981b13a77da7c6b5644c761246100d642325f072d55b6da7ddee0f726a82cf8a704005426822d12e3727d1eeacf46f4cfa290a88e83b556724c1f856941274099df3640d5e7c79947f40e3dfea270c0d09cc82d6abc9b}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.7.1+73-gb90af0a642]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+73-gb90af0a642]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.7.1+77-g6cfa541d78]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:846) ~[teku-ethereum-spec-develop.jar:25.7.1+77-g6cfa541d78]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
 	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
@@ -233,7 +233,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 26, 2025, 12:47:27 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 27, 2025, 12:47:18 AM</p>
 </div>
 </div>
 </body>
