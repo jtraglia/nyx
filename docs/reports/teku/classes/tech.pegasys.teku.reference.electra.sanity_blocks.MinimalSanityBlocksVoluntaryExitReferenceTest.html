@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.024s</div>
+<div class="counter">0.013s</div>
 <p>duration</p>
 </div>
 </td>
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">voluntary_exit</td>
 <td class="failures">testVoluntaryExit()</td>
-<td class="failures">0.024s</td>
+<td class="failures">0.013s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,10 +121,10 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-30 00:41:17.565+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsElectra
-2025-08-30 00:41:17.566+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
-2025-08-30 00:41:17.566+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
-2025-08-30 00:41:17.570+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0x299f695b6e14a43ab8e1f8849ba525a8ad7f2ccbb37c17a3e2bb03441bed641a)
+<pre>2025-08-31 00:46:57.909+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsElectra
+2025-08-31 00:46:57.910+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
+2025-08-31 00:46:57.910+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
+2025-08-31 00:46:57.913+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0x299f695b6e14a43ab8e1f8849ba525a8ad7f2ccbb37c17a3e2bb03441bed641a)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=34, parent_root=0x4543fa507dbd16e68a8b2b5d3112e36f76795796c21f7d6e8edf50d78e8b6922, state_root=0xee9da82f7e6d764eae700e93c25305d9976366b2210eaca49dddbb59e6f1131b, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0xa78d496dd597601a39f72a2ef02d69a5cae39948b722fd1a02cfc296e0521a952eb0392d92aa39dff9aeebcde1c6a4a20e6ac53830471e3a0457e50f4f30842995e860fff091f341df086323d54b6718ae4f661b7ac2a0ea935afb12bfa66b61}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=63}, signature=0x94a752a51470fa4ee2684c317a0f070a25da2f0b445ecd1a01246a5e3f32103e21c974950f11016b351ff9595737e59a0db04db650eb16ea26791a22d4f369a1b163d4c5aebe16bb8632cec7f41f17069b6490c3ffeb55838742e8443952c56e}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x069f197c7b669e045369eeed9565a2ab43567fab947c2bef5449dda928724e88, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x8004ba94fa54dc3fa864dea284b56739ca0d4989786887bbed3376c8aba79dcb70013884d7b719377cfddce2011265fb0163c5cac4e1c4e98ba54baec8348bdae02bdccd78a6f96f8289b17113094cb76a6d94ca6e026e70561dd3e2506d0303}}
 	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.7.1+82-g0b5abf5fc6]
 	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.7.1+82-g0b5abf5fc6]
@@ -233,7 +233,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 30, 2025, 12:44:45 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Aug 31, 2025, 12:50:27 AM</p>
 </div>
 </div>
 </body>
