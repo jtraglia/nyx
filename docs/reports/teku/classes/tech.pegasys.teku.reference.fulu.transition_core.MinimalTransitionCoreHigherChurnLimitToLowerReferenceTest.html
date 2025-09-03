@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.017s</div>
+<div class="counter">0.016s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 <pre>java.lang.AssertionError: Failed to process block 0 at slot 16: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=16, proposer_index=130, parent_root=0x28d845ec7a7a981d633a6391cf513b38ecdd7240be66994023a397e155fce70f, state_root=0xbf5044a05f8dfec4b8fa7f516b4681d27cda74e9bb88f3b751f83c3da53f352f, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8bd2412c638ce9a84a0405a9255ecdc444cef5816a425386c2a494d18bf9c50d66692e0022a787e2f11b9f7831591cfb09e4fbe0d403506d51ba08b6ca566649066ba1012e82bbe921e6a1e8d344865b4dd7239ee5ff12a4bcced3e6cd7ebd7b}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=96, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x4683dca7ec13273058db491aa0c200a63dc2bd108de5d84887181dcae5d16c39, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xaf242565d04d2cc8a76d0b9c13c7fec70bc84ce1de05bbaa22466282e96b226dede99e49603437fd2ea7b472439afdf60984ca0c57874e45cfb1a325dbf59073a49a3538fc541b02daff20a51566f00703c73259c7c51a23a7ab43753f45a150}}
 	at tech.pegasys.teku.reference.altair.fork.TransitionTestExecutor.processUpgrade(TransitionTestExecutor.java:120)
 	at tech.pegasys.teku.reference.altair.fork.TransitionTestExecutor.runTest(TransitionTestExecutor.java:45)
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:121)
 	at tech.pegasys.teku.reference.fulu.transition_core.MinimalTransitionCoreHigherChurnLimitToLowerReferenceTest.testHigherChurnLimitToLower(MinimalTransitionCoreHigherChurnLimitToLowerReferenceTest.java:28)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -110,7 +110,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">higher_churn_limit_to_lower</td>
 <td class="failures">testHigherChurnLimitToLower()</td>
-<td class="failures">0.017s</td>
+<td class="failures">0.016s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -118,16 +118,16 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-02 00:44:42.440+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
-2025-09-02 00:44:42.440+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 16
-2025-09-02 00:44:42.440+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 16
-2025-09-02 00:44:42.442+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 16 (0x979c52fb72168a37ca78b31c2d6c248d778d11fa6e49a90adf9f7b0468af5160)
+<pre>2025-09-03 00:44:29.109+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsFulu
+2025-09-03 00:44:29.109+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 16
+2025-09-03 00:44:29.109+00:00 | Test worker | DEBUG | BlockProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 16
+2025-09-03 00:44:29.111+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 16 (0x979c52fb72168a37ca78b31c2d6c248d778d11fa6e49a90adf9f7b0468af5160)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=16, proposer_index=130, parent_root=0x28d845ec7a7a981d633a6391cf513b38ecdd7240be66994023a397e155fce70f, state_root=0xbf5044a05f8dfec4b8fa7f516b4681d27cda74e9bb88f3b751f83c3da53f352f, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8bd2412c638ce9a84a0405a9255ecdc444cef5816a425386c2a494d18bf9c50d66692e0022a787e2f11b9f7831591cfb09e4fbe0d403506d51ba08b6ca566649066ba1012e82bbe921e6a1e8d344865b4dd7239ee5ff12a4bcced3e6cd7ebd7b}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=96, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x4683dca7ec13273058db491aa0c200a63dc2bd108de5d84887181dcae5d16c39, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xaf242565d04d2cc8a76d0b9c13c7fec70bc84ce1de05bbaa22466282e96b226dede99e49603437fd2ea7b472439afdf60984ca0c57874e45cfb1a325dbf59073a49a3538fc541b02daff20a51566f00703c73259c7c51a23a7ab43753f45a150}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.0+1-g49ea13b94d]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.0+1-g49ea13b94d]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.0+4-g98c1ddf14e]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.0+4-g98c1ddf14e]
 	at tech.pegasys.teku.reference.altair.fork.TransitionTestExecutor.processUpgrade(TransitionTestExecutor.java:118) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.altair.fork.TransitionTestExecutor.runTest(TransitionTestExecutor.java:45) ~[referenceTest/:?]
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:121) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.fulu.transition_core.MinimalTransitionCoreHigherChurnLimitToLowerReferenceTest.testHigherChurnLimitToLower(MinimalTransitionCoreHigherChurnLimitToLowerReferenceTest.java:28) ~[referenceTest/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
@@ -227,7 +227,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 2, 2025, 12:45:56 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 3, 2025, 12:45:37 AM</p>
 </div>
 </div>
 </body>

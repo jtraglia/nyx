@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.480s</div>
+<div class="counter">2.309s</div>
 <p>duration</p>
 </div>
 </td>
@@ -88,7 +88,7 @@ Finalized checkpoint: Checkpoint{epoch=0, root=0xa75bf2d671b05fdba1f1a97813a62d4
 Protoarray data:
 ProtoNodeData{slot=0, root=0xa75bf2d671b05fdba1f1a97813a62d4fd3f5e5553f1febf6929e1d762e8b47f3, parentRoot=0x0000000000000000000000000000000000000000000000000000000000000000, stateRoot=0x954cb5df411ba52b92d350760f5648f31d96a2cb01c0210aee3d9002619a7cd7, executionBlockNumber=0, executionBlockHash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, validationStatus=OPTIMISTIC, checkpoints=BlockCheckpoints{justifiedCheckpoint=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, finalizedCheckpoint=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, unrealizedJustifiedCheckpoint=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, unrealizedFinalizedCheckpoint=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}}, weight=0}
 	at tech.pegasys.teku.reference.phase0.forkchoice.ForkChoiceTestExecutor.runTest(ForkChoiceTestExecutor.java:194)
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:121)
 	at tech.pegasys.teku.reference.electra.fork_choice_get_head.MinimalForkChoiceGetHeadDiscardEquivocationsOnAttesterSlashingReferenceTest.testDiscardEquivocationsOnAttesterSlashing(MinimalForkChoiceGetHeadDiscardEquivocationsOnAttesterSlashingReferenceTest.java:28)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -121,7 +121,7 @@ but did not.
 <tr>
 <td class="failures">discard_equivocations_on_attester_slashing</td>
 <td class="failures">testDiscardEquivocationsOnAttesterSlashing()</td>
-<td class="failures">2.480s</td>
+<td class="failures">2.309s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -129,13 +129,13 @@ but did not.
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-02 00:41:51.195+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
-2025-09-02 00:41:51.195+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
-2025-09-02 00:41:51.196+00:00 | Test worker | DEBUG | CKZG4844 | Freeing current trusted setup jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt in order to load trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt
-2025-09-02 00:41:51.196+00:00 | Test worker | DEBUG | CKZG4844 | Trusted setup was freed
-2025-09-02 00:41:53.663+00:00 | Test worker | DEBUG | CKZG4844 | Loaded trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt
-2025-09-02 00:41:53.663+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
-2025-09-02 00:41:53.664+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={head={slot=0, root=0x60da80cfa896db02d7d87fb9ffb0a23342fe505b2de21415166b3ddc32dfbce5}}}
+<pre>2025-09-03 00:41:24.156+00:00 | Test worker | INFO  | teku-status-log | Initializing storage
+2025-09-03 00:41:24.156+00:00 | Test worker | INFO  | teku-status-log | Empty storage. Initialization complete.
+2025-09-03 00:41:24.157+00:00 | Test worker | DEBUG | CKZG4844 | Freeing current trusted setup jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/mainnet-trusted-setup.txt in order to load trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt
+2025-09-03 00:41:24.157+00:00 | Test worker | DEBUG | CKZG4844 | Trusted setup was freed
+2025-09-03 00:41:26.453+00:00 | Test worker | DEBUG | CKZG4844 | Loaded trusted setup from jar:file:/home/runner/work/nyx/nyx/teku/ethereum/networks/build/libs/teku-ethereum-networks-develop.jar!/tech/pegasys/teku/networks/minimal-trusted-setup.txt
+2025-09-03 00:41:26.453+00:00 | Test worker | DEBUG | ForkChoice | forkChoiceLateBlockReorgEnabled is set to true
+2025-09-03 00:41:26.454+00:00 | Test worker | INFO  | ForkChoiceTestExecutor | Executing step {checks={head={slot=0, root=0x60da80cfa896db02d7d87fb9ffb0a23342fe505b2de21415166b3ddc32dfbce5}}}
 </pre>
 </span>
 </div>
@@ -147,7 +147,7 @@ but did not.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 2, 2025, 12:45:54 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 3, 2025, 12:45:34 AM</p>
 </div>
 </div>
 </body>

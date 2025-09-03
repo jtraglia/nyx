@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.017s</div>
+<div class="counter">0.019s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83)
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72)
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112)
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:121)
 	at tech.pegasys.teku.reference.deneb.sanity_blocks.MinimalSanityBlocksSyncCommitteeCommitteeFullReferenceTest.testSyncCommitteeCommitteeFull(MinimalSanityBlocksSyncCommitteeCommitteeFullReferenceTest.java:28)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">sync_committee_committee__full</td>
 <td class="failures">testSyncCommitteeCommitteeFull()</td>
-<td class="failures">0.017s</td>
+<td class="failures">0.019s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,17 +121,17 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-02 00:41:10.313+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsDeneb
-2025-09-02 00:41:10.321+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 9 (0x357799a3829118c08b75d2de30eba189091b6fb554c5354ee1dfbd27d200708a)
+<pre>2025-09-03 00:40:41.442+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsDeneb
+2025-09-03 00:40:41.451+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 9 (0x357799a3829118c08b75d2de30eba189091b6fb554c5354ee1dfbd27d200708a)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockDeneb{message=BeaconBlockDeneb{slot=9, proposer_index=29, parent_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, state_root=0xc74858b343ba4c92a0577af92bb3681ded6c09725749a6bbc068143e060ddda1, body=BeaconBlockBodyDeneb{randao_reveal=SszByteVector{0x9891f50997dde712e1ea5cc47daef034f39986f96fe930c2b06cfe9b775383954bedee4d024589487e08fe6364af2c460d08db8c7d7259be28b312a816c4928605ab8f15db8c8125ced82edd50a2b932479a6d11b4fa0da03c34aa328c36a202}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 11111111111111111111111111111111}, sync_committee_signature=SszByteVector{0x86b6107465fc85c541c4d4527e5606d07e9c1ef2a43ab27883d00fce481f1b6b983ba893a7affb0802db3ed3c5f3038205395d8ca68cf38410880f7b10554549900ea1d4975e8744cdfeb5b0e29ce248415dbc084944ca3ddd1e189b07bcb18c}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x51b36e7af91b87ad2daaebee31cecdf620a48d572136eddc70373c230cde486f, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=54, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x45f4426015bfb17ef4560ecf88b1e13a84298faf118fc72f628aa6e633dceb65, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }}}, signature=SszByteVector{0xac086b101a776e9a388d8d0189c207760d55348f98829b98c2b9dff48123d63574d4a4dfc95a53fa26ab06639c0a47ed062a7f0dded3ef17101fbf9e528fec4e265eb17bc6fd18b0db72e22c2b9b64cc422480bcd967c45cd47dff80dd341f52}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.0+1-g49ea13b94d]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.0+1-g49ea13b94d]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.0+4-g98c1ddf14e]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.0+4-g98c1ddf14e]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
 	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runBlockProcessor(SanityBlocksTestExecutor.java:83) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.runTest(SanityBlocksTestExecutor.java:72) ~[referenceTest/:?]
-	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:112) ~[referenceTest/:?]
+	at tech.pegasys.teku.reference.Eth2ReferenceTestCase.runReferenceTest(Eth2ReferenceTestCase.java:121) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.deneb.sanity_blocks.MinimalSanityBlocksSyncCommitteeCommitteeFullReferenceTest.testSyncCommitteeCommitteeFull(MinimalSanityBlocksSyncCommitteeCommitteeFullReferenceTest.java:28) ~[referenceTest/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
@@ -231,7 +231,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 2, 2025, 12:45:54 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 3, 2025, 12:45:34 AM</p>
 </div>
 </div>
 </body>
