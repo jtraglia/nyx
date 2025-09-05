@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.047s</div>
+<div class="counter">0.055s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_duplicate_attester_slashing_same_block</td>
 <td class="success">testInvalidDuplicateAttesterSlashingSameBlock()</td>
-<td class="success">0.047s</td>
+<td class="success">0.055s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,22 +89,22 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-04 00:38:37.711+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsCapella
-2025-09-04 00:38:37.722+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_attester_slashings: No one is slashed
-2025-09-04 00:38:37.722+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xa0dfd2933667a412f3bfa6dc8dc4ad8278d9fc368439833cb3a57ff5bb38c2e5)
+<pre>2025-09-05 00:40:41.572+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsCapella
+2025-09-05 00:40:41.583+00:00 | Test worker | WARN  | AbstractBlockProcessor | Failed to process block: process_attester_slashings: No one is slashed
+2025-09-05 00:40:41.583+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xa0dfd2933667a412f3bfa6dc8dc4ad8278d9fc368439833cb3a57ff5bb38c2e5)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: java.lang.IllegalArgumentException: process_attester_slashings: No one is slashed
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttesterSlashings(AbstractBlockProcessor.java:548) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:450) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:883) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAttesterSlashings(AbstractBlockProcessor.java:548) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processOperationsNoValidation$11(AbstractBlockProcessor.java:450) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processOperationsNoValidation(AbstractBlockProcessor.java:444) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.processOperationsNoValidation(BlockProcessorCapella.java:137) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:104) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:329) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:327) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:172) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.4.jar:?]
@@ -206,8 +206,8 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
 Caused by: java.lang.IllegalArgumentException: process_attester_slashings: No one is slashed
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:220) ~[guava-33.1.0-jre.jar:?]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processAttesterSlashings$15(AbstractBlockProcessor.java:557) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.9.1+2-gd5085b98ad]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processAttesterSlashings$15(AbstractBlockProcessor.java:557) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.safelyProcess(AbstractBlockProcessor.java:876) ~[teku-ethereum-spec-develop.jar:25.9.1+7-g788c262ae8]
 	... 110 more
 </pre>
 </span>
@@ -220,7 +220,7 @@ Caused by: java.lang.IllegalArgumentException: process_attester_slashings: No on
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 4, 2025, 12:44:47 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 5, 2025, 12:47:06 AM</p>
 </div>
 </div>
 </body>
