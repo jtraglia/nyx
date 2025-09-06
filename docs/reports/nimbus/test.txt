@@ -100,8 +100,8 @@ Submodule 'test/yaml-test-suite' (https://github.com/yaml/yaml-test-suite.git) r
 Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/NimYAML/test/yaml-test-suite'...
 Submodule path 'vendor/NimYAML/test/yaml-test-suite': checked out '6e6c296ae9c9d2d5c4134b4b64d01b29ac19ff6f'
 Submodule path 'vendor/gnosis-chain-configs': checked out 'd447a94bbe1bafbef4fe5a2fbb2e5469e7b494bb'
-Submodule path 'vendor/holesky': checked out '099fee50a944e76c595398e69bfda0a6f1e799a1'
-Submodule path 'vendor/hoodi': checked out '3a17a5f5a3e8bccd6609a887f0bbe7ffc71e99e4'
+Submodule path 'vendor/holesky': checked out '47b9fdafc1d7328b6f0efb735ad3391288ba61e4'
+Submodule path 'vendor/hoodi': checked out '2573cf01c8796314b49b2ccac29cdcc147d5a46a'
 Submodule path 'vendor/mainnet': checked out '9df5a5b0955dd1ed4bb103a9bba9a22742ea956c'
 Submodule path 'vendor/nim-bearssl': checked out '11e798b62b8e6beabe958e048e9e24c7e0f9ee63'
 Submodule 'bearssl/csources' (https://github.com/status-im/BearSSL) registered for path 'vendor/nim-bearssl/bearssl/csources'
@@ -191,7 +191,7 @@ Cloning into '/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/v
 Submodule path 'vendor/nimbus-build-system/vendor/Nim': checked out 'f7145dd26efeeeb6eeae6fff649db244d81b212d'
 Submodule path 'vendor/nimbus-security-resources': checked out 'ce9945b1b159d4c9b628f8c4cd2d262964692810'
 Submodule path 'vendor/nimcrypto': checked out '19c41d6be4c00b4a2c8000583bd30cf8ceb5f4b1'
-Submodule path 'vendor/sepolia': checked out '129de385d8bb7d794dc4b864b0ebeb4d73753f98'
+Submodule path 'vendor/sepolia': checked out '494b5152ed04685b776cd3eb7c994402e18dd0aa'
 
 
 Tip of the day: this will probably build faster if you use "make -j4 ...".
@@ -257,19 +257,19 @@ EF - Altair - Operations - Deposit  [Preset: minimal] ................... (0.02s
 EF - Altair - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
 EF - Altair - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
 EF - Altair - Operations - Voluntary Exit  [Preset: minimal] .......... (0.01s)
-EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.25s)
-EF - Altair - Rewards  [Preset: minimal] .................................. (0.01s)
+EF - Altair - SSZ consensus objects  [Preset: minimal] ....................................... (0.27s)
+EF - Altair - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Altair - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Altair - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
-EF - Altair - Epoch Processing - Rewards and penalties [Preset: minimal] ............... (0.01s)
-EF - Altair - Epoch Processing - Registry updates [Preset: minimal] ............... (0.01s)
+EF - Altair - Epoch Processing - Rewards and penalties [Preset: minimal] ............... (0.00s)
+EF - Altair - Epoch Processing - Registry updates [Preset: minimal] ............... (0.00s)
 EF - Altair - Epoch Processing - Slashings [Preset: minimal] ..... (0.00s)
 EF - Altair - Epoch Processing - Eth1 data reset [Preset: minimal] .. (0.00s)
 EF - Altair - Epoch Processing - Effective balance updates [Preset: minimal] . (0.00s)
 EF - Altair - Epoch Processing - Slashings reset [Preset: minimal] . (0.00s)
 EF - Altair - Epoch Processing - RANDAO mixes reset [Preset: minimal] . (0.00s)
 EF - Altair - Epoch Processing - Historical roots update [Preset: minimal] . (0.00s)
-EF - Altair - Epoch Processing - Participation flag updates [Preset: minimal] ............ (0.01s)
+EF - Altair - Epoch Processing - Participation flag updates [Preset: minimal] ............ (0.00s)
 EF - Altair - Epoch Processing - Sync committee updates [Preset: minimal] ..... (0.01s)
 EF - Bellatrix - Operations - Attestation  [Preset: minimal] ......................................... (0.03s)
 EF - Bellatrix - Operations - Attester Slashing  [Preset: minimal] .............................. (0.05s)
@@ -303,7 +303,7 @@ EF - Capella - Operations - Proposer Slashing  [Preset: minimal] ...............
 EF - Capella - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Capella - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
 EF - Capella - Operations - Withdrawals  [Preset: minimal] ...................................................... (0.01s)
-EF - Capella - SSZ consensus objects  [Preset: minimal] .............................................. (0.29s)
+EF - Capella - SSZ consensus objects  [Preset: minimal] .............................................. (0.28s)
 EF - Capella - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Capella - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
 EF - Capella - Epoch Processing - Inactivity [Preset: minimal] ..................... (0.01s)
@@ -323,9 +323,9 @@ EF - Deneb - Operations - Block Header  [Preset: minimal] ...F.. (0.09s)
 =====================================================================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Deneb - Operations - Block Header  [Preset: minimal]::[Valid]   EF - Deneb - Operations - Block Header - basic_block_header'
 ---------------------------------------------------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(191) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/deneb/test_fixture_operations.nim(127) atmdenebatstest_fixture_operationsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) _ZN23test_fixture_operations7runTestE6string6string6string6string4procI6ResultI4void7cstringE3varIN5deneb11BeaconStateEEN5deneb11BeaconBlockEE6string
@@ -347,11 +347,11 @@ and   postState.latest_block_header.body_root.data[0] = 129
 
 (0.09s)   EF - Deneb - Operations - Block Header  [Preset: minimal]
 
-EF - Deneb - Operations - BLS to execution change  [Preset: minimal] .............. (0.02s)
+EF - Deneb - Operations - BLS to execution change  [Preset: minimal] .............. (0.01s)
 EF - Deneb - Operations - Deposit  [Preset: minimal] ..................... (0.02s)
 EF - Deneb - Operations - Execution Payload  [Preset: minimal] ........................................ (0.01s)
 EF - Deneb - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Deneb - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Deneb - Operations - Voluntary Exit  [Preset: minimal] ................ (0.02s)
 EF - Deneb - Operations - Withdrawals  [Preset: minimal] ...................................................... (0.01s)
 EF - Deneb - SSZ consensus objects  [Preset: minimal] FFF.................................F........... (0.31s)
@@ -733,9 +733,9 @@ EF - Deneb - SSZ consensus objects  [Preset: minimal] FFF.......................
 ========================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Deneb - SSZ consensus objects  [Preset: minimal]::  Testing    BlobSidecar'
 ------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(192) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) atmdenebatstest_fixture_ssz_consensus_objectsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1090) _ZN9unittest29runDirectEN9unittest24TestE
@@ -2136,9 +2136,9 @@ EF - Electra - Operations - Block Header  [Preset: minimal] ...F.. (0.01s)
 =======================================================================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Electra - Operations - Block Header  [Preset: minimal]::[Valid]   EF - Electra - Operations - Block Header - basic_block_header'
 -----------------------------------------------------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(195) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/electra/test_fixture_operations.nim(134) atmelectraatstest_fixture_operationsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) _ZN23test_fixture_operations7runTestE6string6string6string6string4procI6ResultI4void7cstringE3varIN7electra11BeaconStateEEN7electra11BeaconBlockEE6string
@@ -2170,7 +2170,7 @@ EF - Electra - Operations - Proposer Slashing  [Preset: minimal] ...............
 EF - Electra - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
 EF - Electra - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.02s)
 EF - Electra - Operations - Withdrawals  [Preset: minimal] ................................................................................. (0.02s)
-EF - Electra - SSZ consensus objects  [Preset: minimal] F.F.F.....................................F............. (0.44s)
+EF - Electra - SSZ consensus objects  [Preset: minimal] F.F.F.....................................F............. (0.51s)
 ============================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Electra - SSZ consensus objects  [Preset: minimal]::  Testing    BeaconBlockBody'
 ----------------------------
@@ -2549,9 +2549,9 @@ EF - Electra - SSZ consensus objects  [Preset: minimal] F.F.F...................
 ========================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Electra - SSZ consensus objects  [Preset: minimal]::  Testing    BlobSidecar'
 ------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(196) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) atmelectraatstest_fixture_ssz_consensus_objectsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1090) _ZN9unittest29runDirectEN9unittest24TestE
@@ -2939,7 +2939,7 @@ EF - Electra - SSZ consensus objects  [Preset: minimal] F.F.F...................
     expectedHash.root was 0xd4e3519051f44c9ebc5194a66756c4a8febc439ad3b781daef2430999d8d865b
     "0x" & toLowerAscii($hash_tree_root(deserialized[])) was 0x83502d265db37bdbd2417dba4eadd4206566fd2380cb4441316d9bc81e3d9c51
 
-  [FAILED ] (  0.02s)   Testing    BeaconBlock[0m
+  [FAILED ] (  0.18s)   Testing    BeaconBlock[0m
 
 ==============================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Electra - SSZ consensus objects  [Preset: minimal]::  Testing    SignedBeaconBlock'
@@ -3931,7 +3931,7 @@ EF - Electra - SSZ consensus objects  [Preset: minimal] F.F.F...................
 
   [FAILED ] (  0.04s)   Testing    SignedBeaconBlock[0m
 
-(0.44s)   EF - Electra - SSZ consensus objects  [Preset: minimal]
+(0.51s)   EF - Electra - SSZ consensus objects  [Preset: minimal]
 
 EF - Electra - Rewards  [Preset: minimal] .................................. (0.00s)
 EF - Electra - Epoch Processing - Justification & Finalization [Preset: minimal] .......... (0.00s)
@@ -3954,9 +3954,9 @@ EF - Fulu - Operations - Block Header  [Preset: minimal] ...F.. (0.01s)
 ====================================================================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Fulu - Operations - Block Header  [Preset: minimal]::[Valid]   EF - Fulu - Operations - Block Header - basic_block_header'
 --------------------------------------------------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(199) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/fulu/test_fixture_operations.nim(134) atmfuluatstest_fixture_operationsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) _ZN23test_fixture_operations7runTestE6string6string6string6string4procI6ResultI4void7cstringE3varIN4fulu11BeaconStateEEN4fulu11BeaconBlockEE6string
@@ -3985,7 +3985,7 @@ EF - Fulu - Operations - Deposit Request  [Preset: minimal] ........... (0.00s)
 EF - Fulu - Operations - Execution Payload  [Preset: minimal] ........................................ (0.01s)
 EF - Fulu - Operations - Withdrawal Request  [Preset: minimal] ............................. (0.01s)
 EF - Fulu - Operations - Proposer Slashing  [Preset: minimal] ............... (0.01s)
-EF - Fulu - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.04s)
+EF - Fulu - Operations - Sync Aggregate  [Preset: minimal] ........................ (0.03s)
 EF - Fulu - Operations - Voluntary Exit  [Preset: minimal] ..................... (0.02s)
 EF - Fulu - Operations - Withdrawals  [Preset: minimal] ................................................................................. (0.02s)
 EF - Fulu - SSZ consensus objects  [Preset: minimal] F.F.F.................F......................F............. (0.37s)
@@ -4367,9 +4367,9 @@ EF - Fulu - SSZ consensus objects  [Preset: minimal] F.F.F.................F....
 ========================
   /home/runner/work/nyx/nyx/nimbus-eth2/build/consensus_spec_tests_minimal 'EF - Fulu - SSZ consensus objects  [Preset: minimal]::  Testing    BlobSidecar'
 ------------------------
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(200) PreMainInner
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1170) atmfuluatstest_fixture_ssz_consensus_objectsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-unittest2/unittest2.nim(1090) _ZN9unittest29runDirectEN9unittest24TestE
@@ -6142,58 +6142,56 @@ EF - Fulu - Epoch Processing - Pending deposits [Preset: minimal] ..............
 EF - Fulu - Epoch Processing - Pending consolidations [Preset: minimal] ............. (0.00s)
 EF - Fulu - Epoch Processing - Proposer lookahead [Preset: minimal] .. (0.00s)
 EF - Fulu - Epoch Processing - Sync committee updates [Preset: minimal] ..... (0.02s)
-EF - Gloas - SSZ consensus objects  [Preset: minimal] /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(541) main
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(526) NimMain
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(371) PreMain
+EF - Gloas - Operations - Attestation  [Preset: minimal] /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(546) main
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(531) NimMain
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(375) PreMain
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-json-rpc/json_rpc/client.nim(203) PreMainInner
-/home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/gloas/test_fixture_ssz_consensus_objects.nim(105) atmgloasatstest_fixture_ssz_consensus_objectsdotnim_Init000
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/std/assertions.nim(41) _ZN10assertions16failedAssertImplE6string
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/std/assertions.nim(36) _ZN10assertions11raiseAssertE6string
-/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/fatal.nim(53) _ZN10assertions8sysFatalE8typeDescIN10exceptions15AssertionDefectEE6string
+/home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/std/private/osdirs.nim(225) atmgloasatstest_fixture_operationsdotnim_Init000
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/excpt.nim(349) _ZN6system18rawWriteStackTraceE3varI3seqIN6system15StackTraceEntryEEE
 /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nimbus-build-system/vendor/Nim/lib/system/stacktraces.nim(62) _ZN11stacktraces30auxWriteStackTraceWithOverrideE3varI3seqIN6system15StackTraceEntryEEE
-Error: unhandled exception: /home/runner/work/nyx/nyx/nimbus-eth2/tests/consensus_spec/gloas/test_fixture_ssz_consensus_objects.nim(104, 3) `dirExists(SSZDir)` You need to run the "download_test_vectors.sh" script to retrieve the consensus spec test vectors. [AssertionDefect]
+Error: unhandled exception: No such file or directory
+Additional info: /home/runner/work/nyx/nyx/nimbus-eth2/vendor/nim-eth2-scenarios/tests-nightly/minimal/gloas/operations/attestation/pyspec_tests [OSError]
 
-[Summary] 3019 tests run (4.73s): 3003 OK, 16 FAILED, 0 SKIPPED
+[Summary] 3019 tests run (4.78s): 3003 OK, 16 FAILED, 0 SKIPPED
 
 consensus_spec_tests_minimal --xml:build/consensus_spec_tests_minimal.xml --console failed; Last 5000 lines from the log:
-{"lvl":"TRC","ts":"2025-09-05 01:18:53.729+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:53.729+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:53.731+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:53.731+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.231+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.232+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.234+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.234+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.236+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.697+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.698+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.699+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.700+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.702+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:55.709+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.196+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.197+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.199+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.199+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.201+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.209+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.829+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.830+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.832+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.832+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.834+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:56.842+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.463+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.464+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.466+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.466+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.468+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:57.476+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.310+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.311+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.313+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.313+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.315+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"82559d22"}}
-{"lvl":"TRC","ts":"2025-09-05 01:18:58.323+00:00","msg":"Skipping deposit with invalid signature","tid":31118,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:48.913+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:48.914+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:48.915+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:48.916+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.412+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.413+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.415+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.415+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.417+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.881+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.881+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.883+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.883+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.885+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:50.893+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a4da75e1"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.375+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.376+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.377+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.378+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.380+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:51.387+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"ac5e6d25"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.004+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.005+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.007+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.007+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.009+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.017+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"87c9bfa6"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.635+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.635+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.637+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.638+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.639+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:52.647+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"95c4ddd1"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.542+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"00000000","withdrawal_credentials":"00b0761f","amount":32000000000,"signature":"b32a3f63"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.543+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"00000000"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.545+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"b58c72f3"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.545+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"c0100000","withdrawal_credentials":"00cd9644","amount":32000000000,"signature":"815720b8"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.547+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"82559d22"}}
+{"lvl":"TRC","ts":"2025-09-06 01:16:53.555+00:00","msg":"Skipping deposit with invalid signature","tid":31161,"file":"state_transition_block.nim:343","deposit":{"pubkey":"b4e84be7","withdrawal_credentials":"007f858e","amount":32000000000,"signature":"a1712452"}}
 make: *** [Makefile:401: test] Error 1
