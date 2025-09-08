@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.015s</div>
+<div class="counter">0.018s</div>
 <p>duration</p>
 </div>
 </td>
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">multiple_attester_slashings_partial_overlap</td>
 <td class="failures">testMultipleAttesterSlashingsPartialOverlap()</td>
-<td class="failures">0.015s</td>
+<td class="failures">0.018s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,11 +121,11 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-07 00:43:52.950+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsDeneb
-2025-09-07 00:43:52.959+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x534fa807cf5d17d3c4be5f5e723c05dee067f66abd44923c8fbeb742407afd94)
+<pre>2025-09-08 00:42:15.702+00:00 | Test worker | DEBUG | ExpectedWithdrawals | Expected withdrawals created with withdrawals list size 0, partials 0, schema definition class: class tech.pegasys.teku.spec.schemas.SchemaDefinitionsDeneb
+2025-09-08 00:42:15.711+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x534fa807cf5d17d3c4be5f5e723c05dee067f66abd44923c8fbeb742407afd94)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockDeneb{message=BeaconBlockDeneb{slot=1, proposer_index=63, parent_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, state_root=0x893c0716b6102875d8ca15d579b7450ca33df7594fad9f3c2cdf8cb71031178b, body=BeaconBlockBodyDeneb{randao_reveal=SszByteVector{0x83a96e46c532b69d2376749e5ea147899e2c3d80961a4b05e9e991cc571f3674df6427d77cfcbf8f55256746e3fa222412904abb13c8027e2b932abced9e90c69613f16031cb88d4e13152ee241310de74152cfad66584f0515025f34e2734cb}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=2: AttesterSlashingPhase0{attestation_1=IndexedAttestationPhase0{attesting_indices=SszList{size=4: 0, 1, 2, 3}, data=AttestationData{slot=0, index=0, beacon_block_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=0, root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed}}, signature=SszByteVector{0xa6c5b2f28afb35f1997b8ac0bfc5b80aa96f0665efb7f8e8fb9c875f9282406b516feff4ffbd78d62e57c2f1828a187600fad53db4d66d2176a3ee9ad2e0af7d3ed062404c93296d29701a60d0beea705c1fd06ed21f96466bb68ac480f11946}}, attestation_2=IndexedAttestationPhase0{attesting_indices=SszList{size=4: 0, 1, 2, 3}, data=AttestationData{slot=0, index=0, beacon_block_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=0, root=0x0101010101010101010101010101010101010101010101010101010101010101}}, signature=SszByteVector{0xa462bb81ed4814067fce617698ae94031bc59c892d9c52c621b209d392f90b5c5ea19a624fd34ceb6bd5f8872e10d61d06c3610fd8f2e4a879bc7ad8de79bbd8d8baec084c6ffbcb634fbc3ee31ab6e2b30c7fb3b7c12ce64eb9ffb9fc1e810e}}}, AttesterSlashingPhase0{attestation_1=IndexedAttestationPhase0{attesting_indices=SszList{size=6: 2, 3, 4, 5, 6, 7}, data=AttestationData{slot=0, index=0, beacon_block_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=0, root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed}}, signature=SszByteVector{0x848fccf8dc3fa0ac9a9c7d7d71b8b31c4796af10fa5731a7dc41eedd8ce390800e844bb5ffa1586da9a8f0327985569103c67ce3b0a625930dd9f2fcf5d120a31f9ded853742a4e9743197bfccd0205b9a480906e6cb84690ab44101b642f1c1}}, attestation_2=IndexedAttestationPhase0{attesting_indices=SszList{size=6: 2, 3, 4, 5, 6, 7}, data=AttestationData{slot=0, index=0, beacon_block_root=0xef6a5efb7c57ee7f94df9a9561778726d1d22aca9b48411ea18a8affb28ff7ed, source=Checkpoint{epoch=0, root=0x0000000000000000000000000000000000000000000000000000000000000000}, target=Checkpoint{epoch=0, root=0x0101010101010101010101010101010101010101010101010101010101010101}}, signature=SszByteVector{0xa67b0842020e7ba3137a8f8cc20b29d2d43e8883ac8d7810781490b59dcc3f2e77493b29511cc6b03273c92c13de956d19c14fb8dedb1efe5b1c00d65235f3f6db68d9d28337bb9cce3fe0d572d399e78d205c56a9108ff9ec752b80fa29a6c9}}}}, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x51b36e7af91b87ad2daaebee31cecdf620a48d572136eddc70373c230cde486f, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=6, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x1fbf0b894e91fe2803fdbc5e2b933283d1c93f0429e34278c11ff7834f3839fd, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }}}, signature=SszByteVector{0x95a7c8462f17c2debcf304627ab82eca7987896fbb2da7619b5cf5ed939699b8628e43e89b6980a5afbee8cb693fc394014712b34dfa729ffd59ce0f3a7cfc4f22566208edeaa4c0cb967d8983684413f97c0608589e4e5739eb542f68ee8fd6}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.1+10-gf1ea8376f6]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.1+10-gf1ea8376f6]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:184) ~[teku-ethereum-spec-develop.jar:25.9.1+12-g017c23f522]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:861) ~[teku-ethereum-spec-develop.jar:25.9.1+12-g017c23f522]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$1(SanityBlocksTestExecutor.java:85) ~[referenceTest/:?]
 	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[?:?]
@@ -231,7 +231,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 7, 2025, 12:48:43 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 8, 2025, 12:47:03 AM</p>
 </div>
 </div>
 </body>
