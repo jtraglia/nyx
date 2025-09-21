@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.020s</div>
+<div class="counter">0.011s</div>
 <p>duration</p>
 </div>
 </td>
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">exit_and_bls_change</td>
 <td class="failures">testExitAndBlsChange()</td>
-<td class="failures">0.020s</td>
+<td class="failures">0.011s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,9 +121,9 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-20 00:42:58.407+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
-2025-09-20 00:42:58.407+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
-2025-09-20 00:42:58.410+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0xcd63f43118a8383ff835b01add145eaf3ac24e56dfb24dd1f534177b6891bebf)
+<pre>2025-09-21 00:47:25.944+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
+2025-09-21 00:47:25.944+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 513
+2025-09-21 00:47:25.946+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0xcd63f43118a8383ff835b01add145eaf3ac24e56dfb24dd1f534177b6891bebf)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=14, parent_root=0xc4e27069aa89ac9bd58ea82fbce545728ac28c0132ef0f8d933f8686d5879182, state_root=0xe9e444846e63733024fcffc5292989a60509194ed412949296b308e29d2dcfc7, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x903aa50966b25a75eee4014900054801cc6b40115b9eb312f10937ee8694463e0f4bc05979465b894e7b8503d95951c800663f9165d8cecd06aea8f3719a158933bc74485e09f1ec760b0ce62ebaf694672af53904ea3ee252b2b2180becbd3c}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=1: SignedVoluntaryExit{message=VoluntaryExit{epoch=64, validator_index=0}, signature=0x9549f3d7b523371550ff50466650d9534265567a16a4cd72b87eefe51151def1ce7e81ecc9bfdbac32055ce1d860967c0c0272de4bb768e71027e062979ec835a36fd7e069ae64659ee725d08e0e56fd223b326499ee3c17c4b86238637086aa}}, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0xf2aeaa929f5e70f5cb91b5640d9d44462516be1691328a13dc3ea5a486e9e68d, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=1: SignedBLSToExecutionChange{message=BLSToExecutionChange{validator_index=0, from_bls_pubkey=SszByteVector{0x9664301dfcb940539b336e6b21c156cda3c8a63847727d37491a892db7f4f2bb9fc9730163254e8bd028b730c8b39309}, to_execution_address=SszByteVector{0x4242424242424242424242424242424242424242}}, signature=SszByteVector{0xb146ac7bf92a80eed2b4c108658f00f04963234a8d7170459e82da2bd90352152ddd8a0d2f000bbe9a16cdad34bdf09e14744d2e23bd10a0b881528e7d0549e8e310785798ecb1374eea56d5d64669ed9c6bcd0ae1718633ad2270384cbc6ecf}}}, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0x93d662290dcd5514ebed873cfae1fcea5e72a0d54240419bf212621ebbe9901aa9118c8b4c5547255a5be0e484b552461420a702a6dd25477eee4fe7a7258ff491cac14b27b59bc3573bf73bd4519d83c6df3b918cd9424719a68cb61f450d40}}
 	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.2+44-g53e35b6d78]
 	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:885) ~[teku-ethereum-spec-develop.jar:25.9.2+44-g53e35b6d78]
@@ -232,7 +232,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 20, 2025, 12:44:47 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 21, 2025, 12:49:10 AM</p>
 </div>
 </div>
 </body>
