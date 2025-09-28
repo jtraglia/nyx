@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.011s</div>
+<div class="counter">0.012s</div>
 <p>duration</p>
 </div>
 </td>
@@ -113,7 +113,7 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <tr>
 <td class="failures">consolidation_requests_when_pending_consolidation_queue_is_full</td>
 <td class="failures">testConsolidationRequestsWhenPendingConsolidationQueueIsFull()</td>
-<td class="failures">0.011s</td>
+<td class="failures">0.012s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -121,12 +121,12 @@ Caused by: tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockP
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-27 00:43:12.226+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
-2025-09-27 00:43:12.226+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 2 consolidation requests to process from block at slot 513
-2025-09-27 00:43:12.226+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: updated validator 0 with exit_epoch = 69, withdrawable_epoch = 325
-2025-09-27 00:43:12.227+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: created PendingConsolidation{source_index=0, target_index=1}
-2025-09-27 00:43:12.227+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: consolidation queue is full
-2025-09-27 00:43:12.229+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0x3bc954761e80685bb4c5c9a5e5bc458bd3f36be07cbabf4a4e88271f4d80b45b)
+<pre>2025-09-28 00:47:51.156+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 513
+2025-09-28 00:47:51.156+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 2 consolidation requests to process from block at slot 513
+2025-09-28 00:47:51.156+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: updated validator 0 with exit_epoch = 69, withdrawable_epoch = 325
+2025-09-28 00:47:51.157+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: created PendingConsolidation{source_index=0, target_index=1}
+2025-09-28 00:47:51.157+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: consolidation queue is full
+2025-09-28 00:47:51.159+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 513 (0x3bc954761e80685bb4c5c9a5e5bc458bd3f36be07cbabf4a4e88271f4d80b45b)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=513, proposer_index=73, parent_root=0x910c257d83adf265c414a730e407d65986553b0126cdb8bb0607f575d63bae62, state_root=0x35be38f38b5647f8691c93f7e7cfbf4fc7ffd08bf7be726cf650270279dd99c6, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0xaa642502bcf5f835fe67118ebb476bc122c135bb01640b4ca14a7d4adaed8c967a623b73ccff9e5c052a526d399a5eb70ba12e3897b7b2fffc4eb7b01b5697d6d05b3fad5f15986edc42dcc658e65a3002636e538b5193b3fd8884a9fad3c2dc}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=256, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=3078, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x96509e2211acaedd1bc33f24f7df3fbc3bc68f5604ff14b4050adf07fb51b650, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=2: ConsolidationRequest{source_address=SszByteVector{0x1111111111111111111111111111111111111111}, source_pubkey=SszByteVector{0x97f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb}, target_pubkey=SszByteVector{0xa572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62ae28f75bb8f1c7c42c39a8c5529bf0f4e}}, ConsolidationRequest{source_address=SszByteVector{0x1111111111111111111111111111111111111111}, source_pubkey=SszByteVector{0x89ece308f9d1f0131765212deca99697b112d61f9be9a5f1f3780a51335b3ff981747a0b2ca2179b96d2c0c9024e5224}, target_pubkey=SszByteVector{0xac9b60d5afcbd5663a8a44b7c5a02f19e9a77ab0a35bd65809bb5c67ec582c897feb04decc694b13e08587f3ff9b5b60}}}}}}, signature=SszByteVector{0xacf980f094f5525880530ac586b1ee598e36ca5f22795109ede29e77125f50d218f1a0e222847f182425068eaa8f0f11172007731aba1fb50131e364ca20491558c77064163eb698deae221b56a9212d845a020cb212058c690b119ac4accaf1}}
 	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.3+6-g5beaed90e9]
 	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:885) ~[teku-ethereum-spec-develop.jar:25.9.3+6-g5beaed90e9]
@@ -235,7 +235,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 27, 2025, 12:44:54 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 28, 2025, 12:49:44 AM</p>
 </div>
 </div>
 </body>
