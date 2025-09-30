@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.012s</div>
+<div class="counter">0.040s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_incorrect_block_sig</td>
 <td class="success">testInvalidIncorrectBlockSig()</td>
-<td class="success">0.012s</td>
+<td class="success">0.040s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,12 +89,12 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-29 00:45:23.161+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
-2025-09-29 00:45:23.161+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
-2025-09-29 00:45:23.164+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x8092bf3e519db329b69895c96ebfdabd47fd33a3ce24dee2928b98401b684d68)
+<pre>2025-09-30 00:45:18.770+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
+2025-09-30 00:45:18.770+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
+2025-09-30 00:45:18.776+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0x8092bf3e519db329b69895c96ebfdabd47fd33a3ce24dee2928b98401b684d68)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=1, proposer_index=14, parent_root=0x27418e529bcf11a39c07003dc417310ea3f6b2e8c87f01767d72f6d72ffb4463, state_root=0x0000000000000000000000000000000000000000000000000000000000000000, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x8db09348eee4b701249a69c7ae48a9b5ad5db8e1585fe38e3182ea09b2b595147ebe8362aa0b0baead41ce57b81cb9840aaff0e62a3958e0b417b3e69b591d8bb9537df20edb3376bfdf5aaf2e95185ef7b57b3644669d3119f608b994b689fc}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=6, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x2227c1b162cc084d5ea15797601b1d5cd581744d7c59334573c3746d9e376ec2, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xb7468e92ac6aa81bc4f6a1c84f94cc5885fe7068b8278a8e5b0520e000f01a5d6d540964b5bdadc48cf97a1c8617e1b51980ccdda2712c7499262c08b0efd98a36fdab82867490482ed3cda1590249ffb3a7ec377a8c00eccf4b1b53b08cc35d}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.3+6-g5beaed90e9]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:885) ~[teku-ethereum-spec-develop.jar:25.9.3+6-g5beaed90e9]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.3+11-g4a20310614]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:885) ~[teku-ethereum-spec-develop.jar:25.9.3+11-g4a20310614]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.4.jar:?]
@@ -205,7 +205,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 29, 2025, 12:46:56 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 30, 2025, 12:46:59 AM</p>
 </div>
 </div>
 </body>
