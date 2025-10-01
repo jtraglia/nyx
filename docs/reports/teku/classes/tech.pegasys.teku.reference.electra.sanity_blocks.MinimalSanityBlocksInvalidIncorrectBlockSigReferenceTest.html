@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.011s</div>
+<div class="counter">0.015s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_incorrect_block_sig</td>
 <td class="success">testInvalidIncorrectBlockSig()</td>
-<td class="success">0.011s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,12 +89,12 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-09-30 00:43:34.513+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
-2025-09-30 00:43:34.513+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
-2025-09-30 00:43:34.516+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xf9ef8d02459d8c19d56cc8455acc0ccd60a8d4305b87ec6d30e518a5caa71078)
+<pre>2025-10-01 00:46:55.629+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_withdrawal_request: 0 withdrawal request to process from block at slot 1
+2025-10-01 00:46:55.629+00:00 | Test worker | DEBUG | ExecutionRequestsProcessorElectra | process_consolidation_request: 0 consolidation requests to process from block at slot 1
+2025-10-01 00:46:55.632+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xf9ef8d02459d8c19d56cc8455acc0ccd60a8d4305b87ec6d30e518a5caa71078)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Invalid block signature: SignedBeaconBlockElectra{message=BeaconBlockElectra{slot=1, proposer_index=14, parent_root=0x60da80cfa896db02d7d87fb9ffb0a23342fe505b2de21415166b3ddc32dfbce5, state_root=0x0000000000000000000000000000000000000000000000000000000000000000, body=BeaconBlockBodyElectra{randao_reveal=SszByteVector{0x9876fa9a6bcddc0f3904187d4d45e06fc88ce83347f6f36e4ece7667d5a2d2f2ef13b89c1fda730d5761a15550f5544712e37df0192b90f216975892723d777718084b2008ec59d9aacd3da36c2e486852278b6d33bdddb0a2b9825433c81d25}, eth1_data=Eth1Data{deposit_root=0x0000000000000000000000000000000000000000000000000000000000000000, deposit_count=64, block_hash=0x0000000000000000000000000000000000000000000000000000000000000000}, graffiti=0x0000000000000000000000000000000000000000000000000000000000000000, proposer_slashings=SszList{size=0: }, attester_slashings=SszList{size=0: }, attestations=SszList{size=0: }, deposits=SszList{size=0: }, voluntary_exits=SszList{size=0: }, sync_aggregate=SyncAggregate{sync_committee_bits=SszBitvector{size=32, 00000000000000000000000000000000}, sync_committee_signature=SszByteVector{0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}}, execution_payload=ExecutionPayloadDeneb{parent_hash=0x7a0d70a91437eebff1e475fa6646e69855227d34a000737d5c2902bd174ab2f8, fee_recipient=SszByteVector{0x0000000000000000000000000000000000000000}, state_root=0x2020202020202020202020202020202020202020202020202020202020202020, receipts_root=0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347, logs_bloom=SszByteVector{0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}, prev_randao=0xdadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadada, block_number=1, gas_limit=30000000, gas_used=0, timestamp=6, extra_data=SszByteList{0x}, base_fee_per_gas=0x000000000000000000000000000000000000000000000000000000003b9aca00, block_hash=0x4470bac40cd47d3e13aa6468a0d91781d8f79780c7bd6573407c2d8bf428ac1a, transactions=SszList{size=0: }, withdrawals=SszList{size=0: }, blob_gas_used=0, excess_blob_gas=0}, bls_to_execution_changes=SszList{size=0: }, blob_kzg_commitments=SszList{size=0: }, execution_requests=ExecutionRequestsElectra{deposits=SszList{size=0: }, withdrawals=SszList{size=0: }, consolidations=SszList{size=0: }}}}, signature=SszByteVector{0xae4fd1c74768dbcc2f265e70971baf6fbfd7a5a6ae82c0e101304feda597e99c39cd4976b4fd07d0bf010c54f17119e20ccad4ff8718a4dce02ace287e1f8063f98c84062f1629d6a86f5876f083a5b89fdd1f569e9a9489cd2ded011daff8ca}}
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.3+11-g4a20310614]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:885) ~[teku-ethereum-spec-develop.jar:25.9.3+11-g4a20310614]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:181) ~[teku-ethereum-spec-develop.jar:25.9.3+16-g8519e40fdb]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:886) ~[teku-ethereum-spec-develop.jar:25.9.3+16-g8519e40fdb]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.4.jar:?]
@@ -205,7 +205,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Sep 30, 2025, 12:46:58 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 1, 2025, 12:50:10 AM</p>
 </div>
 </div>
 </body>
