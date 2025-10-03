@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.057s</div>
+<div class="counter">0.032s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,7 +81,7 @@
 <tr>
 <td class="success">invalid_one_blob_max_plus_one_txs</td>
 <td class="success">testInvalidOneBlobMaxPlusOneTxs()</td>
-<td class="success">0.057s</td>
+<td class="success">0.032s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,18 +89,18 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-10-02 00:41:20.335+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xcfd3721873b6787d36602e2d588e9760c4ced1ceb54f2a4c9bb52ea780fffd64)
+<pre>2025-10-03 00:41:13.793+00:00 | Test worker | WARN  | AbstractBlockProcessor | State transition error while importing block 1 (0xcfd3721873b6787d36602e2d588e9760c4ced1ceb54f2a4c9bb52ea780fffd64)
 tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingException: Number of kzg commitments in block exceeds max blobs per block
-	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:89) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:124) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:114) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:108) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:99) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:324) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:169) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
-	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:886) ~[teku-ethereum-spec-develop.jar:25.9.3+21-gb66c8884e0]
+	at tech.pegasys.teku.spec.logic.versions.deneb.block.BlockProcessorDeneb.validateExecutionPayload(BlockProcessorDeneb.java:89) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processExecutionPayload(BlockProcessorBellatrix.java:124) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.executionProcessing(BlockProcessorBellatrix.java:114) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.versions.capella.block.BlockProcessorCapella.executionProcessing(BlockProcessorCapella.java:108) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.versions.bellatrix.block.BlockProcessorBellatrix.processBlock(BlockProcessorBellatrix.java:99) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.lambda$processUnsignedBlock$7(AbstractBlockProcessor.java:326) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.datastructures.state.beaconstate.common.AbstractBeaconState.updated(AbstractBeaconState.java:69) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processUnsignedBlock(AbstractBlockProcessor.java:324) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.logic.common.block.AbstractBlockProcessor.processAndValidateBlock(AbstractBlockProcessor.java:169) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
+	at tech.pegasys.teku.spec.Spec.processBlock(Spec.java:886) ~[teku-ethereum-spec-develop.jar:25.9.3+27-g8a91d77090]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.applyBlocks(SanityBlocksTestExecutor.java:113) ~[referenceTest/:?]
 	at tech.pegasys.teku.reference.phase0.sanity.SanityBlocksTestExecutor.lambda$runBlockProcessor$2(SanityBlocksTestExecutor.java:88) ~[referenceTest/:?]
 	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63) ~[assertj-core-3.27.4.jar:?]
@@ -211,7 +211,7 @@ tech.pegasys.teku.spec.logic.common.statetransition.exceptions.BlockProcessingEx
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 2, 2025, 12:46:05 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 3, 2025, 12:45:59 AM</p>
 </div>
 </div>
 </body>
